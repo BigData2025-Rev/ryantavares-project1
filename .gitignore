@@ -1,0 +1,3 @@
+define_database.sql
+mysql_config.py
+logs/
