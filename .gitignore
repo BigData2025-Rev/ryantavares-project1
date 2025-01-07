@@ -1,3 +1,4 @@
+__pycache__/
+logs/
 define_database.sql
 mysql_config.py
-logs/
