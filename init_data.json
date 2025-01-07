@@ -1,0 +1,3764 @@
+[
+    {
+        "name": "Counter-Strike: Source",
+        "description": "Counter-Strike: Source blends Counter-Strike's award-winning teamplay action with the advanced technology of Source\u2122 technology.",
+        "developer": "Valve",
+        "publisher": "Valve",
+        "price": 9.99,
+        "metacritic": 88,
+        "categories": [
+            "Multi-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 122836,
+        "release_date": "Nov 1, 2004",
+        "rating": "m"
+    },
+    {
+        "name": "Day of Defeat: Source",
+        "description": "Valve's WWII Multiplayer Classic - Now available for Mac.",
+        "developer": "Valve",
+        "publisher": "Valve",
+        "price": 9.99,
+        "metacritic": 80,
+        "categories": [
+            "Multi-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 15021,
+        "release_date": "Jul 12, 2010",
+        "rating": "m"
+    },
+    {
+        "name": "Half-Life: Blue Shift",
+        "description": "Made by Gearbox Software and originally released in 2001 as an add-on to Half-Life, Blue Shift is a return to the Black Mesa Research Facility in which you play as Barney Calhoun, the security guard sidekick who helped Gordon out of so many sticky situations.",
+        "developer": "Gearbox Software",
+        "publisher": "Valve",
+        "price": 4.99,
+        "metacritic": 71,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 15610,
+        "release_date": "Jun 1, 2001",
+        "rating": "m"
+    },
+    {
+        "name": "Quake II",
+        "description": "You are humanity\u2019s last hope to stop the Strogg, a hostile alien race waging war against Earth. Play this military sci-fi FPS, now upgraded for modern platforms with improved visuals, new campaign content, online multiplayer/co-op, and more.",
+        "developer": "id Software",
+        "publisher": "Bethesda Softworks",
+        "price": 9.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 7245,
+        "release_date": "Aug 3, 2007",
+        "rating": "m"
+    },
+    {
+        "name": "Half-Life 2",
+        "description": "Reawakened from stasis in the occupied metropolis of City 17, Gordon Freeman is joined by Alyx Vance as he leads a desperate human resistance. Experience the landmark first-person shooter packed with immersive world-building, boundary-pushing physics, and exhilarating combat.",
+        "developer": "Valve",
+        "publisher": "Valve",
+        "price": 9.99,
+        "metacritic": 96,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 173918,
+        "release_date": "Nov 16, 2004",
+        "rating": "m"
+    },
+    {
+        "name": "Portal",
+        "description": "Portal\u2122 is a new single player game from Valve. Set in the mysterious Aperture Science Laboratories, Portal has been called one of the most innovative new games on the horizon and will offer gamers hours of unique gameplay.",
+        "developer": "Valve",
+        "publisher": "Valve",
+        "price": 9.99,
+        "metacritic": 90,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 147696,
+        "release_date": "Oct 10, 2007",
+        "rating": "t"
+    },
+    {
+        "name": "AudioSurf",
+        "description": "Ride your music. Audiosurf is a music-adapting puzzle racer where you use your own music to create your own experience. The shape, the speed, and the mood of each ride is determined by the song you choose.",
+        "developer": "Dylan Fitterer",
+        "publisher": "N/A",
+        "price": 9.99,
+        "metacritic": 85,
+        "categories": [
+            "Single-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Indie"
+        ],
+        "recommendations": 8698,
+        "release_date": "Feb 15, 2008",
+        "rating": "rp"
+    },
+    {
+        "name": "Bad Rats: the Rats' Revenge",
+        "description": "Bad Rats is a physics puzzle game where rats finally get their bloody revenge on their new prisoners: The cats. Come up with creative solutions for each puzzle using physics, functional objects, and your specially trained Rats. Try different ways of solving each puzzle to finish faster or earn higher scores.",
+        "developer": "Invent4 Entertainment",
+        "publisher": "Strategy First",
+        "price": 1.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Indie"
+        ],
+        "recommendations": 7079,
+        "release_date": "Jul 20, 2009",
+        "rating": "rp"
+    },
+    {
+        "name": "Call of Duty\u00ae: Modern Warfare\u00ae 2 (2009)",
+        "description": "The most-anticipated game of the year and the sequel to the best-selling first-person action game of all time, Modern Warfare 2 continues the gripping and heart-racing action as players face off against a new threat dedicated to bringing the world to the brink of collapse.",
+        "developer": "Infinity Ward",
+        "publisher": "Activision",
+        "price": 19.99,
+        "metacritic": 86,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 32594,
+        "release_date": "Nov 11, 2009",
+        "rating": "m"
+    },
+    {
+        "name": "Recettear: An Item Shop's Tale",
+        "description": "Recettear is the story of an item shop, the girl who lives in it, and the fairy who turned her life upside down. Recette Lemongrass finds herself in charge of an item shop built into her house, in order to pay back a loan her father took and then skipped out on - and Tear, her newfound fairy \"companion\", won't take no for an answer!",
+        "developer": "EasyGameStation",
+        "publisher": "Carpe Fulgur LLC",
+        "price": 19.99,
+        "metacritic": 82,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "RPG",
+            "Indie"
+        ],
+        "recommendations": 6322,
+        "release_date": "Sep 10, 2010",
+        "rating": "rp"
+    },
+    {
+        "name": "VVVVVV",
+        "description": "VVVVVV is a platform game all about exploring one simple mechanical idea - what if you reversed gravity instead of jumping?",
+        "developer": "Terry Cavanagh",
+        "publisher": "Terry Cavanagh",
+        "price": 4.99,
+        "metacritic": 81,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Indie"
+        ],
+        "recommendations": 6166,
+        "release_date": "Sep 7, 2010",
+        "rating": "rp"
+    },
+    {
+        "name": "Super Meat Boy",
+        "description": "The infamous, tough-as-nails platformer comes to Steam with a playable Head Crab character (Steam-exclusive)!",
+        "developer": "Team Meat",
+        "publisher": "N/A",
+        "price": 14.99,
+        "metacritic": 87,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Indie"
+        ],
+        "recommendations": 26259,
+        "release_date": "Nov 30, 2010",
+        "rating": "t"
+    },
+    {
+        "name": "SpaceChem",
+        "description": "Zachtronics is back with an ambitious new design-based puzzle game. Take on the role of a Reactor Engineer working for SpaceChem, the leading chemical synthesizer for frontier colonies. Construct elaborate factories to transform raw materials into valuable chemical products!",
+        "developer": "Zachtronics",
+        "publisher": "Zachtronics",
+        "price": 9.99,
+        "metacritic": 84,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Indie",
+            "Simulation"
+        ],
+        "recommendations": 2512,
+        "release_date": "Mar 2, 2011",
+        "rating": "rp"
+    },
+    {
+        "name": "Portal 2",
+        "description": "The &quot;Perpetual Testing Initiative&quot; has been expanded to allow you to design co-op puzzles for you and your friends!",
+        "developer": "Valve",
+        "publisher": "Valve",
+        "price": 9.99,
+        "metacritic": 95,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "recommendations": 347578,
+        "release_date": "Apr 18, 2011",
+        "rating": "e10"
+    },
+    {
+        "name": "The Elder Scrolls V: Skyrim",
+        "description": "EPIC FANTASY REBORN The next chapter in the highly anticipated Elder Scrolls saga arrives from the makers of the 2006 and 2008 Games of the Year, Bethesda Game Studios. Skyrim reimagines and revolutionizes the open-world fantasy epic, bringing to life a complete virtual world open for you to explore any way you choose.",
+        "developer": "Bethesda Game Studios",
+        "publisher": "Bethesda Softworks",
+        "price": 19.99,
+        "metacritic": 94,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "RPG"
+        ],
+        "recommendations": 181042,
+        "release_date": "Nov 10, 2011",
+        "rating": "m"
+    },
+    {
+        "name": "To the Moon",
+        "description": "A story-driven experience about two doctors traversing backwards through a dying man's memories to artificially fulfill his last wish.",
+        "developer": "Freebird Games",
+        "publisher": "Freebird Games",
+        "price": 9.99,
+        "metacritic": 81,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Indie",
+            "RPG"
+        ],
+        "recommendations": 61903,
+        "release_date": "Sep 7, 2012",
+        "rating": "rp"
+    },
+    {
+        "name": "Dishonored",
+        "description": "Dishonored is an immersive first-person action game that casts you as a supernatural assassin driven by revenge. With Dishonored\u2019s flexible combat system, creatively eliminate your targets as you combine the supernatural abilities, weapons and unusual gadgets at your disposal.",
+        "developer": "Arkane Studios",
+        "publisher": "Bethesda Softworks",
+        "price": 9.99,
+        "metacritic": 91,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "recommendations": 61462,
+        "release_date": "Oct 8, 2012",
+        "rating": "m"
+    },
+    {
+        "name": "FTL: Faster Than Light",
+        "description": "This &quot;spaceship simulation roguelike-like&quot; allows you to take your ship and crew on an adventure through a randomly generated galaxy filled with glory and bitter defeat.",
+        "developer": "Subset Games",
+        "publisher": "Subset Games",
+        "price": 9.99,
+        "metacritic": 84,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Indie",
+            "Simulation",
+            "Strategy"
+        ],
+        "recommendations": 58120,
+        "release_date": "Sep 14, 2012",
+        "rating": "e10"
+    },
+    {
+        "name": "Call of Duty\u00ae: Black Ops II",
+        "description": "Pushing the boundaries of what fans have come to expect from the record-setting entertainment franchise, Call of Duty\u00ae: Black Ops II propels players into a near future Cold War",
+        "developer": "Treyarch",
+        "publisher": "Activision",
+        "price": 59.99,
+        "metacritic": 74,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 20417,
+        "release_date": "Nov 12, 2012",
+        "rating": "m"
+    },
+    {
+        "name": "BioShock Infinite",
+        "description": "Indebted to the wrong people, with his life on the line, veteran of the U.S. Cavalry and now hired gun, Booker DeWitt has only one opportunity to wipe his slate clean. He must rescue Elizabeth, a mysterious girl imprisoned since childhood and locked up in the flying city of Columbia.",
+        "developer": "Irrational Games",
+        "publisher": "2K",
+        "price": 29.99,
+        "metacritic": 94,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 103975,
+        "release_date": "Mar 25, 2013",
+        "rating": "m"
+    },
+    {
+        "name": "Resident Evil 6",
+        "description": "Blending action and survival horror, Resident Evil 6 promises to be the dramatic horror experience of 2013.",
+        "developer": "Capcom",
+        "publisher": "Capcom",
+        "price": 19.99,
+        "metacritic": 69,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "recommendations": 37605,
+        "release_date": "Mar 21, 2013",
+        "rating": "m"
+    },
+    {
+        "name": "System Shock 2",
+        "description": "&quot;Remember, it is my will that guided you here. It is my will that gave you your cybernetic implants, the only beauty in that meat you call a body. If you value that meat... you will do as I tell you.&quot; The cult classic sci-fi horror FPS-RPG has returned.",
+        "developer": "Nightdive Studios",
+        "publisher": "Nightdive Studios",
+        "price": 9.99,
+        "metacritic": 92,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "RPG"
+        ],
+        "recommendations": 5982,
+        "release_date": "May 10, 2013",
+        "rating": "m"
+    },
+    {
+        "name": "Rogue Legacy",
+        "description": "Rogue Legacy is a genealogical rogue-&quot;LITE&quot; where anyone can be a hero. Each time you die, your child will succeed you. Every child is unique. One child might be colorblind, another might be a dward with have vertigo. But that's OK, because no one is perfect, and you don't have to be to succeed.",
+        "developer": "Cellar Door Games",
+        "publisher": "Cellar Door Games",
+        "price": 14.99,
+        "metacritic": 85,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Indie",
+            "RPG"
+        ],
+        "recommendations": 15475,
+        "release_date": "Jun 27, 2013",
+        "rating": "rp"
+    },
+    {
+        "name": "PixelJunk\u2122 Monsters Ultimate",
+        "description": "Tikiman the Forest Defender is in trouble. Hordes of monsters are sweeping through his realm, hoping to chow down on his offspring \u2013 and it\u2019s up to you to defend them. By placing weapon towers at strategic points around the landscape, you can destroy the invaders and save the little ones.",
+        "developer": "Double Eleven",
+        "publisher": "Double Eleven",
+        "price": 9.99,
+        "metacritic": 72,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Strategy"
+        ],
+        "recommendations": 577,
+        "release_date": "Aug 26, 2013",
+        "rating": "e"
+    },
+    {
+        "name": "Risk of Rain (2013)",
+        "description": "Risk of Rain is an action platformer with roguelike elements. With permanent death as a primary feature, players will have to play their best to get as far as possible. Fight on a mysterious planet with randomly spawning enemies and bosses, either alone or with 3 friends in online co-op.",
+        "developer": "Hopoo Games",
+        "publisher": "Gearbox Publishing",
+        "price": 9.99,
+        "metacritic": 77,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "Indie",
+            "RPG"
+        ],
+        "recommendations": 20504,
+        "release_date": "Nov 8, 2013",
+        "rating": "e10"
+    },
+    {
+        "name": "Spelunky",
+        "description": "Spelunky is a unique platformer with randomized levels that offer a challenging new experience each time you play. Journey deep underground and explore fantastic places filled with all manner of monsters, traps, and treasure.",
+        "developer": "Mossmouth",
+        "publisher": "Mossmouth",
+        "price": 14.99,
+        "metacritic": 90,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Indie"
+        ],
+        "recommendations": 14184,
+        "release_date": "Aug 8, 2013",
+        "rating": "rp"
+    },
+    {
+        "name": "The Binding of Isaac: Rebirth",
+        "description": "The Binding of Isaac: Rebirth is a randomly generated action RPG shooter with heavy Rogue-like elements. Following Isaac on his journey players will find bizarre treasures that change Isaac\u2019s form giving him super human abilities and enabling him to fight off droves of mysterious creatures, discover secrets and fight his way to safety.",
+        "developer": "Nicalis, Inc.",
+        "publisher": "Nicalis, Inc.",
+        "price": 14.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 290579,
+        "release_date": "Nov 4, 2014",
+        "rating": "rp"
+    },
+    {
+        "name": "Skullgirls 2nd Encore",
+        "description": "--Main Stage Game at Evo 2022!-- The ultimate Skullgirls experience: Featuring 14 hand-animated characters, fully voiced story mode, countless palettes, and unparalleled GGPO-based multiplayer netcode.",
+        "developer": "Hidden Variable Studios",
+        "publisher": "Autumn Games",
+        "price": 24.99,
+        "metacritic": 83,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Action",
+            "Indie"
+        ],
+        "recommendations": 28240,
+        "release_date": "Aug 22, 2013",
+        "rating": "t"
+    },
+    {
+        "name": "Borderlands 2",
+        "description": "The Ultimate Vault Hunter\u2019s Upgrade lets you get the most out of the Borderlands 2 experience.",
+        "developer": "Gearbox Software",
+        "publisher": "2K",
+        "price": 19.99,
+        "metacritic": 89,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "RPG"
+        ],
+        "recommendations": 198388,
+        "release_date": "Sep 17, 2012",
+        "rating": "m"
+    },
+    {
+        "name": "Cuphead",
+        "description": "Cuphead is a classic run and gun action game heavily focused on boss battles. Inspired by cartoons of the 1930s, the visuals and audio are painstakingly created with the same techniques of the era, i.e. traditional hand drawn cel animation, watercolor backgrounds, and original jazz recordings.",
+        "developer": "Studio MDHR Entertainment Inc.",
+        "publisher": "Studio MDHR Entertainment Inc.",
+        "price": 19.99,
+        "metacritic": 88,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "Indie"
+        ],
+        "recommendations": 156753,
+        "release_date": "Sep 29, 2017",
+        "rating": "e10"
+    },
+    {
+        "name": "Sid Meier's Civilization\u00ae V",
+        "description": "Create, discover, and download new player-created maps, scenarios, interfaces, and more!",
+        "developer": "Firaxis Games",
+        "publisher": "2K",
+        "price": 29.99,
+        "metacritic": 90,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Strategy"
+        ],
+        "recommendations": 122219,
+        "release_date": "Sep 21, 2010",
+        "rating": "e10"
+    },
+    {
+        "name": "METAL GEAR RISING: REVENGEANCE",
+        "description": "Developed by Kojima Productions and PlatinumGames, METAL GEAR RISING: REVENGEANCE takes the renowned METAL GEAR franchise into exciting new territory with an all-new action experience. The game seamlessly melds pure action and epic story-telling that surrounds Raiden \u2013 a child soldier transformed into a half-human, half-cyborg ninja who...",
+        "developer": "PlatinumGames",
+        "publisher": "KONAMI",
+        "price": 29.99,
+        "metacritic": 83,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 62541,
+        "release_date": "Jan 9, 2014",
+        "rating": "m"
+    },
+    {
+        "name": "Left 4 Dead 2",
+        "description": "Set in the zombie apocalypse, Left 4 Dead 2 (L4D2) is the highly anticipated sequel to the award-winning Left 4 Dead, the #1 co-op game of 2008. This co-operative action horror FPS takes you and your friends through the cities, swamps and cemeteries of the Deep South, from Savannah to New Orleans across five expansive campaigns.",
+        "developer": "Valve",
+        "publisher": "Valve",
+        "price": 9.99,
+        "metacritic": 89,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 704486,
+        "release_date": "Nov 16, 2009",
+        "rating": "m"
+    },
+    {
+        "name": "The Banner Saga",
+        "description": "Live through an epic role-playing Viking saga where your strategic choices directly affect your personal journey. Make allies as you travel with your caravan across this stunning yet harsh landscape. Carefully choose those who will help fight a new threat that jeopardizes an entire civilization.",
+        "developer": "Stoic",
+        "publisher": "Stoic Studio",
+        "price": 24.99,
+        "metacritic": 80,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Indie",
+            "RPG",
+            "Strategy"
+        ],
+        "recommendations": 12972,
+        "release_date": "Jan 14, 2014",
+        "rating": "t"
+    },
+    {
+        "name": "XCOM: Enemy Unknown",
+        "description": "The XCOM: Enemy Unknown - Slingshot Pack is Now Available!",
+        "developer": "Firaxis Games",
+        "publisher": "2K",
+        "price": 29.99,
+        "metacritic": 89,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Strategy"
+        ],
+        "recommendations": 37963,
+        "release_date": "Oct 8, 2012",
+        "rating": "m"
+    },
+    {
+        "name": "Resident Evil 4 (2005)",
+        "description": "(Release: 2014) Special agent Leon S. Kennedy is sent on a mission to rescue the U.S. President\u2019s daughter who has been kidnapped.",
+        "developer": "Capcom",
+        "publisher": "Capcom",
+        "price": 19.99,
+        "metacritic": 79,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "recommendations": 62366,
+        "release_date": "Feb 27, 2014",
+        "rating": "m"
+    },
+    {
+        "name": "METAL GEAR SOLID V: THE PHANTOM PAIN",
+        "description": "Ushering in a new era for the METAL GEAR franchise with cutting-edge technology powered by the Fox Engine, METAL GEAR SOLID V: The Phantom Pain, will provide players a first-rate gaming experience as they are offered tactical freedom to carry out open-world missions.",
+        "developer": "KONAMI",
+        "publisher": "KONAMI",
+        "price": 19.99,
+        "metacritic": 91,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "recommendations": 64664,
+        "release_date": "Sep 1, 2015",
+        "rating": "m"
+    },
+    {
+        "name": "Valkyria Chronicles\u2122",
+        "description": "The critically acclaimed Valkyria Chronicles is now available on PC in 1080p True HD, including all previously released DLC!",
+        "developer": "SEGA",
+        "publisher": "SEGA",
+        "price": 19.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "RPG",
+            "Strategy"
+        ],
+        "recommendations": 10328,
+        "release_date": "Nov 11, 2014",
+        "rating": "t"
+    },
+    {
+        "name": "BattleBlock Theater\u00ae",
+        "description": "Welcome to BattleBlock Theater! You\u2019ve got no where to go but up...on stage. Play single player or co-op to free your friends and save Hatty Hattington! Jump, solve and battle your way through a mysterious theater inhabited by highly technological felines.",
+        "developer": "The Behemoth",
+        "publisher": "The Behemoth",
+        "price": 14.99,
+        "metacritic": 85,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Casual",
+            "Indie"
+        ],
+        "recommendations": 54246,
+        "release_date": "May 15, 2014",
+        "rating": "t"
+    },
+    {
+        "name": "Shadowrun: Dragonfall - Director's Cut",
+        "description": "Harebrained Schemes' biggest Shadowrun game to date, and the definitive Shadowrun RPG experience available on PC. Now a standalone title with tons of new content &amp; improvements!",
+        "developer": "Harebrained Schemes",
+        "publisher": "Paradox Interactive",
+        "price": 14.99,
+        "metacritic": 87,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Indie",
+            "RPG",
+            "Strategy"
+        ],
+        "recommendations": 5110,
+        "release_date": "Sep 18, 2014",
+        "rating": "rp"
+    },
+    {
+        "name": "Infinifactory",
+        "description": "Infinifactory is a sandbox puzzle game by Zachtronics, the creators of SpaceChem and Infiniminer. Build factories that assemble products for your alien overlords, and try not to die in the process.",
+        "developer": "Zachtronics",
+        "publisher": "Zachtronics",
+        "price": 24.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Indie",
+            "Simulation"
+        ],
+        "recommendations": 1725,
+        "release_date": "Jun 30, 2015",
+        "rating": "t"
+    },
+    {
+        "name": "FINAL FANTASY\u00ae XIII",
+        "description": "Final Fantasy XIII is a fantasy RPG in which a band of brave humans struggle against fate in the utopian sky city of Cocoon and the primeval world of Pulse. Follow stylish heroine Lightning's fast paced battles and high adventure in a mysterious new world.",
+        "developer": "Square Enix",
+        "publisher": "Square Enix",
+        "price": 15.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "RPG"
+        ],
+        "recommendations": 14077,
+        "release_date": "Oct 9, 2014",
+        "rating": "t"
+    },
+    {
+        "name": "INSIDE",
+        "description": "Hunted and alone, a boy finds himself drawn into the center of a dark project. INSIDE is a dark, narrative-driven platformer combining intense action with challenging puzzles. It has been critically acclaimed for its moody art style, ambient soundtrack and unsettling atmosphere.",
+        "developer": "Playdead",
+        "publisher": "Playdead",
+        "price": 19.99,
+        "metacritic": 87,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 58983,
+        "release_date": "Jul 7, 2016",
+        "rating": "m"
+    },
+    {
+        "name": "Street Fighter V",
+        "description": "Experience the intensity of head-to-head battles with Street Fighter\u00ae V! Choose from 16 iconic characters, then battle against friends online or offline with a robust variety of match options.",
+        "developer": "CAPCOM Co., Ltd.",
+        "publisher": "CAPCOM Co., Ltd.",
+        "price": 19.99,
+        "metacritic": 89,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 27187,
+        "release_date": "Feb 15, 2016",
+        "rating": "t"
+    },
+    {
+        "name": "Enter the Gungeon",
+        "description": "Enter the Gungeon is a bullet hell dungeon crawler following a band of misfits seeking to shoot, loot, dodge roll and table-flip their way to personal absolution by reaching the legendary Gungeon\u2019s ultimate treasure: the gun that can kill the past.",
+        "developer": "Dodge Roll",
+        "publisher": "Devolver Digital",
+        "price": 14.99,
+        "metacritic": 84,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 72629,
+        "release_date": "Apr 5, 2016",
+        "rating": "t"
+    },
+    {
+        "name": "Rain World",
+        "description": "You are a nomadic slugcat, both predator and prey in a broken ecosystem. Grab your spear and brave the industrial wastes, hunting enough food to survive, but be wary\u2014 other, bigger creatures have the same plan... and slugcats look delicious.",
+        "developer": "Videocult",
+        "publisher": "Akupara Games",
+        "price": 24.99,
+        "metacritic": 66,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 29976,
+        "release_date": "Mar 28, 2017",
+        "rating": "rp"
+    },
+    {
+        "name": "Resident Evil 5",
+        "description": "This game is a port of the Games for Windows - Live version that was released in 2009. If you buy the Untold Stories Bundle here on Steam, it will be the same as upgrading to Resident Evil 5 Gold Edition.",
+        "developer": "Capcom",
+        "publisher": "Capcom",
+        "price": 19.99,
+        "metacritic": 86,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "recommendations": 33006,
+        "release_date": "Sep 15, 2009",
+        "rating": "m"
+    },
+    {
+        "name": "Costume Quest 2",
+        "description": "A sequel to the popular Halloween adventure from Double Fine Productions!",
+        "developer": "Double Fine Productions",
+        "publisher": "Midnight City ",
+        "price": 14.99,
+        "metacritic": 68,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Casual",
+            "RPG"
+        ],
+        "recommendations": 702,
+        "release_date": "Oct 7, 2014",
+        "rating": "e10"
+    },
+    {
+        "name": "Resident Evil",
+        "description": "The game that defined the survival-horror genre is back! Check out the remastered HD version of Resident Evil.",
+        "developer": "CAPCOM Co., Ltd.",
+        "publisher": "CAPCOM Co., Ltd.",
+        "price": 19.99,
+        "metacritic": 82,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "recommendations": 19011,
+        "release_date": "Jan 19, 2015",
+        "rating": "m"
+    },
+    {
+        "name": "Dragon's Dogma: Dark Arisen",
+        "description": "Set in a huge open world, Dragon\u2019s Dogma: Dark Arisen presents a rewarding action combat experience.",
+        "developer": "Capcom",
+        "publisher": "Capcom",
+        "price": 29.99,
+        "metacritic": 81,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "RPG"
+        ],
+        "recommendations": 34945,
+        "release_date": "Jan 15, 2016",
+        "rating": "m"
+    },
+    {
+        "name": "Devil May Cry 4 Special Edition",
+        "description": "The smash-hit stylish action game DMC4 is back and better than ever, boasting new playable characters and game modes!",
+        "developer": "CAPCOM Co., Ltd.",
+        "publisher": "CAPCOM Co., Ltd. ",
+        "price": 24.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 12627,
+        "release_date": "Jun 23, 2015",
+        "rating": "m"
+    },
+    {
+        "name": "ABZU",
+        "description": "From the art director of Journey\u00ae, ABZ\u00db is a beautiful underwater adventure that evokes the dream of diving. Immerse yourself in a vibrant hidden world bursting with color and life as you descend into the heart of the ocean. But beware as you swim deeper as dangers lurk in the depths.",
+        "developer": "Giant Squid",
+        "publisher": "505 Games",
+        "price": 19.99,
+        "metacritic": 83,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Casual",
+            "Indie",
+            "Simulation"
+        ],
+        "recommendations": 20317,
+        "release_date": "Aug 2, 2016",
+        "rating": "e"
+    },
+    {
+        "name": "Ori and the Blind Forest: Definitive Edition",
+        "description": "\u201cOri and the Blind Forest\u201d tells the tale of a young orphan destined for heroics, through a visually stunning Action-Platformer crafted by Moon Studios.",
+        "developer": "Moon Studios GmbH",
+        "publisher": "Xbox Game Studios",
+        "price": 19.99,
+        "metacritic": 88,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 57110,
+        "release_date": "Apr 27, 2016",
+        "rating": "e"
+    },
+    {
+        "name": "Undertale",
+        "description": "UNDERTALE! The RPG game where you don't have to destroy anyone.",
+        "developer": "tobyfox",
+        "publisher": "tobyfox",
+        "price": 9.99,
+        "metacritic": 92,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Indie",
+            "RPG"
+        ],
+        "recommendations": 221060,
+        "release_date": "Sep 15, 2015",
+        "rating": "rp"
+    },
+    {
+        "name": "Wuppo: Definitive Edition",
+        "description": "Play as an exiled 'wum' looking for a new home in this bizarre but charming world, filled with strange creatures, puzzles, monsters and political chaos.",
+        "developer": "snekflat",
+        "publisher": "SOEDESCO",
+        "price": 14.99,
+        "metacritic": 78,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Indie",
+            "RPG"
+        ],
+        "recommendations": 4647,
+        "release_date": "Sep 29, 2016",
+        "rating": "e"
+    },
+    {
+        "name": "Stardew Valley",
+        "description": "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?",
+        "developer": "ConcernedApe",
+        "publisher": "ConcernedApe",
+        "price": 14.99,
+        "metacritic": 89,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Indie",
+            "RPG",
+            "Simulation"
+        ],
+        "recommendations": 715147,
+        "release_date": "Feb 26, 2016",
+        "rating": "e10"
+    },
+    {
+        "name": "Resident Evil 7 Biohazard",
+        "description": "Fear and isolation seep through the walls of an abandoned southern farmhouse. &quot;7&quot; marks a new beginning for survival horror with the \u201cIsolated View\u201d of the visceral new first-person perspective.",
+        "developer": "CAPCOM Co., Ltd.",
+        "publisher": "CAPCOM Co., Ltd.",
+        "price": 19.99,
+        "metacritic": 83,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "recommendations": 62549,
+        "release_date": "Jan 23, 2017",
+        "rating": "m"
+    },
+    {
+        "name": "Devil Daggers",
+        "description": "Devil Daggers is a fast-paced shooter that places you in an abyssal arena to face endless legions of demons. Armed with versatile magic daggers and a fluid movement system, fight to survive as long as you can.",
+        "developer": "Sorath",
+        "publisher": "Sorath",
+        "price": 9.99,
+        "metacritic": 83,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Indie"
+        ],
+        "recommendations": 6941,
+        "release_date": "Feb 18, 2016",
+        "rating": "rp"
+    },
+    {
+        "name": "Resident Evil 0",
+        "description": "Before the mansion, before the destruction of Raccoon City, there was Resident Evil 0. Now remastered with improved visuals and sounds, as well as the all-new Wesker Mode, there's never been a better time to experience the origins of the Resident Evil story.",
+        "developer": "CAPCOM Co., Ltd.",
+        "publisher": "CAPCOM Co., Ltd.",
+        "price": 19.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "recommendations": 9225,
+        "release_date": "Jan 19, 2016",
+        "rating": "m"
+    },
+    {
+        "name": "DARK SOULS\u2122 III",
+        "description": "Dark Souls continues to push the boundaries with the latest, ambitious chapter in the critically-acclaimed and genre-defining series. Prepare yourself and Embrace The Darkness!",
+        "developer": "FromSoftware, Inc.",
+        "publisher": "FromSoftware, Inc.",
+        "price": 59.99,
+        "metacritic": 89,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 255016,
+        "release_date": "Apr 11, 2016",
+        "rating": "m"
+    },
+    {
+        "name": "Parkitect",
+        "description": "Parkitect is a business simulation game that charges you with the construction and management of theme parks! Bringing back the best of classic theme park games with many new features and content on top. Now supports online co-op with up to 8 players!",
+        "developer": "Texel Raptor",
+        "publisher": "Texel Raptor",
+        "price": 29.99,
+        "metacritic": 83,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Casual",
+            "Indie",
+            "Simulation",
+            "Strategy"
+        ],
+        "recommendations": 6205,
+        "release_date": "Nov 29, 2018",
+        "rating": "rp"
+    },
+    {
+        "name": "Bayonetta",
+        "description": "PlatinumGames\u2019 universally acclaimed action masterpiece finally comes to PC. Experience the over-the-top stylish action in 60fps at unlocked HD resolutions. The definitive way to play: being bad never felt so good.",
+        "developer": "PlatinumGames",
+        "publisher": "SEGA",
+        "price": 19.99,
+        "metacritic": 90,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "recommendations": 23638,
+        "release_date": "Apr 11, 2017",
+        "rating": "m"
+    },
+    {
+        "name": "Vanquish",
+        "description": "PlatinumGames\u2019 revolutionary sci-fi action shooter slide-boosts onto PC. Battle legions of future-tech enemies using a vast arsenal of weapons, including all DLC. Fully unlocked framerate and gorgeous HD resolutions up to 4K. The definitive way to play: war has accelerated.",
+        "developer": "PlatinumGames",
+        "publisher": "SEGA",
+        "price": 19.99,
+        "metacritic": 78,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 6109,
+        "release_date": "May 25, 2017",
+        "rating": "m"
+    },
+    {
+        "name": "DOOM",
+        "description": "Now includes all three premium DLC packs (Unto the Evil, Hell Followed, and Bloodfall), maps, modes, and weapons, as well as all feature updates including Arcade Mode, Photo Mode, and the latest Update 6.66, which brings further multiplayer improvements as well as revamps multiplayer progression.",
+        "developer": "id Software",
+        "publisher": "Bethesda Softworks",
+        "price": 19.99,
+        "metacritic": 85,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 134432,
+        "release_date": "May 12, 2016",
+        "rating": "m"
+    },
+    {
+        "name": "BERSERK and the Band of the Hawk",
+        "description": "Behold the fierce blend of &quot;Warriors&quot; and &quot;Berserk&quot;!",
+        "developer": "KOEI TECMO GAMES CO., LTD.",
+        "publisher": "KOEI TECMO GAMES CO., LTD.",
+        "price": 59.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 3165,
+        "release_date": "Feb 21, 2017",
+        "rating": "m"
+    },
+    {
+        "name": "SHENZHEN I/O",
+        "description": "BUILD CIRCUITS. WRITE CODE. RTFM.",
+        "developer": "Zachtronics",
+        "publisher": "Zachtronics",
+        "price": 14.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Indie",
+            "Simulation"
+        ],
+        "recommendations": 3351,
+        "release_date": "Nov 17, 2016",
+        "rating": "t"
+    },
+    {
+        "name": "Mortal Kombat X",
+        "description": "Experience the Next Generation of the #1 Fighting Franchise. Mortal Kombat X combines unparalleled, cinematic presentation with all new gameplay.",
+        "developer": "NetherRealm Studios",
+        "publisher": "Warner Bros. Games",
+        "price": 19.99,
+        "metacritic": 84,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 35143,
+        "release_date": "Apr 13, 2015",
+        "rating": "m"
+    },
+    {
+        "name": "Opus Magnum",
+        "description": "Opus Magnum is the latest open-ended puzzle game from Zachtronics, the creators of SpaceChem, Infinifactory, and SHENZHEN I/O. Design and build machines that assemble potions, poisons, and more using the alchemical engineer\u2019s most advanced tool: the transmutation engine!",
+        "developer": "Zachtronics",
+        "publisher": "Zachtronics",
+        "price": 19.99,
+        "metacritic": 90,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Indie",
+            "Simulation"
+        ],
+        "recommendations": 4686,
+        "release_date": "Dec 7, 2017",
+        "rating": "t"
+    },
+    {
+        "name": "MORDHAU",
+        "description": "MORDHAU is a multiplayer medieval slasher. Create your mercenary and fight in brutal battles where you will experience fast paced combat, castle sieges, cavalry charges, and more.",
+        "developer": "Triternion",
+        "publisher": "Triternion",
+        "price": 29.99,
+        "metacritic": 81,
+        "categories": [
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "Indie"
+        ],
+        "recommendations": 90755,
+        "release_date": "Apr 29, 2019",
+        "rating": "rp"
+    },
+    {
+        "name": "Risk of Rain 2",
+        "description": "Escape a chaotic alien planet by fighting through hordes of frenzied monsters \u2013 with your friends, or on your own. Combine loot in surprising ways and master each character until you become the havoc you feared upon your first crash landing.",
+        "developer": "Hopoo Games",
+        "publisher": "Gearbox Publishing",
+        "price": 24.99,
+        "metacritic": 85,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "Indie"
+        ],
+        "recommendations": 204646,
+        "release_date": "Aug 11, 2020",
+        "rating": "t"
+    },
+    {
+        "name": "They Are Billions",
+        "description": "They Are Billions is a Steampunk strategy game set on a post-apocalyptic planet. Build and defend colonies to survive against the billions of the infected that seek to annihilate the few remaining living humans. Can humanity survive after the zombie apocalypse?",
+        "developer": "Numantian Games",
+        "publisher": "Numantian Games",
+        "price": 29.99,
+        "metacritic": 77,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Strategy"
+        ],
+        "recommendations": 42622,
+        "release_date": "Jun 18, 2019",
+        "rating": "rp"
+    },
+    {
+        "name": "Return of the Obra Dinn",
+        "description": "Lost at sea 1803 ~ The good ship Obra Dinn.",
+        "developer": "Lucas Pope",
+        "publisher": "3909",
+        "price": 19.99,
+        "metacritic": 89,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 25223,
+        "release_date": "Oct 18, 2018",
+        "rating": "rp"
+    },
+    {
+        "name": "AMID EVIL",
+        "description": "A retro FPS for the ages! Once branded a HERETIC. Now YOU have been chosen as our champion! Reclaim our sacred weapons. Take back our ancient lands. If you can stand... AMID EVIL.",
+        "developer": "Indefatigable",
+        "publisher": "New Blood Interactive",
+        "price": 19.99,
+        "metacritic": 85,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 6050,
+        "release_date": "Jun 20, 2019",
+        "rating": "rp"
+    },
+    {
+        "name": "Overcooked! 2",
+        "description": "Overcooked returns with a brand-new helping of chaotic cooking action! Journey back to the Onion Kingdom and assemble your team of chefs in classic couch co-op or online play for up to four players. Hold onto your aprons\u2026 it\u2019s time to save the world again!",
+        "developer": "Ghost Town Games Ltd.",
+        "publisher": "Team17",
+        "price": 24.99,
+        "metacritic": 81,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "Casual",
+            "Indie"
+        ],
+        "recommendations": 49682,
+        "release_date": "Aug 7, 2018",
+        "rating": "e"
+    },
+    {
+        "name": "Forager",
+        "description": "The highly popular and quirky &quot;idle game that you want to actively keep playing&quot;. Explore, craft, gather &amp; manage resources, find secrets and build your base out of nothing! Buy land to explore and expand!",
+        "developer": "HopFrog",
+        "publisher": "Humble Games",
+        "price": 19.99,
+        "metacritic": 78,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Indie",
+            "Simulation"
+        ],
+        "recommendations": 32242,
+        "release_date": "Apr 18, 2019",
+        "rating": "e10"
+    },
+    {
+        "name": "Resident Evil 2",
+        "description": "A deadly virus engulfs the residents of Raccoon City in September of 1998, plunging the city into chaos as flesh eating zombies roam the streets for survivors. An unparalleled adrenaline rush, gripping storyline, and unimaginable horrors await you. Witness the return of Resident Evil 2.",
+        "developer": "CAPCOM Co., Ltd.",
+        "publisher": "CAPCOM Co., Ltd.",
+        "price": 39.99,
+        "metacritic": 89,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 112851,
+        "release_date": "Jan 24, 2019",
+        "rating": "m"
+    },
+    {
+        "name": "THE LONGING",
+        "description": "An unusual mix of adventure and idle game. In utter loneliness deep below the surface, it's your task to wait for the awakening of your king... for 400 days.",
+        "developer": "Studio Seufz",
+        "publisher": "Application Systems Heidelberg",
+        "price": 14.99,
+        "metacritic": 79,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Indie",
+            "RPG"
+        ],
+        "recommendations": 6013,
+        "release_date": "Mar 5, 2020",
+        "rating": "rp"
+    },
+    {
+        "name": "DUSK",
+        "description": "Battle through an onslaught of mystical backwater cultists, possessed militants &amp; even darker forces as you attempt to discover just what lurks beneath the Earth in this retro FPS inspired by the '90s legends.",
+        "developer": "David Szymanski",
+        "publisher": "New Blood Interactive",
+        "price": 19.99,
+        "metacritic": 88,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Action",
+            "Indie"
+        ],
+        "recommendations": 19782,
+        "release_date": "Dec 10, 2018",
+        "rating": "rp"
+    },
+    {
+        "name": "Sekiro\u2122: Shadows Die Twice - GOTY Edition",
+        "description": "Game of the Year - The Game Awards 2019 Best Action Game of 2019 - IGN Carve your own clever path to vengeance in the award winning adventure from developer FromSoftware, creators of Bloodborne and the Dark Souls series. Take Revenge. Restore Your Honor. Kill Ingeniously.",
+        "developer": "FromSoftware, Inc.",
+        "publisher": "Activision (Excluding Japan and Asia)",
+        "price": 59.99,
+        "metacritic": 88,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "recommendations": 225027,
+        "release_date": "Mar 21, 2019",
+        "rating": "m"
+    },
+    {
+        "name": "Devil May Cry 5",
+        "description": "The ultimate Devil Hunter is back in style, in the game action fans have been waiting for.",
+        "developer": "CAPCOM Co., Ltd.",
+        "publisher": "CAPCOM Co., Ltd.",
+        "price": 29.99,
+        "metacritic": 89,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 89950,
+        "release_date": "Mar 7, 2019",
+        "rating": "m"
+    },
+    {
+        "name": "Inscryption",
+        "description": "Inscryption is an inky black card-based odyssey that blends the deckbuilding roguelike, escape-room style puzzles, and psychological horror into a blood-laced smoothie. Darker still are the secrets inscrybed upon the cards...",
+        "developer": "Daniel Mullins Games",
+        "publisher": "Devolver Digital",
+        "price": 19.99,
+        "metacritic": 85,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Indie",
+            "Strategy"
+        ],
+        "recommendations": 115363,
+        "release_date": "Oct 19, 2021",
+        "rating": "rp"
+    },
+    {
+        "name": "Rogue Legacy 2",
+        "description": "Rogue Legacy 2 is what you'd get if you mashed Rogue Legacy and a sequel together. Every time you die, your children will succeed you, and each child is unique. Your daughter might be a Colourblind Archer, and your son could be a Pacifistic Chef. Either way, one of them is getting conscripted.",
+        "developer": "Cellar Door Games",
+        "publisher": "Cellar Door Games",
+        "price": 24.99,
+        "metacritic": 88,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Indie",
+            "RPG"
+        ],
+        "recommendations": 13433,
+        "release_date": "Apr 28, 2022",
+        "rating": "rp"
+    },
+    {
+        "name": "Street Fighter\u2122 6",
+        "description": "Here comes Capcom\u2019s newest challenger! Street Fighter\u2122 6 launches worldwide on June 2nd, 2023 and represents the next evolution of the Street Fighter\u2122 series! Street Fighter 6 spans three distinct game modes, including World Tour, Fighting Ground and Battle Hub.",
+        "developer": "CAPCOM Co., Ltd.",
+        "publisher": "CAPCOM Co., Ltd.",
+        "price": 59.99,
+        "metacritic": 92,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "recommendations": 32095,
+        "release_date": "Jun 1, 2023",
+        "rating": "t"
+    },
+    {
+        "name": "GUILTY GEAR -STRIVE-",
+        "description": "The cutting-edge 2D/3D hybrid graphics pioneered in the Guilty Gear series have been raised to the next level in \u201cGUILTY GEAR -STRIVE-\u201c. The new artistic direction and improved character animations will go beyond anything you\u2019ve seen before in a fighting game!",
+        "developer": "Arc System Works",
+        "publisher": "Arc System Works",
+        "price": 39.99,
+        "metacritic": 85,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 40641,
+        "release_date": "Jun 11, 2021",
+        "rating": "t"
+    },
+    {
+        "name": "Tetris\u00ae Effect: Connected",
+        "description": "Tetris\u00ae Effect: Connected adds an all-new robust multiplayer expansion to the huge variety of addictive and innovative single-player modes that Tetris Effect is known for, with all-new co-op and competitive online and local multiplayer modes!",
+        "developer": "Monstars Inc.",
+        "publisher": "Enhance",
+        "price": 39.99,
+        "metacritic": 93,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Casual",
+            "Indie"
+        ],
+        "recommendations": 7073,
+        "release_date": "Aug 17, 2021",
+        "rating": "rp"
+    },
+    {
+        "name": "We Love Katamari REROLL+ Royal Reverie",
+        "description": "The second title in the Katamari Damacy series has returned in a remastered, powered-up version! This new REROLL comes with improved graphics and gameplay enhancements. In Royal Reverie, roll up katamari as the King of All Cosmos in his boyhood!",
+        "developer": "MONKEYCRAFT Co. Ltd.",
+        "publisher": "Bandai Namco Entertainment",
+        "price": 29.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 1558,
+        "release_date": "Jun 1, 2023",
+        "rating": "e"
+    },
+    {
+        "name": "Vampire Survivors",
+        "description": "Mow down thousands of night creatures and survive until dawn! Vampire Survivors is a gothic horror casual game with rogue-lite elements, where your choices can allow you to quickly snowball against the hundreds of monsters that get thrown at you.",
+        "developer": "poncle",
+        "publisher": "poncle",
+        "price": 4.99,
+        "metacritic": 86,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Casual",
+            "Indie",
+            "RPG"
+        ],
+        "recommendations": 232623,
+        "release_date": "Oct 20, 2022",
+        "rating": "rp"
+    },
+    {
+        "name": "Hi-Fi RUSH",
+        "description": "Test your abilities in two new game modes, uncover new rewards and even a few secrets in the Arcade Challenge! Update! Feel the beat as wannabe rockstar Chai and his ragtag team fight against an evil megacorp in a world that syncs to the music.",
+        "developer": "Tango Gameworks",
+        "publisher": "Bethesda Softworks",
+        "price": 29.99,
+        "metacritic": 90,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 25316,
+        "release_date": "Jan 25, 2023",
+        "rating": "t"
+    },
+    {
+        "name": "DEATH STRANDING DIRECTOR'S CUT",
+        "description": "From legendary game creator Hideo Kojima comes a genre-defying experience, now expanded in this definitive DIRECTOR\u2019S CUT. As Sam Bridges, your mission is to deliver hope to humanity by connecting the last survivors of a decimated America. Can you reunite the shattered world, one step at a time?",
+        "developer": "KOJIMA PRODUCTIONS",
+        "publisher": " 505 Games",
+        "price": 39.99,
+        "metacritic": 85,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "recommendations": 24423,
+        "release_date": "Mar 30, 2022",
+        "rating": "m"
+    },
+    {
+        "name": "TEKKEN 8",
+        "description": "Get ready for the next chapter in the legendary fighting game franchise, TEKKEN 8.",
+        "developer": "Bandai Namco Studios Inc.",
+        "publisher": "Bandai Namco Entertainment",
+        "price": 69.99,
+        "metacritic": 91,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 29999,
+        "release_date": "Jan 25, 2024",
+        "rating": "t"
+    },
+    {
+        "name": "KILL KNIGHT",
+        "description": "KILL KNIGHT is an ultra-responsive arcade-inspired isometric action shooter. Condemned to eternal sufferance, deep within the voids of an eldritch arena, you must wield an arsenal of devastating weaponry to obliterate swarms of otherworldly horrors - and MASTER THE DEMON WITHIN.",
+        "developer": "PlaySide",
+        "publisher": "PlaySide",
+        "price": 14.99,
+        "metacritic": 88,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 1140,
+        "release_date": "Oct 2, 2024",
+        "rating": "rp"
+    },
+    {
+        "name": "Deathwish Enforcers Special Edition",
+        "description": "A gritty, non-stop blood bath from the creator of Insanity's Blade, Super Battle Princess Madelyn and the recently released GuardGrave. And a parody of beloved 60s and 70s classic action films, heroes and villains. Deathwish Enforcers... There's gonna be hell to pay!",
+        "developer": "Monster Bath Games Inc.",
+        "publisher": "Monster Bath Games Inc.",
+        "price": 19.99,
+        "metacritic": 81,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 0,
+        "release_date": "Feb 14, 2024",
+        "rating": "rp"
+    },
+    {
+        "name": "The Void Project",
+        "description": "Fight through relentless demon hordes in a fast-paced and retro-inspired arena shooter, where mastering speed, strategy, and precision will push you to the top of the leaderboard.",
+        "developer": "Silver Demon Studios",
+        "publisher": "Silver Demon Studios",
+        "price": 5.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "Oct 31, 2024",
+        "rating": "t"
+    },
+    {
+        "name": "Rails Across America",
+        "description": "Rails Across America is a game of railroad empires in North America, covering the period from 1830 to the near future. It is a real-time strategy game with a &quot;sim&quot; flavor. Rails allows hundreds of tracks with thousands of trains crossing the continent.",
+        "developer": "Flying Lab Software",
+        "publisher": "Strategy First",
+        "price": 9.99,
+        "metacritic": 81,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Simulation",
+            "Strategy"
+        ],
+        "recommendations": 0,
+        "release_date": "Jan 6, 2024",
+        "rating": "e"
+    },
+    {
+        "name": "Metaphor: ReFantazio",
+        "description": "The throne sits empty after the king\u2019s assassination. With no heirs, the will of the late king decrees that the next monarch will be elected by the people, &amp; thus begins your fight for the throne..",
+        "developer": "ATLUS",
+        "publisher": "SEGA",
+        "price": 69.99,
+        "metacritic": 92,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "RPG"
+        ],
+        "recommendations": 16038,
+        "release_date": "Oct 10, 2024",
+        "rating": "t"
+    },
+    {
+        "name": "Indiana Jones and the Great Circle",
+        "description": "Uncover one of history\u2019s greatest mysteries in a first-person, single-player adventure. The year is 1937, sinister forces are scouring the globe for the secret to an ancient power connected to the Great Circle, and only one person can stop them - Indiana Jones\u2122.",
+        "developer": "MachineGames",
+        "publisher": "Bethesda Softworks",
+        "price": 69.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "recommendations": 5550,
+        "release_date": "Dec 8, 2024",
+        "rating": "t"
+    },
+    {
+        "name": "Darklands: The Chapters",
+        "description": "Darklands is a role-playing game divided into chapters, in which you are a Cowboy who invades computer systems, and a young college student looking for answers.",
+        "developer": "Issedone Studios",
+        "publisher": "Light Orb",
+        "price": 2.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "RPG"
+        ],
+        "recommendations": 0,
+        "release_date": "Jan 20, 2024",
+        "rating": "t"
+    },
+    {
+        "name": "Bear Jojo",
+        "description": "Embark on a whimsical adventure with Bear JoJo in this all-ages arcade game. Enjoy challenging gameplay and discover enchanting surprises along the way!",
+        "developer": "Hayq Studios",
+        "publisher": "Hayq Studios",
+        "price": 2.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Casual",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "Apr 4, 2024",
+        "rating": "e"
+    },
+    {
+        "name": "A Game About Flicking A Switch",
+        "description": "It's you, in room, with a big switch on the wall. What more could you ask for in groundbreaking, forward reaching, out-of-this-world game design? Nothing. This is the peak of gaming.",
+        "developer": "Barry Knoll",
+        "publisher": "Barry Knoll",
+        "price": 1.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Casual",
+            "Indie",
+            "Simulation"
+        ],
+        "recommendations": 0,
+        "release_date": "Feb 13, 2024",
+        "rating": "e"
+    },
+    {
+        "name": "Sunrise GP",
+        "description": "A classic racer with a sunny twist. Enjoy up to 4p splitscreen, crazy bosozoku like tuning, leaderboards, cell-shaded graphics, synthwave music, and laid-back vibes. Grand Prix is waiting for you!",
+        "developer": "Garage 5",
+        "publisher": "Gamedust",
+        "price": 14.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "Casual",
+            "Indie",
+            "Racing",
+            "Simulation",
+            "Sports"
+        ],
+        "recommendations": 0,
+        "release_date": "Aug 27, 2024",
+        "rating": "e"
+    },
+    {
+        "name": "Red Dead Redemption",
+        "description": "Experience the story of former outlaw John Marston as he tracks down the last remaining members of the notorious Van der Linde Gang in the PC debut of the critically acclaimed predecessor to Red Dead Redemption 2.",
+        "developer": "Rockstar Games",
+        "publisher": "Rockstar Games",
+        "price": 49.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 6937,
+        "release_date": "Oct 29, 2024",
+        "rating": "m"
+    },
+    {
+        "name": "Paper Work",
+        "description": "Navigate a thrilling blend of fast-paced action and RPG looting as you make deals, undertake missions, sign contracts, and raise your character level inside of the urban dungeon crawler Paper Work.",
+        "developer": "Dreamworld",
+        "publisher": "Realitygaming",
+        "price": 9.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "RPG",
+            "Early Access"
+        ],
+        "recommendations": 0,
+        "release_date": "Dec 22, 2023",
+        "rating": "m"
+    },
+    {
+        "name": "The Elder Scrolls Online: Gold Road",
+        "description": "A forgotten Daedric Prince has returned, bringing chaos to West Weald! Explore a new zone and defend the city of Skingrad, now beset by a dangerous Daedric cult and the jungles of Valenwood. Customize your skills like never before with the new Scribing system.",
+        "developer": "ZeniMax Online Studios",
+        "publisher": "Bethesda Softworks",
+        "price": 39.99,
+        "metacritic": null,
+        "categories": [
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Massively Multiplayer",
+            "RPG"
+        ],
+        "recommendations": 274,
+        "release_date": "Jun 3, 2024",
+        "rating": "m"
+    },
+    {
+        "name": "Star Trek: Resurgence",
+        "description": "Authentic Star Trek adventure from former members of Telltale Games. Engage in diplomacy, pilot shuttlecraft, and use your tricorder and phaser to overcome challenging puzzles and deadly threats. Tough decisions will impact relationships, your story, and the fate of the galaxy. What will YOU do?",
+        "developer": "Dramatic Labs",
+        "publisher": "Bruner House",
+        "price": 24.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure"
+        ],
+        "recommendations": 1690,
+        "release_date": "May 23, 2024",
+        "rating": "t"
+    },
+    {
+        "name": "The Outforce",
+        "description": "In the 25th century, humanity fights for survival, having abandoned Earth due to a devastating asteroid impact. They now strive to settle in Epsilon Eridani, a nearby star system. Upon reaching their destination, the colonists find themselves entangled in an unforeseen intergalactic conflict.",
+        "developer": "O3 Games",
+        "publisher": "Strategy First",
+        "price": 9.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Strategy"
+        ],
+        "recommendations": 0,
+        "release_date": "Jan 6, 2024",
+        "rating": "t"
+    },
+    {
+        "name": "Shadow Vault",
+        "description": "Shadow Vault is a Strategy RPG that will pit you against an evil government army of mutants hell bent on world domination. Set during a violent time in Earth's alternate history, you must battle the heavily armed forces of the Contingent government and take back your planet!",
+        "developer": "Mayhem Studios",
+        "publisher": "Strategy First",
+        "price": 9.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "RPG"
+        ],
+        "recommendations": 0,
+        "release_date": "Jan 6, 2024",
+        "rating": "t"
+    },
+    {
+        "name": "Dragon Throne: Battle of Red Cliffs",
+        "description": "An epic real-time strategy game set in chaotic Ancient China. Control the kingdoms of Liu Bei, Sun Quan, or Cao Cao, warlords who played a pivotal role in Ancient China. Lead your kingdom, innovate tech, forge alliances, build a formidable army to unite the nation.",
+        "developer": "Object Software",
+        "publisher": "Strategy First",
+        "price": 9.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "RPG",
+            "Strategy"
+        ],
+        "recommendations": 137,
+        "release_date": "Jan 6, 2024",
+        "rating": "t"
+    },
+    {
+        "name": "Redneck Bowl Games",
+        "description": "Bowling without the bowling ball both lethal and non-lethal play in unusual Bowling Arenas.",
+        "developer": "Veteran Games USA",
+        "publisher": "William Crosby",
+        "price": 9.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Simulation",
+            "Sports"
+        ],
+        "recommendations": 0,
+        "release_date": "Nov 13, 2023",
+        "rating": "e"
+    },
+    {
+        "name": "Arranger: A Role-Puzzling Adventure",
+        "description": "Find your way in a world of breezy, thoughtful puzzles, along a charming journey of self-discovery.",
+        "developer": "Furniture & Mattress LLC",
+        "publisher": "Furniture & Mattress LLC",
+        "price": 19.99,
+        "metacritic": 82,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Indie",
+            "RPG"
+        ],
+        "recommendations": 177,
+        "release_date": "Jul 25, 2024",
+        "rating": "rp"
+    },
+    {
+        "name": "Turbo Chicken Simulator",
+        "description": "Turbo Chicken Simulator is an immersive, open-world action RPG. Play as a super-powered chicken in an expansive world. Explore, fight enemies to level up, unlock superpowers, embark on epic quests, drive and customize vehicles, cook, fish, customize your character, and much more!",
+        "developer": "Balkanware",
+        "publisher": "Frozen Pixel",
+        "price": 14.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "RPG",
+            "Early Access"
+        ],
+        "recommendations": 0,
+        "release_date": "Dec 15, 2023",
+        "rating": "e"
+    },
+    {
+        "name": "Plinko : Ball Falling 3D-2D",
+        "description": "Classic Plinko Game With New Theme and Challenge",
+        "developer": "ALI A.M",
+        "publisher": "ALI A.M",
+        "price": 0.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Casual"
+        ],
+        "recommendations": 0,
+        "release_date": "Sep 14, 2023",
+        "rating": "m"
+    },
+    {
+        "name": "Eden Genesis",
+        "description": "Help Leah overcome a serious illness caused by her cybernetic implants. In this a platformer from the creators of Aeterna Noctis, you will face hundreds of challenges and secrets that unravel the mystery of Eden Genesis. Live this Cyberpunk 2D adventure.",
+        "developer": "Aeternum Game Studios S.L",
+        "publisher": "Aeternum Game Studios S.L",
+        "price": 24.99,
+        "metacritic": 74,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "recommendations": 0,
+        "release_date": "Aug 6, 2024",
+        "rating": "rp"
+    },
+    {
+        "name": "Beyond Good & Evil - 20th Anniversary Edition",
+        "description": "Embark on this epic adventure in up to 4K 60 fps with improved graphics and audio, a new speedrun mode, updated achievements, and an exclusive anniversary gallery.",
+        "developer": "Ubisoft",
+        "publisher": "Ubisoft",
+        "price": 19.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "recommendations": 937,
+        "release_date": "Jun 24, 2024",
+        "rating": "t"
+    },
+    {
+        "name": "The Karate Kid: Street Rumble",
+        "description": "Dominate the dojo in The Karate Kid: Street Rumble, a pixel art beat \u2018em up adventure. Grab your friends for local co-op multiplayer and dive into the classic The Karate Kid journey with retro-style gameplay, dynamic combat, and epic boss battles.",
+        "developer": "Odaclick Game Studio",
+        "publisher": "GameMill Entertainment",
+        "price": 39.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 0,
+        "release_date": "Sep 20, 2024",
+        "rating": "e10"
+    },
+    {
+        "name": "Hive Jump 2: Survivors",
+        "description": "Become an agent of vengeance in this bullet-heaven action roguelite! You are the lone survivor of your squad, on an alien planet with just your weapon, a jetpack, and the courage to keep fighting. Kill off alien swarms and transform their valuable guts into explosive upgrades and vital utilities.",
+        "developer": "Graphite Lab",
+        "publisher": "Midwest Games",
+        "price": 6.99,
+        "metacritic": 76,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Casual",
+            "Indie",
+            "RPG"
+        ],
+        "recommendations": 0,
+        "release_date": "Sep 10, 2024",
+        "rating": "rp"
+    },
+    {
+        "name": "Tormenture",
+        "description": "Tormenture is a psychological horror game where you play as a child trapped in a cursed 8-bit game with a dark secret. To survive, you must find four relics and solve reality-blurring puzzles. But beware\u2014some creatures may escape the game and haunt you in the real world. A game within a game.",
+        "developer": "Croxel Studios",
+        "publisher": "Billete Cohete",
+        "price": 14.99,
+        "metacritic": 78,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 133,
+        "release_date": "Oct 21, 2024",
+        "rating": "rp"
+    },
+    {
+        "name": "Broken Sword - Shadow of the Templars: Reforged",
+        "description": "The classic multi-award winning adventure &quot;Broken Sword - the Shadow of the Templars&quot; returns with glorious 4K visuals and iconic remastered audio, pitching intrepid American George Stobbart and fearless journalist Nico Collard into a journey of perilous adventures and ancient conspiracies.",
+        "developer": "Revolution Software Ltd",
+        "publisher": "Revolution Software Ltd",
+        "price": 29.99,
+        "metacritic": 84,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Casual",
+            "Indie"
+        ],
+        "recommendations": 409,
+        "release_date": "Sep 19, 2024",
+        "rating": "rp"
+    },
+    {
+        "name": "The puzzle of blocks",
+        "description": "Infinite challenges, millions of innings with different levels of difficulty.",
+        "developer": "Zhou Yuan",
+        "publisher": "Zhou Yuan",
+        "price": 5.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Casual",
+            "Sports",
+            "Strategy"
+        ],
+        "recommendations": 0,
+        "release_date": "Oct 8, 2023",
+        "rating": "rp"
+    },
+    {
+        "name": "Teenage Mutant Ninja Turtles Arcade: Wrath of the Mutants",
+        "description": "Re-experience the 2017 arcade classic with 3 additional stages and 6 additional boss battles! Take control of Leonardo, Michelangelo, Donatello or Raphael in this classic beat-em-up inspired by the cult favorite Turtles in Time. Play with your friends through 4 player local co-op",
+        "developer": "Cradle Games",
+        "publisher": "GameMill Entertainment",
+        "price": 29.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 0,
+        "release_date": "Apr 23, 2024",
+        "rating": "e10"
+    },
+    {
+        "name": "The Legend of Legacy HD Remastered",
+        "description": "RPG fans rejoice as the classic fantasy of Legend of Legacy is remastered in HD and debuting on Steam!",
+        "developer": "FURYU Corporation",
+        "publisher": "NIS America, Inc.",
+        "price": 49.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "RPG"
+        ],
+        "recommendations": 0,
+        "release_date": "Mar 22, 2024",
+        "rating": "e10"
+    },
+    {
+        "name": "JurassicDragon and the Binary Relic",
+        "description": "JurassicDragon and the Binary Relic invites the player to explore the secrets of the museum and to escape the grovelling fiend. dodge, press and explore the mysterious facility to find what is lurking within.",
+        "developer": "access computer services ltd",
+        "publisher": "access computer services ltd",
+        "price": 2.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Casual",
+            "Indie",
+            "Simulation"
+        ],
+        "recommendations": 0,
+        "release_date": "Aug 4, 2023",
+        "rating": "e10"
+    },
+    {
+        "name": "Kunitsu-Gami: Path of the Goddess",
+        "description": "A new tale of the Kami awaits... Kunitsu-Gami: Path of the Goddess is a unique Japanese-inspired, single player Kagura Action Strategy game.",
+        "developer": "CAPCOM Co., Ltd.",
+        "publisher": "CAPCOM Co., Ltd.",
+        "price": 49.99,
+        "metacritic": 85,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Strategy"
+        ],
+        "recommendations": 1322,
+        "release_date": "Jul 18, 2024",
+        "rating": "t"
+    },
+    {
+        "name": "Farmagia",
+        "description": "Command an army of monsters in this all-new action game featuring character designs by famed manga artist Hiro Mashima. Take a stand to free the people of Felicidad as a Farmagia named Ten when monster farming, adventure, and hectic battles come together in an epic tale of rebellion and friendship.",
+        "developer": "Marvelous Inc.",
+        "publisher": "XSEED Games",
+        "price": 49.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "RPG"
+        ],
+        "recommendations": 0,
+        "release_date": "Nov 1, 2024",
+        "rating": "t"
+    },
+    {
+        "name": "Guayota",
+        "description": "Unveil the darkest secrets of Saint Brendan\u2019s Island, the paradise on Earth, in this 3D Puzzle-Adventure game. Only equipped with a torch, walk through ancient gods\u2019 temples and solve their enigmas.",
+        "developer": "Team Delusion",
+        "publisher": "Dear Villagers",
+        "price": 14.99,
+        "metacritic": 66,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "Aug 13, 2024",
+        "rating": "rp"
+    },
+    {
+        "name": "Dual Family I - IX",
+        "description": "Choose one of two characters and experience the same splitting household from opposing perspectives. With choices made in these dual campaigns being completely up to you, make or break the relationships with those you hold dear!",
+        "developer": "Gumdrop Games",
+        "publisher": "Gumdrop Games",
+        "price": 6.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Casual",
+            "Indie",
+            "Simulation"
+        ],
+        "recommendations": 170,
+        "release_date": "Sep 16, 2019",
+        "rating": "rp"
+    },
+    {
+        "name": "RollingSky2",
+        "description": "As a sequel to a world renowned rhythm game \u201cRolling sky\u201d, Rolling sky2 is a game where you can easily initiate an incredibly marvelous adventure by simple finger movements. Featuring challenging missions yet beginner-friendly gaming experience, the game is also a combination of anime movie and top-notch original soundtrack which will...",
+        "developer": "Cheetah Mobile Inc.",
+        "publisher": "Rising Win Tech. CO., LTD",
+        "price": 12.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Casual",
+            "Racing"
+        ],
+        "recommendations": 114,
+        "release_date": "Mar 31, 2020",
+        "rating": "e"
+    },
+    {
+        "name": "Kwaidan \uff5eAzuma manor story\uff5e",
+        "description": "Seamlessly combining 3D action and point-click adventure, &quot;Kwaidan&quot; provides a nostalgic-yet-new experience. Explore old Japanese manor and solve the clever puzzles set there, and fight against monsters called Yoki.",
+        "developer": "\u6c42\u9053\u5eb5\uff08gudouan\uff09",
+        "publisher": "Mediascape Co.,Ltd.",
+        "price": 24.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "Jan 31, 2020",
+        "rating": "t"
+    },
+    {
+        "name": "PULSOR",
+        "description": "PULSOR is a fast paced shoot em' up space arcade game where you orbit a black hole. Use your quick reactions and aim to blast the obstacles in your way !",
+        "developer": "robotrage",
+        "publisher": "RR Productions",
+        "price": 0.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Casual",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "May 10, 2019",
+        "rating": "e"
+    },
+    {
+        "name": "PARTY BINGO",
+        "description": "This game is four kinds of party games arranged BINGO.",
+        "developer": "SIMS CO., LTD.",
+        "publisher": "SIMS CO., LTD.",
+        "price": 1.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Casual"
+        ],
+        "recommendations": 0,
+        "release_date": "May 2, 2019",
+        "rating": "e"
+    },
+    {
+        "name": "Transport Fever 2",
+        "description": "The classic transport simulation genre has a new gold standard with Transport Fever 2. Discover a whole new world by navigating transport routes through land, water and air. May progress and prosperity find their way!",
+        "developer": "Urban Games",
+        "publisher": "Good Shepherd Entertainment",
+        "price": 39.99,
+        "metacritic": 76,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Casual",
+            "Indie",
+            "Simulation",
+            "Strategy"
+        ],
+        "recommendations": 21246,
+        "release_date": "Dec 11, 2019",
+        "rating": "rp"
+    },
+    {
+        "name": "Heroland",
+        "description": "Looking for a magical getaway? Yearning to go on an epic quest? Excited about waiting in line for overpriced merch? Then grab a sword and your annual pass, because Heroland awaits!",
+        "developer": "FURYU Corporation",
+        "publisher": "XSEED Games",
+        "price": 19.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "RPG"
+        ],
+        "recommendations": 0,
+        "release_date": "Dec 3, 2019",
+        "rating": "t"
+    },
+    {
+        "name": "Truck Life",
+        "description": "Brand new truck simulation game, experience fun from a variety of truck driving. Drive around the original Chinese map, complete hundreds of specialty tasks through different cities. Meet in the mountains, rivers, lakes and seas. Let\u2019s share your truck life.",
+        "developer": "\u60ca\u53f9\u53f7\u6e38\u620f\u5de5\u4f5c\u5ba4",
+        "publisher": "\u60ca\u53f9\u53f7\u6e38\u620f\u5de5\u4f5c\u5ba4",
+        "price": 19.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Casual",
+            "Indie",
+            "Simulation",
+            "Sports"
+        ],
+        "recommendations": 1363,
+        "release_date": "Aug 6, 2020",
+        "rating": "e10"
+    },
+    {
+        "name": "Devolver Bootleg",
+        "description": "Devolver Bootleg contains eight original rip-offs of Devolver Digital games. Pay money for it now.",
+        "developer": "doinksoft",
+        "publisher": "Devolver Digital",
+        "price": 4.99,
+        "metacritic": 69,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Casual",
+            "Indie",
+            "Sports"
+        ],
+        "recommendations": 1000,
+        "release_date": "Jun 9, 2019",
+        "rating": "rp"
+    },
+    {
+        "name": "Evil West",
+        "description": "A dark menace consumes the Old West. In solo or coop, fight with style in visceral, explosive combat against bloodthirsty monstrosities. Eradicate the vampiric hordes with your lightning-fueled gauntlet and become a Wild West Superhero.",
+        "developer": "Flying Wild Hog",
+        "publisher": "Focus Entertainment",
+        "price": 49.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "RPG"
+        ],
+        "recommendations": 7379,
+        "release_date": "Nov 21, 2022",
+        "rating": "m"
+    },
+    {
+        "name": "Tank Battle Heroes: Esports War",
+        "description": "Join an epic war on the battlefield! Lead your tank to victory. Tank Battle Heroes is a game that allows you to play single-player and multiplayer PVP. Take on enemy forces, upgrade your machine and stand on the top in the ranking!",
+        "developer": "T-Bull",
+        "publisher": "T-Bull",
+        "price": 0.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Action",
+            "Indie",
+            "Strategy"
+        ],
+        "recommendations": 0,
+        "release_date": "Feb 3, 2022",
+        "rating": "t"
+    },
+    {
+        "name": "OddBallers",
+        "description": "OddBallers\u2122 is a totally bonkers multiplayer party game where each round is a new, absurd type of dodgeball.",
+        "developer": "Game Swing",
+        "publisher": "Ubisoft",
+        "price": 19.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Action",
+            "Casual",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "Aug 15, 2024",
+        "rating": "e10"
+    },
+    {
+        "name": "Still There",
+        "description": "Every day is the same on the faraway Bento space-lighthouse - until a mysterious radio message breaks through. Evade the past, welcome oblivion, make the perfect Italian coffee. Still There is a psychological adventure game about grief, technical puzzles, wacky AIs and dark humour. How far is far enough?",
+        "developer": "GhostShark",
+        "publisher": "Iceberg Interactive",
+        "price": 14.99,
+        "metacritic": 77,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure"
+        ],
+        "recommendations": 710,
+        "release_date": "Nov 20, 2019",
+        "rating": "rp"
+    },
+    {
+        "name": "Bendy and the Dark Revival",
+        "description": "Bendy and the Dark Revival\u00ae is a first-person survival horror game set in the creepiest cartoon studio to ever exist. Discover the truth. Escape the studio. Above all, fear the Ink Demon\u2026and survive.",
+        "developer": "Joey Drew Studios",
+        "publisher": "Joey Drew Studios",
+        "price": 29.99,
+        "metacritic": 72,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "recommendations": 10909,
+        "release_date": "Nov 15, 2022",
+        "rating": "t"
+    },
+    {
+        "name": "New World: Aeternum",
+        "description": "Experience a thrilling action RPG set on the supernatural island of Aeternum. Forge your destiny on an adventure filled with danger and opportunity.",
+        "developer": "Amazon Games",
+        "publisher": "Amazon Games",
+        "price": 59.99,
+        "metacritic": null,
+        "categories": [
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Massively Multiplayer",
+            "RPG"
+        ],
+        "recommendations": 244221,
+        "release_date": "Sep 28, 2021",
+        "rating": "t"
+    },
+    {
+        "name": "Ben 10: Power Trip",
+        "description": "Evil Hex has cursed Europe \u2013 and only Ben 10 can stop him! Explore a 3D world filled with combat, puzzles and secrets as you save the day!",
+        "developer": "PHL Collective",
+        "publisher": "Outright Games Ltd.",
+        "price": 29.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "recommendations": 243,
+        "release_date": "Oct 9, 2020",
+        "rating": "e10"
+    },
+    {
+        "name": "6120",
+        "description": "The history of the driver, Alexander Rasputin, he goes on an internship to manage the train, and enters the paranormal world with his mentor. You have to uncover the secret of the train 6120, and its passengers!",
+        "developer": "indie_games_studio",
+        "publisher": "indie_games_studio",
+        "price": 4.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "Apr 19, 2019",
+        "rating": "m"
+    },
+    {
+        "name": "Vane",
+        "description": "In a ruined desert, a strange golden dust transforms a free-spirited bird into a determined young child, setting off a chain of events that will reshape the world itself.",
+        "developer": "Friend & Foe Games",
+        "publisher": "Friend & Foe Games",
+        "price": 19.99,
+        "metacritic": 63,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Casual",
+            "Indie"
+        ],
+        "recommendations": 162,
+        "release_date": "Jul 22, 2019",
+        "rating": "rp"
+    },
+    {
+        "name": "Inkbound",
+        "description": "A turn-based tactical roguelike from the creators of Monster Train. Play solo or co-op, create powerful builds, and save the Atheneum.",
+        "developer": "Shiny Shoe",
+        "publisher": "Shiny Shoe",
+        "price": 29.99,
+        "metacritic": 80,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "RPG",
+            "Strategy"
+        ],
+        "recommendations": 3110,
+        "release_date": "Apr 9, 2024",
+        "rating": "rp"
+    },
+    {
+        "name": "Frank & the TimeTwister Machine",
+        "description": "After being dragged to the TimeTwister Machine, Frank must fight his way back home!",
+        "developer": "Mind Flayer Studios",
+        "publisher": "Mind Flayer Studios",
+        "price": 9.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "May 3, 2019",
+        "rating": "e"
+    },
+    {
+        "name": "Conan Chop Chop",
+        "description": "Conan Chop Chop is a party roguelite for 1-4 players full of mayhem, loot, and adventure. In this outrageous take on Conan the Barbarian, you are the muscle-bound hero foolish enough to try and stop the evil wizard Thoth-Amon!",
+        "developer": "Mighty Kingdom",
+        "publisher": "Funcom",
+        "price": 14.99,
+        "metacritic": 72,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 405,
+        "release_date": "Mar 1, 2022",
+        "rating": "rp"
+    },
+    {
+        "name": "Dragon Star Varnir",
+        "description": "Fight in 3-tiered battles, devour your enemies, and customize your characters in this epic RPG to end the dragon's curse!",
+        "developer": "Idea Factory, Compile Heart",
+        "publisher": "Idea Factory International",
+        "price": 39.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "RPG"
+        ],
+        "recommendations": 415,
+        "release_date": "Oct 8, 2019",
+        "rating": "t"
+    },
+    {
+        "name": "UNSIGHTED",
+        "description": "EXPLORE YOUR WAY. Awoken to a world ruined by war, Alma must traverse the vast city of Arcadia before the life force of her friends and herself withers away. Time is ticking, and every moment matters. Who will you save, and who will you leave to turn UNSIGHTED?",
+        "developer": "Studio Pixel Punk",
+        "publisher": "Humble Games",
+        "price": 19.99,
+        "metacritic": 84,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Indie",
+            "RPG"
+        ],
+        "recommendations": 1487,
+        "release_date": "Sep 30, 2021",
+        "rating": "rp"
+    },
+    {
+        "name": "Garden Story",
+        "description": "Embark on a wholesome adventure to save The Grove! Forage resources, combat the invasive Rot, and restore the community. Relax and enjoy the fruits of your labor in this charming action-RPG starring a grape.",
+        "developer": "Picogram",
+        "publisher": "Rose City Games",
+        "price": 19.99,
+        "metacritic": 70,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Indie",
+            "RPG"
+        ],
+        "recommendations": 1140,
+        "release_date": "Aug 11, 2021",
+        "rating": "rp"
+    },
+    {
+        "name": "Sneak In: a sphere matcher game",
+        "description": "Sneak In is a marble shoot game with the theme of Amazonian Jungle. It is easy to play, but truly addictive. Your goal is to clear all the marbles before they reach the end of the path, and meanwhile, achieve Marbles and Combos as many as possible to get the highest score.",
+        "developer": "Binogure Studio \ud83d\udc3a",
+        "publisher": "Binogure Studio \ud83d\udc3a",
+        "price": 2.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Casual"
+        ],
+        "recommendations": 0,
+        "release_date": "Oct 15, 2020",
+        "rating": "e"
+    },
+    {
+        "name": "Super Monkey Ball: Banana Blitz HD",
+        "description": "Hold onto your bananas, because Super Monkey Ball: Banana Blitz HD is rolling your way! Experience the magic of one of the most beloved titles in the series, now remastered in HD!",
+        "developer": "SEGA",
+        "publisher": "SEGA",
+        "price": 29.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 297,
+        "release_date": "Dec 10, 2019",
+        "rating": "e10"
+    },
+    {
+        "name": "Crumble",
+        "description": "Crumble is a dynamic physics platformer. Move like a Slime, jump like a ball, swing like Spiderman!",
+        "developer": "BRUTE FORCE",
+        "publisher": "BRUTE FORCE",
+        "price": 14.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Indie",
+            "Racing"
+        ],
+        "recommendations": 611,
+        "release_date": "Dec 4, 2020",
+        "rating": "e"
+    },
+    {
+        "name": "Lair of the Clockwork God",
+        "description": "A fast-paced Point-and-Click adventure AND an indie platfomer in one! Join adventurer Ben and wannabe indie darling Dan in a race against time to stop all the Apocalypses happening at the same time.",
+        "developer": "Size Five Games",
+        "publisher": "Size Five Games",
+        "price": 19.99,
+        "metacritic": 84,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Casual",
+            "Indie"
+        ],
+        "recommendations": 648,
+        "release_date": "Feb 21, 2020",
+        "rating": "rp"
+    },
+    {
+        "name": "Disaster Report 4: Summer Memories",
+        "description": "In the shadow of a massive earthquake, you must brave a destroyed city where your choices will determine who survives.",
+        "developer": "Granzella Inc.",
+        "publisher": "NIS America, Inc.",
+        "price": 59.99,
+        "metacritic": 58,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "recommendations": 391,
+        "release_date": "Apr 7, 2020",
+        "rating": "t"
+    },
+    {
+        "name": "Langrisser I & II",
+        "description": "The battle between light and chaos comes to a head in this remake of legendary Strategy RPGs Langrisser I and Langrisser II.",
+        "developer": "Chara-ani Corporation",
+        "publisher": "NIS America, Inc.",
+        "price": 49.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "RPG",
+            "Strategy"
+        ],
+        "recommendations": 756,
+        "release_date": "Mar 10, 2020",
+        "rating": "t"
+    },
+    {
+        "name": "Tribe: Primitive Builder",
+        "description": "Chill out as you explore the beautiful, realistic island of exiles. Gather resources, craft tools, construct buildings and settlements. Manage tribe and automate your gameplay. Discover 4 lands, a storyline and save the inhabitants of the island.",
+        "developer": "Space Boat Studios",
+        "publisher": "PlayWay S.A.",
+        "price": 19.99,
+        "metacritic": 64,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Casual",
+            "Simulation"
+        ],
+        "recommendations": 532,
+        "release_date": "Oct 12, 2023",
+        "rating": "rp"
+    },
+    {
+        "name": "Trombone Champ",
+        "description": "Honk, blow, &amp; toot your way through over 60 songs, collect all 50 unique Tromboner Cards, and uncover the mysteries of the Trombiverse. Do you have what it takes to become the true Trombone Champ?",
+        "developer": "Holy Wow Studios LLC",
+        "publisher": "Holy Wow Studios LLC",
+        "price": 14.99,
+        "metacritic": 82,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Casual",
+            "Indie"
+        ],
+        "recommendations": 8846,
+        "release_date": "Sep 15, 2022",
+        "rating": "rp"
+    },
+    {
+        "name": "Ritual: Crown of Horns",
+        "description": "Ritual: Crown of Horns is a violent, horde mode, top-down fast-paced action game set in an alternate Wild West, an absurd, acid-fueled vision of hellish frontier.",
+        "developer": "Draw Distance",
+        "publisher": "Feardemic",
+        "price": 19.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "Nov 7, 2019",
+        "rating": "t"
+    },
+    {
+        "name": "The Renovator",
+        "description": "In this game you\u2019re an experienced restorer currently working in a museum workshop. The restorer\u2019s friend requested him to fix some old exhibits. From that moment his adventure starts.",
+        "developer": "mirzagame5",
+        "publisher": "mirzagame5",
+        "price": 0.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "Apr 17, 2019",
+        "rating": "rp"
+    },
+    {
+        "name": "Beyond The Wire",
+        "description": "Set in the muddy trenches of WW1, Beyond The Wire is a 50v50 multiplayer FPS that immerses players in the desperate &amp; brutal circumstances of the Great War. Featuring an arsenal of historic weapons, ten massive maps, ten playable factions, era-specific tanks, &amp; a brutal melee combat system.",
+        "developer": "Redstone Interactive",
+        "publisher": "Offworld",
+        "price": 9.99,
+        "metacritic": null,
+        "categories": [
+            "Multi-player"
+        ],
+        "genres": [
+            "Action",
+            "Indie",
+            "Massively Multiplayer",
+            "Simulation",
+            "Strategy"
+        ],
+        "recommendations": 5144,
+        "release_date": "Aug 31, 2022",
+        "rating": "m"
+    },
+    {
+        "name": "Signs of the Sojourner",
+        "description": "In this narrative card game about relationships and communication, navigate conversations in a colorful world reminiscent of our own. Learn and grow through the cards you choose to play. Who will you become? What will you leave behind?",
+        "developer": "Echodog Games",
+        "publisher": "Echodog Games",
+        "price": 19.99,
+        "metacritic": 77,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Casual",
+            "Indie",
+            "RPG"
+        ],
+        "recommendations": 145,
+        "release_date": "May 14, 2020",
+        "rating": "rp"
+    },
+    {
+        "name": "AntQueen 3D",
+        "description": "Experience a game where you live through the cycle of an ant colony. You can dig your own tunnels, organize your colony, customize your army, but you need to survive every wave of attack!",
+        "developer": "Fernando Dudka",
+        "publisher": "Les Technologies inVantage",
+        "price": 15.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Indie",
+            "Simulation",
+            "Strategy"
+        ],
+        "recommendations": 0,
+        "release_date": "Nov 1, 2019",
+        "rating": "e"
+    },
+    {
+        "name": "Toki",
+        "description": "The return of the wacky monkey!Toki sets off on a new adventure! The cult action/platform game originally released on arcade machines in 1989 is back with a super-simian new version, featuring all-new hand-drawn graphics and re-orchestrated music!",
+        "developer": "Microids",
+        "publisher": "Microids",
+        "price": 19.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure"
+        ],
+        "recommendations": 335,
+        "release_date": "Jun 7, 2019",
+        "rating": "e10"
+    },
+    {
+        "name": "Fort Boyard",
+        "description": "Enter Fort Boyard and take up the challenge with more than 10 activities that combine Action and Party Games! Endurance, dexterity, and perseverance will be your best assets for collecting boyard coins.",
+        "developer": "Appeal Studio",
+        "publisher": "Microids",
+        "price": 24.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action",
+            "Sports"
+        ],
+        "recommendations": 0,
+        "release_date": "Jun 27, 2019",
+        "rating": "e"
+    },
+    {
+        "name": "Funny Bunny: Adventures",
+        "description": "Nice looking and fun game, that develops logical thinking and responsivity. It is highly recommended for children!",
+        "developer": "mPower Games Studio",
+        "publisher": "mPower Games Studio",
+        "price": 9.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Casual",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "Apr 24, 2019",
+        "rating": "e"
+    },
+    {
+        "name": "Floppy Knights",
+        "description": "Meet the Floppy Knights: tangible projections summoned from floppy disks! Tactics fuse with card game mechanics as Phoebe and Carlton, a brilliant young inventor &amp; her robot-arm bestie, square off in turn-based battles. Select your Knights, hone your deck, and execute your strategy for victory!",
+        "developer": "Rose City Games",
+        "publisher": "Rose City Games",
+        "price": 19.99,
+        "metacritic": 83,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Indie",
+            "Strategy"
+        ],
+        "recommendations": 266,
+        "release_date": "May 24, 2022",
+        "rating": "rp"
+    },
+    {
+        "name": "Radiant Arc",
+        "description": "Want to remember the classic JRPG experience? Look no further than the embodiment of references that is Radiant Arc! Explore an open world as you work to become a beacon of hope in a world about to be consumed in darkness!",
+        "developer": "Linky317",
+        "publisher": "YuBui Studios",
+        "price": 5.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Indie",
+            "RPG"
+        ],
+        "recommendations": 0,
+        "release_date": "May 30, 2019",
+        "rating": "t"
+    },
+    {
+        "name": "Rebound Dodgeball Evolved",
+        "description": "Rebound Dodgeball Evolved is an intense local multiplayer twin-stick sci-fi dodgeball game. An out of control mess of crazed rebounding action! There is nowhere to hide with the top down camera, so you better stay on the move! The game is 2-4 players in a free-for-all deathmatch arena.",
+        "developer": "Hexterion",
+        "publisher": "Hexterion",
+        "price": 14.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Indie",
+            "Sports"
+        ],
+        "recommendations": 0,
+        "release_date": "Sep 20, 2019",
+        "rating": "e10"
+    },
+    {
+        "name": "Wolfenstein: Youngblood",
+        "description": "Wolfenstein: Youngblood is the first modern co-op Wolfenstein adventure. Team up with a friend or play solo as one of BJ Blazkowicz\u2019s twin daughters and wield a powerful arsenal of new weapons, gadgets, and abilities to liberate Paris from the Nazis.",
+        "developer": "Machine Games",
+        "publisher": "Bethesda Softworks",
+        "price": 19.99,
+        "metacritic": 69,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 11163,
+        "release_date": "Jul 25, 2019",
+        "rating": "m"
+    },
+    {
+        "name": "Wolfenstein: Cyberpilot",
+        "description": "Wolfenstein\u00ae: Cyberpilot\u2122 brings virtual reality to the revolution against the Nazis.",
+        "developer": "Arkane Studios",
+        "publisher": "Bethesda Softworks",
+        "price": 19.99,
+        "metacritic": 54,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 271,
+        "release_date": "Jul 25, 2019",
+        "rating": "m"
+    },
+    {
+        "name": "Ori and the Will of the Wisps",
+        "description": "Play the critically acclaimed masterpiece. Embark on a new journey in a vast, exotic world where you\u2019ll encounter towering enemies and challenging puzzles on your quest to unravel Ori\u2019s destiny.",
+        "developer": "Moon Studios GmbH",
+        "publisher": "Xbox Game Studios",
+        "price": 29.99,
+        "metacritic": 88,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 123470,
+        "release_date": "Mar 10, 2020",
+        "rating": "e"
+    },
+    {
+        "name": "Cathedral",
+        "description": "Make your way through more than 600 rooms, and unravel the secrets of your past by finding the five elemental orbs. Cathedral features a vast world, meant for exploring!",
+        "developer": "Decemberborn Interactive",
+        "publisher": "Decemberborn Interactive",
+        "price": 14.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 261,
+        "release_date": "Oct 31, 2019",
+        "rating": "e10"
+    },
+    {
+        "name": "Island Town Zombie Paradise",
+        "description": "Island Town is a one man made project that was created as a learning experience for game development. The game features 4 weapons, 6 cars, 3 dimensions of the same map, two dimensions with over 200 zombies throughout the map, and one daytime dimension with no zombies to explore.",
+        "developer": "Island Town",
+        "publisher": "Island Town",
+        "price": 0.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Casual",
+            "Indie",
+            "Racing",
+            "Early Access"
+        ],
+        "recommendations": 0,
+        "release_date": "Apr 26, 2019",
+        "rating": "rp"
+    },
+    {
+        "name": "Sentenced",
+        "description": "Sentenced combines the oppressive horror atmosphere and the complexity of survival, mixed with its stealth system and permadeath. In the depths of the labyrinth, a variety of monsters will not leave a place where you could relax in safety.",
+        "developer": "Vitalij Kurjata",
+        "publisher": "Vitalij Kurjata",
+        "price": 1.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "Apr 26, 2019",
+        "rating": "m"
+    },
+    {
+        "name": "A Short Hike",
+        "description": "Hike, climb, and soar through the peaceful mountainside landscapes of Hawk Peak Provincial Park as you make your way to the summit.",
+        "developer": "adamgryu",
+        "publisher": "adamgryu",
+        "price": 7.99,
+        "metacritic": 82,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 15132,
+        "release_date": "Jul 30, 2019",
+        "rating": "e"
+    },
+    {
+        "name": "Race With Ryan",
+        "description": "Ryan\u2019s World has come to life, and it\u2019s every bit as colorful, fun and fast as you imagined. So pick a racer, head to one of six magical locations, and step on the gas to show your friends and family who the fastest racer really is.",
+        "developer": "3DClouds",
+        "publisher": "Outright Games Ltd.",
+        "price": 24.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Casual",
+            "Racing"
+        ],
+        "recommendations": 0,
+        "release_date": "Nov 1, 2019",
+        "rating": "e"
+    },
+    {
+        "name": "EndlessHell",
+        "description": "Endless Hell is a third-person action game. The game advances through a linear process, killing monsters to gain resources, improving their skill level, and killing the boss to the next level by killing the level.",
+        "developer": "Virtual Journey Studio",
+        "publisher": "Virtual Journey Studio",
+        "price": 1.88,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Indie",
+            "RPG"
+        ],
+        "recommendations": 0,
+        "release_date": "Apr 17, 2019",
+        "rating": "t"
+    },
+    {
+        "name": "Sir Lovelot",
+        "description": "Sir Lovelot is on a quest to find the love of his life. Join him in this wacky tight platformer, where impressing cheeky damsels is harder than a heart of stone!",
+        "developer": "pixel games SARL-S",
+        "publisher": "pixel games SARL-S",
+        "price": 9.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "Mar 3, 2021",
+        "rating": "t"
+    },
+    {
+        "name": "Wingspan",
+        "description": "Wingspan is a relaxing, award-winning strategy card game about birds for 1 to 5 players. Each bird you play extends a chain of powerful combinations in one of your three habitats. Your goal is to discover and attract the best birds to your network of wildlife preserves.",
+        "developer": "Monster Couch",
+        "publisher": "Monster Couch",
+        "price": 19.99,
+        "metacritic": 84,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Indie",
+            "Strategy"
+        ],
+        "recommendations": 8020,
+        "release_date": "Sep 17, 2020",
+        "rating": "rp"
+    },
+    {
+        "name": "Driven Out",
+        "description": "Beautiful 16 bit retro art style with fluid animations and deliberate combat. Read the enemy and act accordingly in this seamless world without any load screens.",
+        "developer": "No Pest Productions",
+        "publisher": "Jens Kolhammar",
+        "price": 14.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 216,
+        "release_date": "Oct 18, 2019",
+        "rating": "t"
+    },
+    {
+        "name": "Emergency Water Landing",
+        "description": "Emergency Water Landing is a local multiplayer party game, where a sinking aircraft is the least of your worries. Control high powered rescue rafts, while competing against opponents to save passengers from imminent danger, launching them to their presumable safety.",
+        "developer": "Burnt Bag Studios",
+        "publisher": "Burnt Bag Studios",
+        "price": 3.99,
+        "metacritic": null,
+        "categories": [
+            "Multi-player"
+        ],
+        "genres": [
+            "Action",
+            "Casual",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "Apr 19, 2019",
+        "rating": "e10"
+    },
+    {
+        "name": "SCRAP RUSH!!",
+        "description": "Robots compete by gathering junk in this crazy battle!The rules are simple! Use blocks and crush your foes!Play with up to 4 players!",
+        "developer": "ACQUIRE Corp.",
+        "publisher": "ACQUIRE Corp.",
+        "price": 9.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Action",
+            "Casual",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "Jun 19, 2019",
+        "rating": "e"
+    },
+    {
+        "name": "Adecke - Cards Games Deluxe",
+        "description": "Adecke include six cards games. Cultural games played around china, europe and america since the old ages. Cribbage, Military Whist (9), Bull (150) ,Ass-hole, Hockey, Speed",
+        "developer": "Philippe Pelchat",
+        "publisher": "Philippe Pelchat",
+        "price": 4.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Casual"
+        ],
+        "recommendations": 0,
+        "release_date": "Apr 20, 2019",
+        "rating": "t"
+    },
+    {
+        "name": "Star Impact",
+        "description": "Star Impact screams with nostalgic gaming fun! Classic Vibes \u221a Challenging Platforming Indie Gameplay \u221a 80s Synth Soundtrack \u221a Play as Interstellar Pilot Stella Striker. Similar to great classics like Mario, Sonic, and Super Donkey Kong.",
+        "developer": "Me Games",
+        "publisher": "Me Games",
+        "price": 4.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Casual",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "May 13, 2019",
+        "rating": "e"
+    },
+    {
+        "name": "Wanderlust: Travel Stories",
+        "description": "Wanderlust: Travel Stories is a bridge between literature and gaming. Step into the shoes of modern travelers\u2014explore their desires, hopes and fears, and shape how their stories unfold. Make this journey your own.",
+        "developer": "Different Tales",
+        "publisher": "Different Tales",
+        "price": 14.99,
+        "metacritic": 79,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "Sep 26, 2019",
+        "rating": "rp"
+    },
+    {
+        "name": "Animal Friends Adventure",
+        "description": "Having saved his home from a rotting plague, Super Panda embarks on an all new mission to save his beloved forest once more. He must venture through forest, ancient ruins, terrifying forests and more to face off with his ancient nemesis. A game that is perfect for players of all ages.",
+        "developer": "Folkvang Studios, Inc",
+        "publisher": "Folkvang Studios",
+        "price": 4.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Casual",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "May 2, 2019",
+        "rating": "e"
+    },
+    {
+        "name": "Digital Diamond Baseball V8",
+        "description": "Digital Diamond Baseball is a computerized baseball simulator that allows gamers to play individual games, series, or entire seasons, using players from any baseball season in history. Never pay for a new season again!",
+        "developer": "Curiosity Computing",
+        "publisher": "Cass Consulting Inc",
+        "price": 4.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Indie",
+            "Simulation",
+            "Sports",
+            "Strategy"
+        ],
+        "recommendations": 0,
+        "release_date": "Apr 15, 2019",
+        "rating": "e"
+    },
+    {
+        "name": "Wavey The Rocket",
+        "description": "\ud83d\ude80 Play as Wavey the Rocket as he tries to stop the moon from being destroyed by an evil corporation that removes fizz from soda! A precision side scroller like no other, it's hand-crafted and set to some seriously funky hip hop.",
+        "developer": "UpperRoom Games Ltd",
+        "publisher": "UpperRoom Games Ltd",
+        "price": 10.99,
+        "metacritic": 62,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "May 7, 2020",
+        "rating": "rp"
+    },
+    {
+        "name": "Reel Fishing: Road Trip Adventure",
+        "description": "Grab your rod, reel, and adventurous spirit as you join three friends on a summer road trip to remember! Visit a variety of fishing spots, from deep-sea fishing to freshwater stream fishing as you and the gang track down and try to catch the elusive Legendary Fish.",
+        "developer": "Tachyon Inc.",
+        "publisher": "Natsume Inc.",
+        "price": 29.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "RPG",
+            "Sports"
+        ],
+        "recommendations": 0,
+        "release_date": "Sep 17, 2019",
+        "rating": "e"
+    },
+    {
+        "name": "Trover Saves the Universe",
+        "description": "From Squanch Games comes Trover Saves the Universe. Your pups are missing. The cosmos is at stake. Only you and Trover can save everything in this bizarre comedy adventure!",
+        "developer": "Squanch Games, Inc.",
+        "publisher": "Squanch Games, Inc.",
+        "price": 29.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 2656,
+        "release_date": "Jun 4, 2019",
+        "rating": "m"
+    },
+    {
+        "name": "Hitchhiker",
+        "description": "Welcome to the big city where you play god. Control the traffic to get your character to the destination on time. Use power ups like boosts and overtakes to give you an advantage over the other cars. Level up and earn rewards that help your progress through the game.",
+        "developer": "MatthewHall3D",
+        "publisher": "MatthewHall3D",
+        "price": 9.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Casual",
+            "Indie",
+            "Simulation",
+            "Strategy"
+        ],
+        "recommendations": 0,
+        "release_date": "May 3, 2019",
+        "rating": "e"
+    },
+    {
+        "name": "Breaking Bunny",
+        "description": "Welcome at Breaking Bunny! Have Fun!",
+        "developer": "Heinz Poetter",
+        "publisher": "ADE",
+        "price": 0.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Casual",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "Apr 23, 2019",
+        "rating": "e"
+    },
+    {
+        "name": "Bear With Me: The Lost Robots",
+        "description": "Bear With Me: The Lost Robots is an all new prequel chapter featuring Amber\u2019s brother Flint and the callous detective Ted E. Bear. Take to the gritty and bustling undergrounds of Paper City, discovering new characters and rich lore leading up to the events of the first 3 episodes of Bear With Me.",
+        "developer": "Exordium Games",
+        "publisher": "Maximum Entertainment",
+        "price": 4.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "Jul 30, 2019",
+        "rating": "e10"
+    },
+    {
+        "name": "LUNARK",
+        "description": "A pixel-art sci-fi adventure set in the midst of a rebellion against a totalitarian regime, LUNARK is a modern take on the 2D cinematic platformer genre of the '90s. Run, jump, hang, climb, roll, and shoot your way through gorgeous and mysterious locations!",
+        "developer": "Canari Games",
+        "publisher": "WayForward",
+        "price": 19.99,
+        "metacritic": 74,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 151,
+        "release_date": "Mar 30, 2023",
+        "rating": "rp"
+    },
+    {
+        "name": "Minute of Islands",
+        "description": "Explore strange and wonderful islands and dark labyrinths below in this narrative puzzle platformer. Guide young mechanic Mo on her quest to repair a world on the brink of collapse. The powerful Omni Switch at your disposal may not be enough to fix the damage that hides beneath the surface...",
+        "developer": "Studio Fizbin",
+        "publisher": "Assemble Entertainment",
+        "price": 19.99,
+        "metacritic": 73,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 569,
+        "release_date": "Jun 13, 2021",
+        "rating": "rp"
+    },
+    {
+        "name": "Must Dash Amigos",
+        "description": "A Loco-Multiplayer Battle Racer packed with pi\u00f1atas and family-friendly mayhem for up to 4 Players! Blaze past your rivals in Race Mode or dish out the damage in Battle Mode! You can't just run, you Must Dash Amigos!",
+        "developer": "miniBeast Game Studios",
+        "publisher": "miniBeast Game Studios",
+        "price": 6.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player"
+        ],
+        "genres": [
+            "Action",
+            "Indie",
+            "Racing"
+        ],
+        "recommendations": 0,
+        "release_date": "Jul 23, 2019",
+        "rating": "e"
+    },
+    {
+        "name": "Pilgrims",
+        "description": "Pilgrims is a playful adventure game, created by the team behind Machinarium and Samorost. Roam the land as you please and make new friends, share a laugh with your fellow travelers and help them complete their little stories, your way. How many different solutions can you find?",
+        "developer": "Amanita Design",
+        "publisher": "Amanita Design",
+        "price": 6.99,
+        "metacritic": 78,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Casual",
+            "Indie"
+        ],
+        "recommendations": 4208,
+        "release_date": "Oct 7, 2019",
+        "rating": "rp"
+    },
+    {
+        "name": "River City Girls",
+        "description": "There's trouble once again in River City, and this time only the girls can save the day! Using a variety of attacks, weapons, and items, these hot-blooded heroines are ready to teach the city\u2019s lowlifes a lesson - either solo or in 2-player co-op! It\u2019s an old-school rumble for a new generation!",
+        "developer": "WayForward",
+        "publisher": "WayForward ",
+        "price": 29.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player",
+            "Multi-player",
+            "Co-op"
+        ],
+        "genres": [
+            "Action"
+        ],
+        "recommendations": 2699,
+        "release_date": "Sep 5, 2019",
+        "rating": "e10"
+    },
+    {
+        "name": "Cosmic Cash",
+        "description": "Ever wonder what baby a slot machine and a classic shooter would make? Well wonder no more! Cosmic Cash combines the retro action packed feel of arcade shooters with the thrill of winning big at the slots.",
+        "developer": "Rabbit Hole Studios",
+        "publisher": "Rabbit Hole Studios",
+        "price": 1.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Simulation",
+            "Strategy"
+        ],
+        "recommendations": 0,
+        "release_date": "May 7, 2019",
+        "rating": "t"
+    },
+    {
+        "name": "Half Past Fate",
+        "description": "Love is in the air, but work, life, and spicy Ramen keep getting in the way! From 8 hours to 8 years, this time-jumping saga will change the way you feel about fate forever.",
+        "developer": "Serenity Forge",
+        "publisher": "Way Down Deep",
+        "price": 19.99,
+        "metacritic": 78,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Adventure",
+            "Indie",
+            "RPG",
+            "Simulation"
+        ],
+        "recommendations": 216,
+        "release_date": "Mar 12, 2020",
+        "rating": "rp"
+    },
+    {
+        "name": "Super Catscape",
+        "description": "Super Catscape is a 2D sidescroller retro platformer about Kim, a brave kitten who is abducted by strange alien creatures. Kim has to find a way to escape from the strange alien planet, saving all captive pets in his way back to Earth.",
+        "developer": "Nuke Games",
+        "publisher": "Nuke Games",
+        "price": 4.99,
+        "metacritic": null,
+        "categories": [
+            "Single-player"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Indie"
+        ],
+        "recommendations": 0,
+        "release_date": "Apr 10, 2019",
+        "rating": "e"
+    }
+]
