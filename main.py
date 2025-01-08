@@ -1,11 +1,12 @@
 """The main entry point for the CLI store application."""
 
 from exceptions import (InvalidInputError, InvalidCredentialsError)
+from entities import (User, Game)
 from service import Service
 import logging
 
-service = Service()
 logger: logging.Logger
+service = Service()
 
 def main():
     logging.basicConfig(filename="logs/p1.log",
@@ -49,9 +50,10 @@ def user_prescreen():
                                 ">> ")
                 password = input("Enter a password: \n" +
                                 ">> ")
-                if service.login(username, password):
+                user = service.login(username, password)
+                if user:
                     print("Login successful!")
-                    user_mode(username)
+                    user_mode(user)
             elif option == 'C':
                 username = input("Enter a username: \n" +
                                 ">> ")
@@ -68,7 +70,7 @@ def user_prescreen():
         except InvalidInputError as e:
             print(e)
 
-def user_mode(username):
+def user_mode(user):
     while True:
         try:
             option = input("What would you like to do?\n" +
@@ -80,7 +82,7 @@ def user_mode(username):
                             "[L]og out\n" +
                             ">> ").upper()
             if option == 'B':
-                print("Browse store")
+                browse_store(user)
             elif option == 'G':
                 print("View your games")
             elif option == 'I':
@@ -91,12 +93,62 @@ def user_mode(username):
                 print("View and/or add money to your Wallet")
             elif option == 'L':
                 print("Logging out...")
-                logger.info("User (%s) logged out", username)
+                logger.info("User (%s) logged out", user.username)
                 break
             else:
                 raise InvalidInputError(['b', 'g', 'i', 'o', 'w', 'l'])
         except InvalidInputError as e:
             print(e)
+
+def browse_store(user):
+    """Browse and select available games in the store."""
+    # TODO: Add options to sort results
+    games = service.get_all_games()
+
+    # View 5 games at a time.
+    start = 0
+    end = 5 if len(games) >= 5 else len(games)
+    while end <= len(games):
+        for i in range(start, end):
+            if i < len(games):
+                game = games[i]
+                game.show_truncated()
+        else:
+            option = input("[Game Number] to view more details\n"
+                "[Enter] to load more games\n"
+                "[B]ack\n"
+                ">> ").upper()
+            print()
+            if option in [str(game.game_id) for game in games]:
+                view_game(option, user)
+                continue
+            elif option == 'B':
+                break
+        start = end
+        end += 5
+
+def view_game(game_id, user: User):
+    """Display detailed information about the given game and provide the option to buy it"""
+    game = Game(**service.get_game_by_id(game_id))
+    if game:
+        while True:
+            try:
+                game.show_detailed()
+                user.show_wallet()
+                option = input(f"[A]dd {game.name} to cart?\n"
+                            "[B]ack\n"
+                            ">> ").upper()
+                if option == 'A':
+                    user.cart.add(game, game.price)
+                    user.cart.show()
+                    user.show_wallet()
+                    input("\nEnter any key to continue.\n")
+                elif option == 'B':
+                    break
+                else:
+                    raise InvalidInputError(['a', 'b'])
+            except InvalidInputError as e:
+                print(e)
 
 def admin_prescreen():
     try:
