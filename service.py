@@ -2,7 +2,7 @@
 
 from dao import Dao
 import datetime as dt
-from exceptions import (UnderAgeError, AlreadyExistsError, InvalidCredentialsError)
+from exceptions import (UnderAgeError, AlreadyExistsError, InvalidCredentialsError, InvalidInputError)
 import logging
 
 logger = logging.getLogger(__name__)
@@ -16,10 +16,12 @@ class Service():
         Returns true if user was inserted into the database, false otherwise.
         """
         # TODO: Store secured form of password
-        # TODO: Check that username and password are not empty.
         try:
-            age = Service.years_since_date(date_of_birth)
-            if age < 13:
+            if not username:
+                raise ValueError("Username must not be empty.")
+            if len(password) < 6:
+                raise ValueError("Password must be at least 6 characters long.")
+            if Service.years_since_date(date_of_birth) < 13:
                 raise UnderAgeError("Must be 13 years of age or older.")
             if self.dao.select_user_by_username(username):    
                 raise AlreadyExistsError("A user with that username already exists.")
