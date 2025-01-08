@@ -5,11 +5,14 @@ from service import Service
 import logging
 
 service = Service()
+logger: logging.Logger
 
 def main():
     logging.basicConfig(filename="logs/p1.log",
                     level=logging.INFO,
                     format='%(asctime)s :: %(levelname)s :: %(message)s')
+    global logger
+    logger = logging.getLogger(__name__)
     
     while True:
         try:
@@ -66,6 +69,7 @@ def admin_prescreen():
         option = input("Please enter the admin password: ")
         if option == password:
             print("Success! Welcome, admin.")
+            logger.info("Admin logged in")
             admin_mode()
         else:
             raise InvalidCredentialsError("Incorrect admin password.")
@@ -82,6 +86,7 @@ def admin_mode():
             if option == 'S':
                 print("doing stuff")
             elif option == 'B':
+                logger.info("Admin logged out")
                 break
             else:
                 raise InvalidInputError(valid_keys=['s', 'b']) #TODO: Update valid keys
