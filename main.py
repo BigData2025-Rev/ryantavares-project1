@@ -1,11 +1,14 @@
 """The main entry point for the CLI store application."""
 
 import logging
+from service import Service
 
 def main():
     logging.basicConfig(filename="logs/p1.log",
                     level=logging.INFO,
                     format='%(asctime)s :: %(levelname)s :: %(message)s')
+    
+    service = Service()
 
     while True:
         option = input("Who are you?:\n" +
@@ -23,7 +26,14 @@ def main():
                 if option == 'L':
                     print("do log in")
                 elif option == 'C':
-                    print("do create an account")
+                    username = input("Enter a username: \n" +
+                                     ">> ")
+                    password = input("Enter a password: \n" +
+                                     ">> ")
+                    date_of_birth = input("Enter your date of birth (YYYY-MM-DD): \n" +
+                                     ">> ")
+                    if service.create_user(username, password, date_of_birth):
+                        print("Account created!")
                 elif option == 'Q':
                     break
         elif option == 'A':
