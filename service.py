@@ -2,7 +2,7 @@
 
 from dao import Dao
 import datetime as dt
-from exceptions import (UnderAgeError, AlreadyExistsError, InvalidCredentialsError, InvalidInputError)
+from exceptions import (UnderAgeError, AlreadyExistsError, InvalidCredentialsError)
 import logging
 
 logger = logging.getLogger(__name__)
