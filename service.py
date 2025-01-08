@@ -42,6 +42,9 @@ class Service():
         except InvalidCredentialsError as e:
             print(e)
             return False
+        
+    def get_all_games(self):
+        return self.dao.all_games()
     
     # TODO: Move years_since_date to more appropriate, reusable location.
     def years_since_date(date):

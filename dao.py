@@ -44,3 +44,12 @@ class Dao():
                     return cursor.fetchone()
                 except mysql.connector.Error as e:
                     logger.error("Query to select user by username (%s) and password (hidden) failed :: %s", (username, e.msg))
+    
+    def all_games(self):
+        if self.cnx and self.cnx.is_connected():
+            with self.cnx.cursor(dictionary=True) as cursor:
+                try:
+                    cursor.execute("SELECT * FROM Games;")
+                    return cursor.fetchall()
+                except mysql.connector.Error as e:
+                    logger.error("Query to select all games failed :: %s", (e.msg))        
