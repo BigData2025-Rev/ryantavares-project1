@@ -24,7 +24,7 @@ class Dao():
                     logger.info("Inserted user %s into db", username)
                     return True
                 except mysql.connector.Error as e:
-                    logger.warning("Failed to insert user %s :: %s", (username, e.msg))
+                    logger.error("Failed to insert user %s :: %s", (username, e.msg))
         return False
     
     def select_user_by_username(self, username):
@@ -34,7 +34,7 @@ class Dao():
                     cursor.execute("SELECT * FROM Users WHERE username=%s", [username])
                     return cursor.fetchone()
                 except mysql.connector.Error as e:
-                    logger.warning("Query to select user by username (%s) failed :: %s", (username, e.msg))
+                    logger.error("Query to select user by username (%s) failed :: %s", (username, e.msg))
     
     def user_by_username_password(self, username, password):
         if self.cnx and self.cnx.is_connected():
@@ -43,4 +43,4 @@ class Dao():
                     cursor.execute("SELECT * FROM Users WHERE username=%s AND password=%s", [username, password])
                     return cursor.fetchone()
                 except mysql.connector.Error as e:
-                    logger.warning("Query to select user by username (%s) and password (hidden) failed :: %s", (username, e.msg))
+                    logger.error("Query to select user by username (%s) and password (hidden) failed :: %s", (username, e.msg))
