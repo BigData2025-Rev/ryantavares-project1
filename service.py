@@ -46,6 +46,16 @@ class Service():
     def get_all_games(self):
         return self.dao.all_games()
     
+    def get_game_by_id(self, game_id):
+        try:
+            game = self.dao.game_by_id(game_id)
+            if game:
+                return game
+            else:
+                raise ValueError("Game with that id does not exist")
+        except ValueError as e:
+            print(e)
+    
     # TODO: Move years_since_date to more appropriate, reusable location.
     def years_since_date(date):
         """Returns the number of years since the given date."""

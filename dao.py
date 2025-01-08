@@ -27,7 +27,7 @@ class Dao():
                     logger.error("Failed to insert user %s :: %s", (username, e.msg))
         return False
     
-    def select_user_by_username(self, username):
+    def user_by_username(self, username):
         if self.cnx and self.cnx.is_connected():
             with self.cnx.cursor() as cursor:
                 try:
@@ -52,4 +52,13 @@ class Dao():
                     cursor.execute("SELECT * FROM Games;")
                     return cursor.fetchall()
                 except mysql.connector.Error as e:
-                    logger.error("Query to select all games failed :: %s", (e.msg))        
+                    logger.error("Query to select all games failed :: %s", (e.msg))       
+
+    def game_by_id(self, game_id):
+        if self.cnx and self.cnx.is_connected():
+            with self.cnx.cursor(dictionary=True) as cursor:
+                try:
+                    cursor.execute("SELECT * FROM Games WHERE game_id=%s", [game_id])
+                    return cursor.fetchone()
+                except mysql.connector.Error as e:
+                    logger.error("Query to select game by game_id (%s) failed :: %s", (game_id, e.msg))
