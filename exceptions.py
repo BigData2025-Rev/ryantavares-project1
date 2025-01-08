@@ -5,3 +5,6 @@ class UnderAgeError(Exception):
 
 class AlreadyExistsError(Exception):
     pass
+
+class InvalidCredentialsError(Exception):
+    pass

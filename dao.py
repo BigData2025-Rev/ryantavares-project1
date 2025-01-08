@@ -21,7 +21,7 @@ class Dao():
                     insert_query = "INSERT INTO Users (username, password, date_of_birth) VALUES (%s, %s, %s)"
                     cursor.execute(insert_query, (username, password, date_of_birth))
                     self.cnx.commit()
-                    logger.info("Inserted user %s", username)
+                    logger.info("Inserted user %s into db", username)
                     return True
                 except mysql.connector.Error as e:
                     logger.warning("Failed to insert user %s :: %s", (username, e.msg))
@@ -35,3 +35,12 @@ class Dao():
                     return cursor.fetchone()
                 except mysql.connector.Error as e:
                     logger.warning("Query to select user by username (%s) failed :: %s", (username, e.msg))
+    
+    def user_by_username_password(self, username, password):
+        if self.cnx and self.cnx.is_connected():
+            with self.cnx.cursor() as cursor:
+                try:
+                    cursor.execute("SELECT * FROM Users WHERE username=%s AND password=%s", [username, password])
+                    return cursor.fetchone()
+                except mysql.connector.Error as e:
+                    logger.warning("Query to select user by username (%s) and password (hidden) failed :: %s", (username, e.msg))

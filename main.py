@@ -24,7 +24,12 @@ def main():
                                "[Q]uit\n" +
                                ">> ").upper()
                 if option == 'L':
-                    print("do log in")
+                    username = input("Enter a username: \n" +
+                                     ">> ")
+                    password = input("Enter a password: \n" +
+                                     ">> ")
+                    if service.login(username, password):
+                        print("Login successful!")
                 elif option == 'C':
                     username = input("Enter a username: \n" +
                                      ">> ")

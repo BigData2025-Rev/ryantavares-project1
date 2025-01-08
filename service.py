@@ -2,7 +2,10 @@
 
 from dao import Dao
 import datetime as dt
-from exceptions import (UnderAgeError, AlreadyExistsError)
+from exceptions import (UnderAgeError, AlreadyExistsError, InvalidCredentialsError)
+import logging
+
+logger = logging.getLogger(__name__)
 
 class Service():
     def __init__(self):
@@ -13,6 +16,7 @@ class Service():
         Returns true if user was inserted into the database, false otherwise.
         """
         # TODO: Store secured form of password
+        # TODO: Check that username and password are not empty.
         try:
             age = Service.years_since_date(date_of_birth)
             if age < 13:
@@ -24,6 +28,18 @@ class Service():
             return False
         else:
             return self.dao.insert_user(username, password, date_of_birth)
+        
+    def login(self, username, password):
+        """If given username and password matches a user in the database, return True. If no match, return false."""
+        try:
+            if self.dao.user_by_username_password(username, password):
+                logger.info("User %s logged in", (username))
+                return True
+            else:
+                raise InvalidCredentialsError("Incorrect username/password combination.")
+        except InvalidCredentialsError as e:
+            print(e)
+            return False
     
     # TODO: Move years_since_date to more appropriate, reusable location.
     def years_since_date(date):
