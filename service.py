@@ -1,5 +1,6 @@
 """Service Layer for verifying incoming/outgoing requests to the database."""
 
+from entities import (User, Game)
 from dao import Dao
 import datetime as dt
 from exceptions import (UnderAgeError, AlreadyExistsError, InvalidCredentialsError)
@@ -23,7 +24,7 @@ class Service():
                 raise ValueError("Password must be at least 6 characters long.")
             if Service.years_since_date(date_of_birth) < 13:
                 raise UnderAgeError("Must be 13 years of age or older.")
-            if self.dao.select_user_by_username(username):    
+            if self.dao.user_by_username(username):    
                 raise AlreadyExistsError("A user with that username already exists.")
         except (ValueError, UnderAgeError, AlreadyExistsError) as e:
             print(e)
@@ -32,19 +33,22 @@ class Service():
             return self.dao.insert_user(username, password, date_of_birth)
         
     def login(self, username, password):
-        """If given username and password matches a user in the database, return True. If no match, return false."""
+        """If given username and password matches a user in the database, return the User. If no match, return None."""
         try:
-            if self.dao.user_by_username_password(username, password):
+            user = self.dao.user_by_username_password(username, password)
+            if user:
                 logger.info("User %s logged in", (username))
-                return True
+                del user['password']
+                user = User(**user)
+                return user
             else:
                 raise InvalidCredentialsError("Incorrect username/password combination.")
         except InvalidCredentialsError as e:
             print(e)
-            return False
+            return None
         
     def get_all_games(self):
-        return self.dao.all_games()
+        return [Game(**game) for game in self.dao.all_games()]
     
     def get_game_by_id(self, game_id):
         try:

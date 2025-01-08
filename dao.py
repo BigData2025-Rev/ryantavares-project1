@@ -29,7 +29,7 @@ class Dao():
     
     def user_by_username(self, username):
         if self.cnx and self.cnx.is_connected():
-            with self.cnx.cursor() as cursor:
+            with self.cnx.cursor(dictionary=True) as cursor:
                 try:
                     cursor.execute("SELECT * FROM Users WHERE username=%s", [username])
                     return cursor.fetchone()
@@ -38,7 +38,7 @@ class Dao():
     
     def user_by_username_password(self, username, password):
         if self.cnx and self.cnx.is_connected():
-            with self.cnx.cursor() as cursor:
+            with self.cnx.cursor(dictionary=True) as cursor:
                 try:
                     cursor.execute("SELECT * FROM Users WHERE username=%s AND password=%s", [username, password])
                     return cursor.fetchone()
