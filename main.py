@@ -14,7 +14,11 @@ def main():
     global logger
     logger = logging.getLogger(__name__)
     
+    intro = "Welcome to The Game Store"
     while True:
+        print("".ljust(len(intro), '='))
+        print(intro)
+        print("".ljust(len(intro), '='))
         try:
             option = input("Who are you?:\n" +
                         "[U]ser\n" +
@@ -47,6 +51,7 @@ def user_prescreen():
                                 ">> ")
                 if service.login(username, password):
                     print("Login successful!")
+                    user_mode(username)
             elif option == 'C':
                 username = input("Enter a username: \n" +
                                 ">> ")
@@ -60,6 +65,36 @@ def user_prescreen():
                 break
             else:
                 raise InvalidInputError(valid_keys=['l', 'c', 'b'])
+        except InvalidInputError as e:
+            print(e)
+
+def user_mode(username):
+    while True:
+        try:
+            option = input("What would you like to do?\n" +
+                            "[B]rowse store\n" +
+                            "Your [G]ames\n" +
+                            "Your [I]nventory\n" +
+                            "Your [O]rder History\n" +
+                            "Your [W]allet\n" +
+                            "[L]og out\n" +
+                            ">> ").upper()
+            if option == 'B':
+                print("Browse store")
+            elif option == 'G':
+                print("View your games")
+            elif option == 'I':
+                print("View your inventory")
+            elif option == 'O':
+                print("View your Order History")
+            elif option == 'W':
+                print("View and/or add money to your Wallet")
+            elif option == 'L':
+                print("Logging out...")
+                logger.info("User (%s) logged out", username)
+                break
+            else:
+                raise InvalidInputError(['b', 'g', 'i', 'o', 'w', 'l'])
         except InvalidInputError as e:
             print(e)
 
@@ -80,16 +115,22 @@ def admin_mode():
     while True:
         try:
             option = input("What would you like to do?\n" +
-                        "[S]tuff\n" +
-                        "[B]ack\n" +
+                        "[V]iew data\n" +
+                        "Make changes to [G]ames\n" +
+                        "Make changes to [U]sers\n" +
+                        "[L]og out\n" +
                         ">> ").upper()
-            if option == 'S':
-                print("doing stuff")
-            elif option == 'B':
+            if option == 'V':
+                print("View orders and/or users")
+            elif option == 'G':
+                print("Add, update, or delete games in store")
+            elif option == 'U':
+                print("Update or delete users")
+            elif option == 'L':
                 logger.info("Admin logged out")
                 break
             else:
-                raise InvalidInputError(valid_keys=['s', 'b']) #TODO: Update valid keys
+                raise InvalidInputError(valid_keys=['v', 'g', 'u', 'l'])
         except InvalidInputError as e:
             print(e)
     
