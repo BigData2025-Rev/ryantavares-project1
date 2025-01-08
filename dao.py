@@ -21,10 +21,10 @@ class Dao():
                     insert_query = "INSERT INTO Users (username, password, date_of_birth) VALUES (%s, %s, %s)"
                     cursor.execute(insert_query, (username, password, date_of_birth))
                     self.cnx.commit()
-                    logger.info("Inserted user %s into db", username)
+                    logger.info("Inserted user [%s] into db", username)
                     return True
                 except mysql.connector.Error as e:
-                    logger.error("Failed to insert user %s :: %s", (username, e.msg))
+                    logger.error("Failed to insert user [%s] :: %s", (username, e.msg))
         return False
     
     def user_by_username(self, username):
@@ -34,7 +34,7 @@ class Dao():
                     cursor.execute("SELECT * FROM Users WHERE username=%s", [username])
                     return cursor.fetchone()
                 except mysql.connector.Error as e:
-                    logger.error("Query to select user by username (%s) failed :: %s", (username, e.msg))
+                    logger.error("Query to select user by username [%s] failed :: %s", (username, e.msg))
     
     def user_by_username_password(self, username, password):
         if self.cnx and self.cnx.is_connected():
@@ -43,7 +43,7 @@ class Dao():
                     cursor.execute("SELECT * FROM Users WHERE username=%s AND password=%s", [username, password])
                     return cursor.fetchone()
                 except mysql.connector.Error as e:
-                    logger.error("Query to select user by username (%s) and password (hidden) failed :: %s", (username, e.msg))
+                    logger.error("Query to select user by username [%s] and password failed :: %s", (username, e.msg))
     
     def all_games(self):
         if self.cnx and self.cnx.is_connected():
@@ -61,4 +61,4 @@ class Dao():
                     cursor.execute("SELECT * FROM Games WHERE game_id=%s", [game_id])
                     return cursor.fetchone()
                 except mysql.connector.Error as e:
-                    logger.error("Query to select game by game_id (%s) failed :: %s", (game_id, e.msg))
+                    logger.error("Query to select game by game_id [%s] failed :: %s", (game_id, e.msg))

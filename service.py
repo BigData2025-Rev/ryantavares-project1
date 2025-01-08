@@ -37,7 +37,7 @@ class Service():
         try:
             user = self.dao.user_by_username_password(username, password)
             if user:
-                logger.info("User %s logged in", (username))
+                logger.info("User [%s] logged in", (username))
                 del user['password']
                 user = User(**user)
                 return user

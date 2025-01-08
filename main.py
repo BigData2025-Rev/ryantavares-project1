@@ -93,7 +93,7 @@ def user_mode(user):
                 print("View and/or add money to your Wallet")
             elif option == 'L':
                 print("Logging out...")
-                logger.info("User (%s) logged out", user.username)
+                logger.info("User [%s] logged out", user.username)
                 break
             else:
                 raise InvalidInputError(['b', 'g', 'i', 'o', 'w', 'l'])
