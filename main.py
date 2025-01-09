@@ -1,5 +1,6 @@
 """The main entry point for the CLI store application."""
 
+from decimal import Decimal
 from exceptions import (InvalidInputError, InvalidCredentialsError)
 from entities import (User, Game)
 from service import Service
@@ -70,9 +71,10 @@ def user_prescreen():
         except InvalidInputError as e:
             print(e)
 
-def user_mode(user):
+def user_mode(user:User):
     while True:
         try:
+            print("\nWelcome {username}!\n".format(username=user.username))
             option = input("What would you like to do?\n" +
                             "[B]rowse store\n" +
                             "Your [G]ames\n" +
@@ -91,16 +93,20 @@ def user_mode(user):
                 print("View your Order History")
             elif option == 'W':
                 print("View and/or add money to your Wallet")
+                # TODO: Wallet funds not properly implemented yet, but this is useful for now.
+                service.update_wallet_funds(user.user_id, Decimal(100.00))
+                user.wallet += 100
             elif option == 'L':
                 print("Logging out...")
                 logger.info("User [%s] logged out", user.username)
+                del user
                 break
             else:
                 raise InvalidInputError(['b', 'g', 'i', 'o', 'w', 'l'])
         except InvalidInputError as e:
             print(e)
 
-def browse_store(user):
+def browse_store(user:User):
     """Browse and select available games in the store."""
     # TODO: Add options to sort results
     games = service.get_all_games()
@@ -127,7 +133,7 @@ def browse_store(user):
         start = end
         end += 5
 
-def view_game(game_id, user: User):
+def view_game(game_id, user:User):
     """Display detailed information about the given game and provide the option to buy it"""
     game = Game(**service.get_game_by_id(game_id))
     if game:
@@ -140,9 +146,12 @@ def view_game(game_id, user: User):
                             ">> ").upper()
                 if option == 'A':
                     user.cart.add(game, game.price)
-                    user.cart.show()
-                    user.show_wallet()
-                    input("\nEnter any key to continue.\n")
+                    if user.will_purchase():
+                        if service.make_purchase(user, user.cart.games):
+                            service.add_games_to_user(user.user_id, user.cart.games)
+                            user.cart.empty()
+                    else:
+                        break
                 elif option == 'B':
                     break
                 else:

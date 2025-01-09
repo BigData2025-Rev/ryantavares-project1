@@ -1,12 +1,13 @@
 """This module contains various entities that are used throughout the program."""
 
 from decimal import Decimal
+from exceptions import (InvalidInputError)
 
 class Game():
     def __init__(self, game_id, name, price, rating, description, developer, publisher, recommendations, release_date, metacritic, discount_percent):
         self.game_id = game_id
         self.name = name
-        self.price = price
+        self.price = Decimal(price)
         self.rating = rating
         self.description =  description
         self.developer = developer
@@ -44,13 +45,24 @@ class Game():
 
 class Cart():
     """Defines a Cart which holds multiple products and carries a total of their prices."""
-    def __init__(self, games: list[Game]=[], total=Decimal(0.00)):
-        self.games = games
-        self.total=total
+    def __init__(self, games: list[Game]=None, total=Decimal(0.00)):
+        self.games = [] if games == None else games
+        self.total= total
+
+    def __del__(self):
+        self.empty()
 
     def add(self, game, price):
         self.games.append(game)
-        self.total += price
+        self.total += Decimal(price)
+
+    def remove(self, game, price):
+        self.games.remove(game)
+        self.total -= Decimal(price)
+
+    def empty(self):
+        self.total = Decimal(0.00)
+        self.games = []
 
     def show(self):
         print("\nYour cart:")
@@ -61,12 +73,29 @@ class Cart():
 
 class User():
     """Defines a User. Password, not included."""
-    def __init__(self, user_id, username="", date_of_birth="", wallet=0.00, cart=Cart()):
-        self.id=user_id
+    def __init__(self, user_id, username="", date_of_birth="", wallet=0.00):
+        self.user_id=user_id
         self.username = username
         self.date_of_birth=date_of_birth
         self.wallet = wallet
-        self.cart = cart
+        self.cart = Cart()
 
     def show_wallet(self):
-        print("${wallet}\tIn your wallet".format(wallet=self.wallet))
+        print("${wallet:.2f}\tIn your wallet".format(wallet=self.wallet))
+
+    def will_purchase(self):
+        while True:
+            self.cart.show()
+            self.show_wallet()
+            try:
+                option = input("\n[M]ake purchase?\n"
+                                "[B]ack\n"
+                                ">> ").upper()
+                if option == 'M':
+                    return True
+                elif option == 'B':
+                    return False
+                else:
+                    InvalidInputError('m', 'b')
+            except InvalidInputError as e:
+                print(e)

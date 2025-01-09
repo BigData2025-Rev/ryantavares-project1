@@ -3,6 +3,7 @@
 from entities import (User, Game)
 from dao import Dao
 import datetime as dt
+from decimal import Decimal
 from exceptions import (UnderAgeError, AlreadyExistsError, InvalidCredentialsError)
 import logging
 
@@ -57,6 +58,41 @@ class Service():
                 return game
             else:
                 raise ValueError("Game with that id does not exist")
+        except ValueError as e:
+            print(e)
+
+    def make_purchase(self, user:User, games: list[Game]):
+        """Makes a purchase.
+        Returns True if the purchase could be completed, False otherwise.
+        """
+        try:
+            if len(games) == 0:
+                raise ValueError("There must be games in the order to make a purchase.")
+            total_cost = Decimal(0.00)
+            for game in games:
+                total_cost += game.price - (game.price * game.discount_percent)
+                if user.wallet < total_cost:
+                    raise ValueError("You don't have enough funds!")
+            if self.dao.insert_order(user.user_id, dt.datetime.now(), total_cost, games):
+                new_wallet = user.wallet - total_cost
+                if self.update_wallet_funds(user.user_id, new_wallet):                    
+                    user.wallet -= total_cost
+                    return True
+        except ValueError as e:
+            print(e)
+
+    def update_wallet_funds(self, user_id, amount:Decimal):
+        """Update a user's wallet funds."""
+        if amount >= Decimal(0.00):
+            return self.dao.update_user_wallet(user_id, amount)
+        else:
+            print("Cannot have a negative wallet funds.")
+    
+    def add_games_to_user(self, user_id, games: list[Game]):
+        try:
+            if len(games) == 0:
+                raise ValueError("There must be games to add to user.")
+            self.dao.insert_user_games(user_id, games)
         except ValueError as e:
             print(e)
     
