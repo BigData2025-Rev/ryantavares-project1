@@ -1,5 +1,6 @@
 """Data Access Layer for communicating directly with the MySQL database."""
 
+from entities import (User, Game)
 import mysql.connector.errors
 from connection import connect_to_mysql
 import logging
@@ -26,6 +27,15 @@ class Dao():
                 except mysql.connector.Error as e:
                     logger.error("Failed to insert user [%s] :: %s", username, e.msg)
         return False
+    
+    def user_by_id(self, user_id):
+        if self.cnx and self.cnx.is_connected():
+            with self.cnx.cursor(dictionary=True) as cursor:
+                try:
+                    cursor.execute("SELECT * FROM Users WHERE user_id=%s", [user_id])
+                    return User(**cursor.fetchone())
+                except mysql.connector.Error as e:
+                    logger.error("Query to select user by user_id [%s] failed :: %s", user_id, e.msg)
     
     def user_by_username(self, username):
         if self.cnx and self.cnx.is_connected():
@@ -63,7 +73,7 @@ class Dao():
                 except mysql.connector.Error as e:
                     logger.error("Query to select game by game_id [%s] failed :: %s", game_id, e.msg)
 
-    def insert_order(self, user_id, order_date, total_cost, games):
+    def insert_order(self, user_id, order_date, total_cost, games=None):
         if self.cnx and self.cnx.is_connected():
             with self.cnx.cursor() as cursor:
                 try:
@@ -71,12 +81,13 @@ class Dao():
                     insert_query = "INSERT INTO Orders (user_fk, order_date, total_cost) VALUES (%s, %s, %s);"
                     cursor.execute(insert_query, (user_id, order_date, total_cost))
 
-                    # Insert order details into OrderDetails table.
-                    insert_query = "INSERT INTO OrderDetails (order_fk, game_fk, quantity) VALUES (%s, %s, %s);"
-                    order_fk = cursor._last_insert_id
-                    for game_fk in set([game.game_id for game in games]):
-                        quantity = [game.game_id for game in games].count(game_fk)
-                        cursor.execute(insert_query, (order_fk, game_fk, quantity))
+                    # Insert order details into OrderDetails table if this purchse is for games.
+                    if games:
+                        insert_query = "INSERT INTO OrderDetails (order_fk, game_fk, quantity) VALUES (%s, %s, %s);"
+                        order_fk = cursor._last_insert_id
+                        for game_fk in set([game.game_id for game in games]):
+                            quantity = [game.game_id for game in games].count(game_fk)
+                            cursor.execute(insert_query, (order_fk, game_fk, quantity))
 
                     self.cnx.commit()
                     logger.info("Inserted order_id [%s] by user_id [%s] with total_cost [$%.2f] into db", cursor._last_insert_id, user_id, total_cost)

@@ -92,10 +92,27 @@ def user_mode(user:User):
             elif option == 'O':
                 print("View your Order History")
             elif option == 'W':
-                print("View and/or add money to your Wallet")
-                # TODO: Wallet funds not properly implemented yet, but this is useful for now.
-                service.update_wallet_funds(user.user_id, Decimal(100.00))
-                user.wallet += 100
+                while True:
+                    try:
+                        user.show_wallet()
+                        option = input("\nWhat would you like to do?\n" +
+                                    "[A]dd funds to your wallet\n" +
+                                    "[B]ack\n"
+                                    ">> ").upper()
+                        print()
+                        if option == 'A':
+                            option = input("How much would you like to add?\n" +
+                                    ">> $").upper()
+                            if service.purchase_wallet_funds(user, round(float(option), 2)):
+                                print("Thank you for your purchase!")
+                                print(f"Added {option} to your wallet\n")
+                        elif option == 'B':
+                            break
+                        else:
+                            raise InvalidInputError(['a', 'b'])
+                    except (InvalidInputError, ValueError) as e:
+                        if type(e) == ValueError: print("Please enter a valid number.")
+                        else: print(e)
             elif option == 'L':
                 print("Logging out...")
                 logger.info("User [%s] logged out", user.username)
@@ -147,7 +164,7 @@ def view_game(game_id, user:User):
                 if option == 'A':
                     user.cart.add(game, game.price)
                     if user.will_purchase():
-                        if service.make_purchase(user, user.cart.games):
+                        if service.purchase_games(user, user.cart.games):
                             service.add_games_to_user(user.user_id, user.cart.games)
                             user.cart.empty()
                     else:

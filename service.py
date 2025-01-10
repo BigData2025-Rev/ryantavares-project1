@@ -3,7 +3,7 @@
 from entities import (User, Game)
 from dao import Dao
 import datetime as dt
-from decimal import Decimal
+from decimal import (Decimal, InvalidOperation)
 from exceptions import (UnderAgeError, AlreadyExistsError, InvalidCredentialsError)
 import logging
 
@@ -61,7 +61,7 @@ class Service():
         except ValueError as e:
             print(e)
 
-    def make_purchase(self, user:User, games: list[Game]):
+    def purchase_games(self, user:User, games: list[Game]):
         """Makes a purchase.
         Returns True if the purchase could be completed, False otherwise.
         """
@@ -75,18 +75,32 @@ class Service():
                     raise ValueError("You don't have enough funds!")
             if self.dao.insert_order(user.user_id, dt.datetime.now(), total_cost, games):
                 new_wallet = user.wallet - total_cost
-                if self.update_wallet_funds(user.user_id, new_wallet):                    
+                if self.update_wallet_funds(user, new_wallet):
                     user.wallet -= total_cost
                     return True
         except ValueError as e:
             print(e)
-
-    def update_wallet_funds(self, user_id, amount:Decimal):
+        
+    def purchase_wallet_funds(self, user:User, amount):
+        """Purchases wallet funds for a given user."""
+        try:
+            amount = Decimal(amount)
+            if amount <= Decimal(0.00):
+                raise ValueError
+            else:
+                if self.dao.insert_order(user.user_id, dt.datetime.now(), amount):
+                    new_amount = user.wallet + amount
+                    return self.update_wallet_funds(user, new_amount)
+        except (ValueError, InvalidOperation) as e:
+            print("Please enter a positive monetary value.")
+    
+    def update_wallet_funds(self, user:User, amount:Decimal):
         """Update a user's wallet funds."""
         if amount >= Decimal(0.00):
-            return self.dao.update_user_wallet(user_id, amount)
+            if self.dao.update_user_wallet(user.user_id, amount):
+                user.wallet = amount
         else:
-            print("Cannot have a negative wallet funds.")
+            print("Cannot have negative wallet funds.")
     
     def add_games_to_user(self, user_id, games: list[Game]):
         try:
