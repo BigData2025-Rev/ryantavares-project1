@@ -92,27 +92,7 @@ def user_mode(user:User):
             elif option == 'O':
                 print("View your Order History")
             elif option == 'W':
-                while True:
-                    try:
-                        user.show_wallet()
-                        option = input("\nWhat would you like to do?\n" +
-                                    "[A]dd funds to your wallet\n" +
-                                    "[B]ack\n"
-                                    ">> ").upper()
-                        print()
-                        if option == 'A':
-                            option = input("How much would you like to add?\n" +
-                                    ">> $").upper()
-                            if service.purchase_wallet_funds(user, round(float(option), 2)):
-                                print("Thank you for your purchase!")
-                                print(f"Added {option} to your wallet\n")
-                        elif option == 'B':
-                            break
-                        else:
-                            raise InvalidInputError(['a', 'b'])
-                    except (InvalidInputError, ValueError) as e:
-                        if type(e) == ValueError: print("Please enter a valid number.")
-                        else: print(e)
+                manage_wallet(user)
             elif option == 'L':
                 print("Logging out...")
                 logger.info("User [%s] logged out", user.username)
@@ -122,6 +102,30 @@ def user_mode(user:User):
                 raise InvalidInputError(['b', 'g', 'i', 'o', 'w', 'l'])
         except InvalidInputError as e:
             print(e)
+
+def manage_wallet(user:User):
+    """Flow for user to view and add funds to wallet."""
+    while True:
+        try:
+            user.show_wallet()
+            option = input("\nWhat would you like to do?\n" +
+                        "[A]dd funds to your wallet\n" +
+                        "[B]ack\n"
+                        ">> ").upper()
+            print()
+            if option == 'A':
+                option = input("How much would you like to add?\n" +
+                        ">> $").upper()
+                if service.purchase_wallet_funds(user, round(float(option), 2)):
+                    print("Thank you for your purchase!")
+                    print(f"Added {option} to your wallet\n")
+            elif option == 'B':
+                break
+            else:
+                raise InvalidInputError(['a', 'b'])
+        except (InvalidInputError, ValueError) as e:
+            if type(e) == ValueError: print("Please enter a valid number.")
+            else: print(e)
 
 def browse_store(user:User):
     """Browse and select available games in the store."""
