@@ -55,11 +55,15 @@ class Service():
         try:
             game = self.dao.game_by_id(game_id)
             if game:
-                return game
+                return Game(**game)
             else:
                 raise ValueError("Game with that id does not exist")
         except ValueError as e:
             print(e)
+
+    def get_games_in_user_inventory(self, user:User) -> list[Game]:
+        """Gets games that a user has purchased."""
+        return self.dao.games_in_user_inventory(user.user_id)
 
     def purchase_games(self, user:User, games: list[Game]):
         """Makes a purchase.
@@ -99,8 +103,10 @@ class Service():
         if amount >= Decimal(0.00):
             if self.dao.update_user_wallet(user.user_id, amount):
                 user.wallet = amount
+                return True
         else:
             print("Cannot have negative wallet funds.")
+            return False
     
     def add_games_to_user(self, user_id, games: list[Game]):
         try:

@@ -77,7 +77,6 @@ def user_mode(user:User):
             print("\nWelcome {username}!\n".format(username=user.username))
             option = input("What would you like to do?\n" +
                             "[B]rowse store\n" +
-                            "Your [G]ames\n" +
                             "Your [I]nventory\n" +
                             "Your [O]rder History\n" +
                             "Your [W]allet\n" +
@@ -85,10 +84,8 @@ def user_mode(user:User):
                             ">> ").upper()
             if option == 'B':
                 browse_store(user)
-            elif option == 'G':
-                print("View your games")
             elif option == 'I':
-                print("View your inventory")
+                view_user_inventory(user)
             elif option == 'O':
                 print("View your Order History")
             elif option == 'W':
@@ -102,6 +99,29 @@ def user_mode(user:User):
                 raise InvalidInputError(['b', 'g', 'i', 'o', 'w', 'l'])
         except InvalidInputError as e:
             print(e)
+
+def view_user_inventory(user:User):
+    while True:
+        try:
+            print("\nYour Inventory".center(30, '='))
+            print("ID\t" + "Qty\t" + "Title")
+            games = service.get_games_in_user_inventory(user)
+            unique_games = sorted(set(games), key=lambda game: game.game_id)
+            for game in unique_games:
+                print(f"{game.game_id}\t" + f"{[game.game_id for game in games].count(game.game_id)}\t" + f"{game.name}")
+
+            #TODO: Implement gifting.
+            option = input("\nWhat would you like to do?\n" +
+                            "[Game ID] [User Name] to gift a game to another user\n"
+                            "[B]ack\n" +
+                            ">> ").upper()
+            if option == 'B':
+                break
+            else:
+                raise InvalidInputError(['GAME_ID USERNAME', 'b'])
+        except InvalidInputError as e:
+            print(e)
+        
 
 def manage_wallet(user:User):
     """Flow for user to view and add funds to wallet."""
@@ -156,7 +176,7 @@ def browse_store(user:User):
 
 def view_game(game_id, user:User):
     """Display detailed information about the given game and provide the option to buy it"""
-    game = Game(**service.get_game_by_id(game_id))
+    game = service.get_game_by_id(game_id)
     if game:
         while True:
             try:
@@ -172,7 +192,7 @@ def view_game(game_id, user:User):
                             service.add_games_to_user(user.user_id, user.cart.games)
                             user.cart.empty()
                     else:
-                        break
+                        continue
                 elif option == 'B':
                     break
                 else:

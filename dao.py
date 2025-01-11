@@ -96,6 +96,28 @@ class Dao():
                     logger.error("Failed to insert order by user_id [%s] :: %s", user_id, e.msg)
         return False
     
+    def games_in_user_inventory(self, user_id):
+        if self.cnx and self.cnx.is_connected():
+            with self.cnx.cursor() as cursor:
+                try:
+                    cursor.execute(
+                        """
+                        SELECT g.*, quantity_in_inventory
+                        FROM Games g INNER JOIN User_Game ug ON g.game_id = ug.game_fk
+                        WHERE user_fk = %s
+                        ORDER BY g.name DESC;
+                        """
+                    , [user_id])
+                    rows = cursor.fetchall()
+                    games = []
+                    for row in rows:
+                        for i in range(row[-1]):
+                            games.append(Game(*row[0:-1]))
+                    return games
+
+                except mysql.connector.Error as e:
+                    logger.error("Query to select user_id [%s] games in inventory failed :: %s", user_id, e.msg)
+    
     def select_user_game(self, user_id, game_id):
         if self.cnx and self.cnx.is_connected():
             with self.cnx.cursor(dictionary=True) as cursor:
