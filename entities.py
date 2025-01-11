@@ -16,6 +16,12 @@ class Game():
         self.release_date = release_date
         self.metacritic = metacritic
         self.discount_percent = discount_percent
+
+    def __eq__(self, other):
+        return self.game_id == other.game_id
+    
+    def __hash__(self):
+        return hash((self.game_id, self.name))
     
     def show_truncated(self):
         format = ("[{game_id}]\t{name}\n"
