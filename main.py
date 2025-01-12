@@ -87,7 +87,7 @@ def user_mode(user:User):
             elif option == 'I':
                 view_user_inventory(user)
             elif option == 'O':
-                print("View your Order History")
+                user_order_history(user.user_id)
             elif option == 'W':
                 manage_wallet(user)
             elif option == 'L':
@@ -100,11 +100,32 @@ def user_mode(user:User):
         except InvalidInputError as e:
             print(e)
 
+def user_order_history(user_id):
+    recent_orders = service.recent_orders_by_user(user_id)
+    start = 0
+    end = 5 if len(recent_orders) >= 5 else len(recent_orders)
+    while end <= len(recent_orders):
+        for i in range(start, end):
+            if i < len(recent_orders):
+                if i == start:
+                    recent_orders[i].show(include_header=True)
+                else:
+                    recent_orders[i].show()
+        else:
+            option = input("What would you like to do?\n" +
+                    "[Enter] to load more orders\n"
+                    "[B]ack\n" +
+                    ">> ").upper()
+            if option == 'B':
+                break
+        start = end
+        end = end + 5 if end + 5 <= len(recent_orders) else len(recent_orders)
+
 def view_user_inventory(user:User):
     while True:
         try:
             print("\nYour Inventory".center(30, '='))
-            print("ID\t" + "Qty\t" + "Title")
+            print("gID\t" + "Qty\t" + "Title")
             games = service.get_games_in_user_inventory(user)
             unique_games = sorted(set(games), key=lambda game: game.game_id)
             for game in unique_games:
@@ -172,7 +193,7 @@ def browse_store(user:User):
             elif option == 'B':
                 break
         start = end
-        end += 5
+        end = end + 5 if end + 5 <= len(games) else len(games)
 
 def view_game(game_id, user:User):
     """Display detailed information about the given game and provide the option to buy it"""

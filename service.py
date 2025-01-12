@@ -132,6 +132,17 @@ class Service():
             return True
         else:
             return False
+        
+    def recent_orders_by_user(self, user_id):
+        try:
+            orders = self.dao.recent_orders_by_user(user_id)
+            if orders:
+                return orders
+            else:
+                raise ValueError("User does not exist.")
+        except ValueError as e:
+            print(e)
+
     
     # TODO: Move years_since_date to more appropriate, reusable location.
     def years_since_date(date:str):

@@ -1,6 +1,6 @@
 """Data Access Layer for communicating directly with the MySQL database."""
 
-from entities import (User, Game)
+from entities import (User, Game, Order)
 import mysql.connector.errors
 from connection import connect_to_mysql
 import logging
@@ -245,3 +245,23 @@ class Dao():
                 except mysql.connector.Error as e:
                     logger.error("Failed to update user_id [%s] wallet balance :: %s", user_id, e.msg)
         return False
+    
+    def recent_orders_by_user(self, user_id):
+        if self.cnx and self.cnx.is_connected():
+            with self.cnx.cursor(dictionary=True) as cursor:
+                try:
+                    cursor.execute("SELECT * FROM Orders WHERE user_fk=%s ORDER BY order_date DESC;", [user_id])
+                    orders = cursor.fetchall()
+
+                    cursor.execute(
+                        """
+                        SELECT g.name, od.quantity, od.order_fk
+                        FROM Games g INNER JOIN OrderDetails od ON g.game_id = od.game_fk;
+                        """
+                    )
+                    details = cursor.fetchall()
+                    for order in orders:
+                        order['quantities_by_game'] = [{detail['name']:detail['quantity']} for detail in details if detail['order_fk'] == order['order_id']]
+                    return [Order(**order) for order in orders]
+                except mysql.connector.Error as e:
+                    logger.error("Query to select orders by user_id [%s] failed :: %s", user_id, e.msg)
