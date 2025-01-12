@@ -135,15 +135,13 @@ def view_user_inventory(user:User):
             for game in unique_games:
                 print(f"{game.game_id}\t" + f"{[game.game_id for game in games].count(game.game_id)}\t" + f"{game.name}")
 
-            #TODO: Implement gifting.
             option = input("\nWhat would you like to do?\n" +
-                            "[Game ID] [User Name] to gift a game to another user\n"
                             "[B]ack\n" +
                             ">> ").upper()
             if option == 'B':
                 break
             else:
-                raise InvalidInputError(['GAME_ID USERNAME', 'b'])
+                raise InvalidInputError(['b'])
         except InvalidInputError as e:
             print(e)
         
@@ -186,7 +184,7 @@ def browse_store(user:User):
                 game = games[i]
                 game.show_truncated()
         else:
-            option = input("[Game Number] to view more details\n"
+            option = input("[Game ID] to view more details\n"
                 "[Enter] to load more games\n"
                 "[B]ack\n"
                 ">> ").upper()

@@ -81,7 +81,7 @@ class Cart():
     def show(self):
         print("\nYour cart:")
         for game in self.games:
-            print(f"${game.price}\t{game.name}")
+            print(f"${game.price}\t{game.name}\t[{game.game_id}]")
         print("".center(15, "-"))
         print(f"${self.total}\tTotal")
 
@@ -103,10 +103,17 @@ class User():
             self.show_wallet()
             try:
                 option = input("\n[M]ake purchase?\n"
+                                "Remove game from cart  ->  [remove (Game ID)]\n"
                                 "[B]ack\n"
                                 ">> ").upper()
+                option_parts = option.split(' ')
                 if option == 'M':
                     return True
+                elif len(option_parts) == 2 and option_parts[0] == 'REMOVE' and option_parts[1].isnumeric():
+                    for game in self.cart.games:
+                        if option_parts[1] ==  str(game.game_id):
+                            self.cart.remove(game, game.price)
+                            break
                 elif option == 'B':
                     return False
                 else:
