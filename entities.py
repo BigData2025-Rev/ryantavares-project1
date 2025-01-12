@@ -4,7 +4,7 @@ from decimal import Decimal
 from exceptions import (InvalidInputError)
 
 class Game():
-    def __init__(self, game_id, name, price, rating, description, developer, publisher, recommendations, release_date, metacritic, discount_percent):
+    def __init__(self, game_id, name, price, rating, description, developer, publisher, recommendations, release_date, metacritic, discount_percent, genres=[], categories=[]):
         self.game_id = game_id
         self.name = name
         self.price = Decimal(price)
@@ -16,6 +16,8 @@ class Game():
         self.release_date = release_date
         self.metacritic = metacritic
         self.discount_percent = discount_percent
+        self.genres = genres
+        self.categories = categories
 
     def __eq__(self, other):
         return self.game_id == other.game_id
@@ -26,10 +28,12 @@ class Game():
     def show_truncated(self):
         format = ("[{game_id}]\t{name}\n"
                 "\tDev: {developer} | Pub: {publisher} | Released: {release_date} | Rated: {rating} | Metacritic: {metacritic}\n"
+                "\tGenres: {genres} | Categories: {categories}\n"
                 "\t${price}\n")
         print(format.format(game_id=self.game_id, name=self.name, developer=self.developer,
                         publisher=self.publisher, release_date=self.release_date, rating=self.rating.upper(),
-                        price=self.price, metacritic=f"{self.metacritic}/100" if self.metacritic else 'NA'))
+                        genres=", ".join(self.genres), categories=", ".join(self.categories), price=self.price,
+                        metacritic=f"{self.metacritic}/100" if self.metacritic else 'NA'))
 
     def show_detailed(self):
         format = ("\tTitle:\t\t{name}\n"
@@ -38,6 +42,8 @@ class Game():
                 "\tPublisher:\t{publisher}\n"
                 "\tRelease Date:\t{release_date}\n"
                 "\tRated:\t\t{rating}\n"
+                "\tGenres:\t\t{genres}\n"
+                "\tCategories:\t{categories}\n"
                 "\tMetacritic:\t{metacritic}\n"
                 "\tPrice:\t\t${price}\n"
                 "\tDiscount:\t{discount_percent}\n")
@@ -47,7 +53,8 @@ class Game():
         print()
         print(format.format(name=self.name, description="\n\t\t\t".join([desc1,desc2]), developer=self.developer,
                             publisher=self.publisher, release_date=self.release_date, rating=self.rating.upper(),
-                            price=self.price, metacritic=f"{self.metacritic}/100" if self.metacritic else 'NA',
+                            genres=", ".join(self.genres), categories=", ".join(self.categories), price=self.price,
+                            metacritic=f"{self.metacritic}/100" if self.metacritic else 'NA',
                             discount_percent=f"{self.discount_percent*100}%"))
 
 class Cart():

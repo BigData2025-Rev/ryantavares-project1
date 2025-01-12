@@ -49,13 +49,13 @@ class Service():
             return None
         
     def get_all_games(self):
-        return [Game(**game) for game in self.dao.all_games()]
+        return self.dao.all_games()
     
     def get_game_by_id(self, game_id):
         try:
             game = self.dao.game_by_id(game_id)
             if game:
-                return Game(**game)
+                return game
             else:
                 raise ValueError("Game with that id does not exist")
         except ValueError as e:
