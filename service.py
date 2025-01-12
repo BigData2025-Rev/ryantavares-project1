@@ -148,6 +148,18 @@ class Service():
     
     def get_all_users(self) -> list[User]:
         return self.dao.all_users()
+    
+    def change_username(self, current_username, new_username):
+        try:
+            if not new_username:
+                raise ValueError("Username must not be empty.")
+            elif not self.dao.user_by_username(current_username):
+                raise ValueError("User does not exist.")
+            else:
+                return self.dao.update_username(current_username, new_username)
+        except ValueError as e:
+            print(e)
+            return False
 
     
     # TODO: Move years_since_date to more appropriate, reusable location.

@@ -124,7 +124,7 @@ def user_order_history(user_id):
 def view_user_inventory(user:User):
     while True:
         try:
-            print("\nYour Inventory".center(30, '='))
+            print(f"\n{user.username}'s Inventory".center(30, '='))
             print("gID\t" + "Qty\t" + "Title")
             games = service.get_games_in_user_inventory(user)
             unique_games = sorted(set(games), key=lambda game: game.game_id)
@@ -295,7 +295,7 @@ def admin_view_users():
         else:
             option = input("[order uID] to view a user's orders\n"
                         "[mod (current_username) (new_username)] to update a user's username\n"
-                        "[mod (uID) wallet (new_balance)] to update a user's wallet balance\n"
+                        "[del (uID) to delete a user\n"
                         "[Enter] to load more\n"
                         "[B]ack\n"
                         ">> ")
@@ -304,10 +304,14 @@ def admin_view_users():
             if option_parts[0].upper() == 'ORDER' and option_parts[1] in [str(user.user_id) for user in users]:
                 user_order_history(option_parts[1])
                 continue
-            elif option_parts[0].upper() == 'MOD' and option_parts[1] in [str(user.username).upper() for user in users]:
-                print(f"Change username to {option_parts[2]}")
-            elif option_parts[0].upper() == 'MOD' and option_parts[1] in [str(user.user_id) for user in users] and option_parts[2].replace('.','',1) and option_parts[3].replace('.','',1):
-                print(f"Change wallet balance to {option_parts[3]}")
+            elif option_parts[0].upper() == 'MOD' and option_parts[1] in [str(user.username) for user in users] and len(option_parts) == 3:
+                if service.change_username(option_parts[1], option_parts[2]):
+                    for user in users:
+                        if user.username == option_parts[1]: 
+                            user.username = option_parts[2]
+                continue
+            elif option_parts[0].upper() == 'DEL' and option_parts[1] in [str(user.user_id) for user in users]:
+                print(f"Delete user with user_id {option_parts[1]}")
             elif option.upper() == 'B':
                 break
         start = end

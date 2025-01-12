@@ -63,6 +63,20 @@ class Dao():
                     return cursor.fetchone()
                 except mysql.connector.Error as e:
                     logger.error("Query to select user by username [%s] and password failed :: %s", username, e.msg)
+
+    def update_username(self, current_username, new_username):
+        if self.cnx and self.cnx.is_connected():
+            with self.cnx.cursor(dictionary=True) as cursor:
+                try:
+                    cursor.execute("UPDATE Users SET username=%s WHERE username=%s;", [new_username, current_username])
+                    if cursor.rowcount == 1:
+                        self.cnx.commit()
+                        logger.info("Updated user [%s] to [%s]", current_username, new_username)
+                        return True
+                    else:
+                        return False
+                except mysql.connector.Error as e:
+                    logger.error("Could not update username of [%s] to [%s] :: %s", current_username, new_username, e.msg)
     
     def all_games(self):
         if self.cnx and self.cnx.is_connected():
