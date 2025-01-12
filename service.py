@@ -4,7 +4,7 @@ from entities import (User, Game, Order)
 from dao import Dao
 import datetime as dt
 from decimal import (Decimal, InvalidOperation)
-from exceptions import (UnderAgeError, AlreadyExistsError, InvalidCredentialsError)
+from exceptions import (UnderAgeError, ExistenceError, InvalidCredentialsError)
 import logging
 
 logger = logging.getLogger(__name__)
@@ -26,8 +26,8 @@ class Service():
             if Service.years_since_date(date_of_birth) < 13:
                 raise UnderAgeError("Must be 13 years of age or older.")
             if self.dao.user_by_username(username):    
-                raise AlreadyExistsError("A user with that username already exists.")
-        except (ValueError, UnderAgeError, AlreadyExistsError) as e:
+                raise ExistenceError("A user with that username already exists.")
+        except (ValueError, UnderAgeError, ExistenceError) as e:
             print(e)
             return False
         else:
@@ -135,12 +135,10 @@ class Service():
         
     def recent_orders_by_user(self, user_id) -> list[Order]:
         try:
-            orders = self.dao.recent_orders_by_user(user_id)
-            if orders:
-                return orders
-            else:
-                raise ValueError("User does not exist.")
-        except ValueError as e:
+            if not self.dao.user_by_id(user_id):
+                raise ExistenceError("User does not exist.")
+            return self.dao.recent_orders_by_user(user_id)
+        except ExistenceError as e:
             print(e)
     
     def get_recent_orders(self) -> list[Order]:
@@ -154,10 +152,20 @@ class Service():
             if not new_username:
                 raise ValueError("Username must not be empty.")
             elif not self.dao.user_by_username(current_username):
-                raise ValueError("User does not exist.")
+                raise ExistenceError("User does not exist.")
             else:
                 return self.dao.update_username(current_username, new_username)
-        except ValueError as e:
+        except (ValueError, ExistenceError) as e:
+            print(e)
+            return False
+        
+    def remove_user(self, user_id):
+        try:
+            if not self.dao.user_by_id(user_id):
+                raise ExistenceError("User does not exist.")
+            else:
+                return self.dao.delete_user(user_id)
+        except ExistenceError as e:
             print(e)
             return False
 

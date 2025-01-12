@@ -3,7 +3,7 @@
 class UnderAgeError(Exception):
     pass
 
-class AlreadyExistsError(Exception):
+class ExistenceError(Exception):
     pass
 
 class InvalidCredentialsError(Exception):

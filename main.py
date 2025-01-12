@@ -102,6 +102,10 @@ def user_mode(user:User):
 
 def user_order_history(user_id):
     recent_orders = service.recent_orders_by_user(user_id)
+    if not recent_orders: 
+        recent_orders = []
+
+    print(f"Orders by uID [{user_id}]\n")
     start = 0
     end = 5 if len(recent_orders) >= 5 else len(recent_orders)
     while end <= len(recent_orders):
@@ -293,9 +297,9 @@ def admin_view_users():
                 else:
                     user.show()
         else:
-            option = input("[order uID] to view a user's orders\n"
-                        "[mod (current_username) (new_username)] to update a user's username\n"
-                        "[del (uID) to delete a user\n"
+            option = input("View a user's orders \t\t->\t [order uID]\n"
+                        "Update a user's username \t->\t [mod (current_username) (new_username)]\n"
+                        "Delete a user \t\t\t->\t [del (uID)]\n"
                         "[Enter] to load more\n"
                         "[B]ack\n"
                         ">> ")
@@ -306,12 +310,16 @@ def admin_view_users():
                 continue
             elif option_parts[0].upper() == 'MOD' and option_parts[1] in [str(user.username) for user in users] and len(option_parts) == 3:
                 if service.change_username(option_parts[1], option_parts[2]):
+                    print(f"Changed user [{option_parts[1]}] to [{option_parts[2]}].")
                     for user in users:
                         if user.username == option_parts[1]: 
                             user.username = option_parts[2]
                 continue
             elif option_parts[0].upper() == 'DEL' and option_parts[1] in [str(user.user_id) for user in users]:
-                print(f"Delete user with user_id {option_parts[1]}")
+                if service.remove_user(option_parts[1]):
+                    print(f"Deleted user with uID [{option_parts[1]}]")
+                    users = [user for user in users if str(user.user_id) != option_parts[1]]
+                continue
             elif option.upper() == 'B':
                 break
         start = end

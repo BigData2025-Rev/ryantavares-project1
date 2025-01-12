@@ -41,7 +41,7 @@ class Dao():
         if self.cnx and self.cnx.is_connected():
             with self.cnx.cursor(dictionary=True) as cursor:
                 try:
-                    cursor.execute("SELECT * FROM Users WHERE user_id=%s", [user_id])
+                    cursor.execute("SELECT user_id, username, date_of_birth, wallet FROM Users WHERE user_id=%s", [user_id])
                     return User(**cursor.fetchone())
                 except mysql.connector.Error as e:
                     logger.error("Query to select user by user_id [%s] failed :: %s", user_id, e.msg)
@@ -50,8 +50,8 @@ class Dao():
         if self.cnx and self.cnx.is_connected():
             with self.cnx.cursor(dictionary=True) as cursor:
                 try:
-                    cursor.execute("SELECT * FROM Users WHERE username=%s", [username])
-                    return cursor.fetchone()
+                    cursor.execute("SELECT user_id, username, date_of_birth, wallet FROM Users WHERE username=%s", [username])
+                    return User(**cursor.fetchone())
                 except mysql.connector.Error as e:
                     logger.error("Query to select user by username [%s] failed :: %s", username, e.msg)
     
@@ -66,7 +66,7 @@ class Dao():
 
     def update_username(self, current_username, new_username):
         if self.cnx and self.cnx.is_connected():
-            with self.cnx.cursor(dictionary=True) as cursor:
+            with self.cnx.cursor() as cursor:
                 try:
                     cursor.execute("UPDATE Users SET username=%s WHERE username=%s;", [new_username, current_username])
                     if cursor.rowcount == 1:
@@ -77,6 +77,20 @@ class Dao():
                         return False
                 except mysql.connector.Error as e:
                     logger.error("Could not update username of [%s] to [%s] :: %s", current_username, new_username, e.msg)
+
+    def delete_user(self, user_id):
+        if self.cnx and self.cnx.is_connected():
+            with self.cnx.cursor() as cursor:
+                try:
+                    cursor.execute("DELETE FROM Users WHERE user_id=%s;", [user_id])
+                    if cursor.rowcount == 1:
+                        self.cnx.commit()
+                        logger.info("Deleted user with user_id [%s]", user_id)
+                        return True
+                    else:
+                        return False
+                except mysql.connector.Error as e:
+                    logger.error("Could not delete user with user_id [%s] :: %s", user_id, e.msg)
     
     def all_games(self):
         if self.cnx and self.cnx.is_connected():
