@@ -41,7 +41,7 @@ def main():
 def user_prescreen():
     while True:
         try:
-            option = input("What would you like to do?\n" +
+            option = input("\nWhat would you like to do?\n" +
                         "[L]og in\n" +
                         "[C]reate an account\n" +
                         "[B]ack\n" +
@@ -227,7 +227,7 @@ def admin_prescreen():
         password = "password"
         option = input("Please enter the admin password: ")
         if option == password:
-            print("Success! Welcome, admin.")
+            print("\nSuccess!")
             logger.info("Admin logged in")
             admin_mode()
         else:
@@ -238,27 +238,16 @@ def admin_prescreen():
 def admin_mode():
     while True:
         try:
-            option = input("What would you like to do?\n" +
+            print("\nWelcome, admin.")
+
+            option = input("\nWhat would you like to do?\n" +
                         "[V]iew data\n" +
                         "Make changes to [G]ames\n" +
                         "Make changes to [U]sers\n" +
                         "[L]og out\n" +
                         ">> ").upper()
             if option == 'V':
-                while True:
-                    option = input("What would you like to do?\n" +
-                            "View [U]sers\n"
-                            "View [O]rders\n"
-                            "[B]ack\n" +
-                            ">> ").upper()
-                    if option == 'U':
-                        pass
-                    elif option == 'O':
-                        admin_view_orders()
-                    elif option == 'B':
-                        break
-                    else:
-                        raise InvalidInputError(['u', 'o', 'b'])
+                admin_view_data()
             elif option == 'G':
                 print("Add, update, or delete games in store")
             elif option == 'U':
@@ -268,6 +257,25 @@ def admin_mode():
                 break
             else:
                 raise InvalidInputError(valid_keys=['v', 'g', 'u', 'l'])
+        except InvalidInputError as e:
+            print(e)
+
+def admin_view_data():
+    while True:
+        try:
+            option = input("\nWhat would you like to do?\n" +
+                    "View [U]sers\n"
+                    "View [O]rders\n"
+                    "[B]ack\n" +
+                    ">> ").upper()
+            if option == 'U':
+                pass
+            elif option == 'O':
+                admin_view_orders()
+            elif option == 'B':
+                break
+            else:
+                raise InvalidInputError(['u', 'o', 'b'])
         except InvalidInputError as e:
             print(e)
 
