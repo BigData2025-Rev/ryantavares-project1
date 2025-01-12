@@ -18,7 +18,7 @@ def main():
     
     intro = "Welcome to The Game Store"
     while True:
-        print("".ljust(len(intro), '='))
+        print("\n".ljust(len(intro), '='))
         print(intro)
         print("".ljust(len(intro), '='))
         try:
@@ -245,7 +245,20 @@ def admin_mode():
                         "[L]og out\n" +
                         ">> ").upper()
             if option == 'V':
-                print("View orders and/or users")
+                while True:
+                    option = input("What would you like to do?\n" +
+                            "View [U]sers\n"
+                            "View [O]rders\n"
+                            "[B]ack\n" +
+                            ">> ").upper()
+                    if option == 'U':
+                        pass
+                    elif option == 'O':
+                        admin_view_orders()
+                    elif option == 'B':
+                        break
+                    else:
+                        raise InvalidInputError(['u', 'o', 'b'])
             elif option == 'G':
                 print("Add, update, or delete games in store")
             elif option == 'U':
@@ -257,6 +270,27 @@ def admin_mode():
                 raise InvalidInputError(valid_keys=['v', 'g', 'u', 'l'])
         except InvalidInputError as e:
             print(e)
+
+def admin_view_orders():
+    recent_orders = service.get_recent_orders()
+    start = 0
+    end = 5 if len(recent_orders) >= 5 else len(recent_orders)
+    while end <= len(recent_orders):
+        for i in range(start, end):
+            if i < len(recent_orders):
+                if i == start:
+                    recent_orders[i].show(include_header=True)
+                else:
+                    recent_orders[i].show()
+        else:
+            option = input("What would you like to do?\n" +
+                    "[Enter] to load more orders\n"
+                    "[B]ack\n" +
+                    ">> ").upper()
+            if option == 'B':
+                break
+        start = end
+        end = end + 5 if end + 5 <= len(recent_orders) else len(recent_orders)
     
 
 

@@ -1,6 +1,6 @@
 """Service Layer for verifying incoming/outgoing requests to the database."""
 
-from entities import (User, Game)
+from entities import (User, Game, Order)
 from dao import Dao
 import datetime as dt
 from decimal import (Decimal, InvalidOperation)
@@ -133,7 +133,7 @@ class Service():
         else:
             return False
         
-    def recent_orders_by_user(self, user_id):
+    def recent_orders_by_user(self, user_id) -> list[Order]:
         try:
             orders = self.dao.recent_orders_by_user(user_id)
             if orders:
@@ -142,6 +142,9 @@ class Service():
                 raise ValueError("User does not exist.")
         except ValueError as e:
             print(e)
+    
+    def get_recent_orders(self) -> list[Order]:
+        return self.dao.recent_orders()
 
     
     # TODO: Move years_since_date to more appropriate, reusable location.

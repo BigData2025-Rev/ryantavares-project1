@@ -265,3 +265,23 @@ class Dao():
                     return [Order(**order) for order in orders]
                 except mysql.connector.Error as e:
                     logger.error("Query to select orders by user_id [%s] failed :: %s", user_id, e.msg)
+
+    def recent_orders(self):
+        if self.cnx and self.cnx.is_connected():
+            with self.cnx.cursor(dictionary=True) as cursor:
+                try:
+                    cursor.execute("SELECT * FROM Orders ORDER BY order_date DESC;")
+                    orders = cursor.fetchall()
+
+                    cursor.execute(
+                        """
+                        SELECT g.name, od.quantity, od.order_fk
+                        FROM Games g INNER JOIN OrderDetails od ON g.game_id = od.game_fk;
+                        """
+                    )
+                    details = cursor.fetchall()
+                    for order in orders:
+                        order['quantities_by_game'] = [{detail['name']:detail['quantity']} for detail in details if detail['order_fk'] == order['order_id']]
+                    return [Order(**order) for order in orders]
+                except mysql.connector.Error as e:
+                    logger.error("Query to select all recent orders failed :: %s", e.msg)
