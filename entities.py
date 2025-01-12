@@ -113,6 +113,14 @@ class User():
                     InvalidInputError('m', 'b')
             except InvalidInputError as e:
                 print(e)
+        
+    def show(self, include_header=False):
+        header = "uID".ljust(10, ' ') + "Username".ljust(25, ' ') + "Date of Birth".ljust(25, ' ') + "Wallet\n"
+        user = self
+        out = f"{user.user_id}".ljust(10, ' ') + f"{user.username[:20]}".ljust(25, ' ') + f"{user.date_of_birth}".ljust(25, ' ') + f"{user.wallet}" + "\n"
+        if include_header:
+            print(header)
+        print(out)
 
 class Order():
     def __init__(self, order_id, user_fk, order_date, total_cost, quantities_by_game:list[dict[str:int]]=None):

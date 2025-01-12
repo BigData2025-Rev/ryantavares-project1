@@ -28,6 +28,15 @@ class Dao():
                     logger.error("Failed to insert user [%s] :: %s", username, e.msg)
         return False
     
+    def all_users(self):
+        if self.cnx and self.cnx.is_connected():
+            with self.cnx.cursor(dictionary=True) as cursor:
+                try:
+                    cursor.execute("SELECT user_id, username, date_of_birth, wallet FROM Users ORDER BY user_id DESC;")
+                    return [User(**user) for user in cursor.fetchall()]
+                except mysql.connector.Error as e:
+                    logger.error("Query to select all users failed :: %s", e.msg)
+    
     def user_by_id(self, user_id):
         if self.cnx and self.cnx.is_connected():
             with self.cnx.cursor(dictionary=True) as cursor:

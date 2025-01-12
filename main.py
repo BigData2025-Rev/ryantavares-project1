@@ -269,7 +269,7 @@ def admin_view_data():
                     "[B]ack\n" +
                     ">> ").upper()
             if option == 'U':
-                pass
+                admin_view_users()
             elif option == 'O':
                 admin_view_orders()
             elif option == 'B':
@@ -278,6 +278,40 @@ def admin_view_data():
                 raise InvalidInputError(['u', 'o', 'b'])
         except InvalidInputError as e:
             print(e)
+
+def admin_view_users():
+    users = service.get_all_users()
+    
+    start = 0
+    end = 5 if len(users) >= 5 else len(users)
+    while end <= len(users):
+        for i in range(start, end):
+            if i < len(users):
+                user = users[i]
+                if i == start:
+                    user.show(include_header=True)
+                else:
+                    user.show()
+        else:
+            option = input("[order uID] to view a user's orders\n"
+                        "[mod (current_username) (new_username)] to update a user's username\n"
+                        "[mod (uID) wallet (new_balance)] to update a user's wallet balance\n"
+                        "[Enter] to load more\n"
+                        "[B]ack\n"
+                        ">> ")
+            print()
+            option_parts = option.split(' ')
+            if option_parts[0].upper() == 'ORDER' and option_parts[1] in [str(user.user_id) for user in users]:
+                user_order_history(option_parts[1])
+                continue
+            elif option_parts[0].upper() == 'MOD' and option_parts[1] in [str(user.username).upper() for user in users]:
+                print(f"Change username to {option_parts[2]}")
+            elif option_parts[0].upper() == 'MOD' and option_parts[1] in [str(user.user_id) for user in users] and option_parts[2].replace('.','',1) and option_parts[3].replace('.','',1):
+                print(f"Change wallet balance to {option_parts[3]}")
+            elif option.upper() == 'B':
+                break
+        start = end
+        end = end + 5 if end + 5 <= len(users) else len(users)
 
 def admin_view_orders():
     recent_orders = service.get_recent_orders()

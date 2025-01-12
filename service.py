@@ -145,6 +145,9 @@ class Service():
     
     def get_recent_orders(self) -> list[Order]:
         return self.dao.recent_orders()
+    
+    def get_all_users(self) -> list[User]:
+        return self.dao.all_users()
 
     
     # TODO: Move years_since_date to more appropriate, reusable location.
