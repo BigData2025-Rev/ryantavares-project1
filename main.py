@@ -189,7 +189,8 @@ def view_game(game_id, user:User):
                     user.cart.add(game, game.price)
                     if user.will_purchase():
                         if service.purchase_games(user, user.cart.games):
-                            service.add_games_to_user(user.user_id, user.cart.games)
+                            print("\nPurchase successful!")
+                            service.add_games_to_user(user, user.cart.games)
                             user.cart.empty()
                     else:
                         continue

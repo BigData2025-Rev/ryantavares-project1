@@ -44,6 +44,7 @@ class Game():
         desc = self.description
         desc1 = desc[0:len(desc) // 2]
         desc2 = desc[len(desc) // 2:]
+        print()
         print(format.format(name=self.name, description="\n\t\t\t".join([desc1,desc2]), developer=self.developer,
                             publisher=self.publisher, release_date=self.release_date, rating=self.rating.upper(),
                             price=self.price, metacritic=f"{self.metacritic}/100" if self.metacritic else 'NA',

@@ -72,18 +72,22 @@ class Service():
         try:
             if len(games) == 0:
                 raise ValueError("There must be games in the order to make a purchase.")
+            for game in games:
+                if not self.of_age_for_game(user, game):
+                    raise UnderAgeError(f"You are not of age to buy {game.name}.")
             total_cost = Decimal(0.00)
             for game in games:
                 total_cost += game.price - (game.price * game.discount_percent)
                 if user.wallet < total_cost:
                     raise ValueError("You don't have enough funds!")
+                
             if self.dao.insert_order(user.user_id, dt.datetime.now(), total_cost, games):
                 new_wallet = user.wallet - total_cost
                 if self.update_wallet_funds(user, new_wallet):
-                    user.wallet -= total_cost
                     return True
-        except ValueError as e:
+        except (ValueError, UnderAgeError) as e:
             print(e)
+            return False
         
     def purchase_wallet_funds(self, user:User, amount):
         """Purchases wallet funds for a given user."""
@@ -108,16 +112,29 @@ class Service():
             print("Cannot have negative wallet funds.")
             return False
     
-    def add_games_to_user(self, user_id, games: list[Game]):
+    def add_games_to_user(self, user:User, games:list[Game]):
         try:
             if len(games) == 0:
                 raise ValueError("There must be games to add to user.")
-            self.dao.insert_user_games(user_id, games)
-        except ValueError as e:
+            for game in games:
+                if not self.of_age_for_game(user, game):
+                    raise UnderAgeError(f"You are not of age to buy {game.name}.")
+            else:
+                self.dao.insert_user_games(user.user_id, games)
+                return True
+        except (ValueError, UnderAgeError) as e:
             print(e)
+            return False
+        
+    def of_age_for_game(self, user:User, game:Game):
+        age = Service.years_since_date(user.date_of_birth.__str__())
+        if self.dao.game_if_of_age(game.game_id, age):
+            return True
+        else:
+            return False
     
     # TODO: Move years_since_date to more appropriate, reusable location.
-    def years_since_date(date):
+    def years_since_date(date:str):
         """Returns the number of years since the given date."""
         try:
             then = dt.datetime.strptime(date, '%Y-%m-%d')

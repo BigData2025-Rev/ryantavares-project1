@@ -72,6 +72,21 @@ class Dao():
                     return cursor.fetchone()
                 except mysql.connector.Error as e:
                     logger.error("Query to select game by game_id [%s] failed :: %s", game_id, e.msg)
+                
+    def game_if_of_age(self, game_id, age):
+        if self.cnx and self.cnx.is_connected():
+            with self.cnx.cursor(dictionary=True) as cursor:
+                try:
+                    cursor.execute(
+                        """
+                        SELECT g.*
+                        FROM Games g INNER JOIN Ratings r ON g.rating = r.rating
+                        WHERE g.game_id = %s AND r.required_age <= %s;
+                        """
+                    , [game_id, age])
+                    return cursor.fetchone()
+                except mysql.connector.Error as e:
+                    logger.error("Query to select game by game_id [%s] for user with age [%s] failed :: %s", game_id, age, e.msg)
 
     def insert_order(self, user_id, order_date, total_cost, games=None):
         if self.cnx and self.cnx.is_connected():
