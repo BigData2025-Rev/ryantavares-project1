@@ -62,18 +62,41 @@ class Dao():
                     cursor.execute("SELECT * FROM Games;")
                     games = cursor.fetchall()
 
-                    # TODO: Make getting genres and categories more efficient (many queries are needed for current implementation)
-                    # Get genres
-                    for game in games:
-                        game['genres'] = [genre[0] for genre in self.game_genres(game['game_id'])]
+                    cursor.execute(
+                        """
+                        SELECT gam.game_id, gen.genre
+                        FROM Games gam INNER JOIN Game_Genre gen ON gam.game_id = gen.game_fk;
+                        """
+                    )
+                    genres = cursor.fetchall()
 
-                    # Get categories
+                    cursor.execute(
+                        """
+                        SELECT gam.game_id, cat.category
+                        FROM Games gam INNER JOIN Game_Category cat ON gam.game_id = cat.game_fk;
+                        """
+                    )
+                    categories = cursor.fetchall()
+
                     for game in games:
-                        game['categories'] = [category[0] for category in self.game_categories(game['game_id'])]
+                        game['genres'] = [genre['genre'] for genre in genres if genre['game_id'] == game['game_id']]
+                        game['categories'] = [category['category'] for category in categories if category['game_id'] == game['game_id']]
 
                     return [Game(**game) for game in games]
                 except mysql.connector.Error as e:
                     logger.error("Query to select all games failed :: %s", (e.msg))
+
+    def game_by_id(self, game_id):
+        if self.cnx and self.cnx.is_connected():
+            with self.cnx.cursor(dictionary=True) as cursor:
+                try:
+                    cursor.execute("SELECT * FROM Games WHERE game_id=%s;", [game_id])
+                    game = cursor.fetchone()
+                    game['genres'] = [genre[0] for genre in self.game_genres(game['game_id'])]
+                    game['categories'] = [category[0] for category in self.game_categories(game['game_id'])]
+                    return Game(**game)
+                except mysql.connector.Error as e:
+                    logger.error("Query to select game by game_id [%s] failed :: %s", game_id, e.msg)
 
     def game_genres(self, game_id):
         if self.cnx and self.cnx.is_connected():
@@ -104,18 +127,6 @@ class Dao():
                     return cursor.fetchall()
                 except mysql.connector.Error as e:
                     logger.error("Query to select game categories :: %s", (e.msg))
-
-    def game_by_id(self, game_id):
-        if self.cnx and self.cnx.is_connected():
-            with self.cnx.cursor(dictionary=True) as cursor:
-                try:
-                    cursor.execute("SELECT * FROM Games WHERE game_id=%s;", [game_id])
-                    game = cursor.fetchone()
-                    game['genres'] = [genre[0] for genre in self.game_genres(game['game_id'])]
-                    game['categories'] = [category[0] for category in self.game_categories(game['game_id'])]
-                    return Game(**game)
-                except mysql.connector.Error as e:
-                    logger.error("Query to select game by game_id [%s] failed :: %s", game_id, e.msg)
                 
     def game_if_of_age(self, game_id, age):
         if self.cnx and self.cnx.is_connected():
