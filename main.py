@@ -140,12 +140,17 @@ def view_user_inventory(user:User):
                 print(f"{game.game_id}\t" + f"{[game.game_id for game in games].count(game.game_id)}\t" + f"{game.name}")
 
             option = input("\nWhat would you like to do?\n" +
+                            "Gift game to user -> (gID) (username)\n"
                             "[B]ack\n" +
-                            ">> ").upper()
-            if option == 'B':
+                            ">> ")
+            option_parts = option.split(' ')
+            if len(option_parts) == 2 and option_parts[0].isnumeric():
+                if service.gift_game_to_user(option_parts[0], user.user_id, option_parts[1]):
+                    print("\nGift received!")
+            elif option.upper() == 'B':
                 break
             else:
-                raise InvalidInputError(['b'])
+                raise InvalidInputError(['gID username', 'b'])
         except InvalidInputError as e:
             print(e)
         

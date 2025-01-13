@@ -103,8 +103,12 @@ class Dao():
         if self.cnx and self.cnx.is_connected():
             with self.cnx.cursor() as cursor:
                 try:
-                    update_query = "UPDATE User_Game SET quantity_in_inventory=%s WHERE user_fk=%s AND game_fk=%s;"
-                    cursor.execute(update_query, (quantity, user_id, game_id))
+                    if quantity > 0:
+                        update_query = "UPDATE User_Game SET quantity_in_inventory=%s WHERE user_fk=%s AND game_fk=%s;"
+                        cursor.execute(update_query, (quantity, user_id, game_id))
+                    else:
+                        delete_query = "DELETE FROM User_Game WHERE user_fk = %s AND game_fk = %s;"
+                        cursor.execute(delete_query, (user_id, game_id))
 
                     self.cnx.commit()
                     logger.info("Updated user_id [%s] inventory", user_id)

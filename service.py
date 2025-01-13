@@ -174,6 +174,25 @@ class Service():
             return True
         else:
             return False
+    
+    def gift_game_to_user(self, game_id, from_id, to_username):
+        try:
+            to = self.dao.user_by_username(to_username)
+            user_game = self.dao.user_game(from_id, game_id)
+            if not to:
+                raise ExistenceError("The user you are gifting to does not exist.")
+            elif not user_game:
+                raise ExistenceError("You do not have that game.")
+            elif not self.dao.game_if_of_age(user_game['game_fk'], Service.years_since_date(to.date_of_birth.__str__())):
+                raise UnderAgeError("The user you are gifting to is not old enough to play that game.")
+            else:
+                curr_quantity = user_game['quantity_in_inventory']
+                game = self.dao.game_by_id(user_game['game_fk'])
+                if self.add_games_to_user(to, [game]):
+                    return self.dao.update_user_game(from_id, game_id, curr_quantity - 1)
+        except (ExistenceError, UnderAgeError) as e:
+            print(e)
+            return False        
         
     def get_games_ordered_by_date(self):
         return self.dao.games_ordered_by_date()
