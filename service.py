@@ -13,6 +13,7 @@ class Service():
     def __init__(self):
         self.dao = Dao()
 
+    """USERS"""
     def create_user(self, username, password, date_of_birth):
         """If given user data is valid, calls dao to insert user to the database.
         Returns true if user was inserted into the database, false otherwise.
@@ -48,6 +49,67 @@ class Service():
             print(e)
             return None
         
+    def get_all_users(self) -> list[User]:
+        return self.dao.all_users()
+    
+    def change_username(self, current_username, new_username):
+        try:
+            if not new_username:
+                raise ValueError("Username must not be empty.")
+            elif not self.dao.user_by_username(current_username):
+                raise ExistenceError("User does not exist.")
+            else:
+                return self.dao.update_username(current_username, new_username)
+        except (ValueError, ExistenceError) as e:
+            print(e)
+            return False
+        
+    def remove_user(self, user_id):
+        try:
+            if not self.dao.user_by_id(user_id):
+                raise ExistenceError("User does not exist.")
+            else:
+                return self.dao.delete_user(user_id)
+        except ExistenceError as e:
+            print(e)
+            return False
+        
+    def purchase_wallet_funds(self, user:User, amount):
+        """Purchases wallet funds for a given user."""
+        try:
+            amount = Decimal(amount)
+            if amount <= Decimal(0.00):
+                raise ValueError
+            else:
+                if self.dao.insert_order(user.user_id, dt.datetime.now(), amount):
+                    new_amount = user.wallet + amount
+                    return self.update_wallet_funds(user, new_amount)
+        except (ValueError, InvalidOperation) as e:
+            print("Please enter a positive monetary value.")
+    
+    def update_wallet_funds(self, user:User, amount:Decimal):
+        """Update a user's wallet funds."""
+        if amount >= Decimal(0.00):
+            if self.dao.update_user_wallet(user.user_id, amount):
+                user.wallet = amount
+                return True
+        else:
+            print("Cannot have negative wallet funds.")
+            return False
+        
+    """ORDERS"""
+    def get_recent_orders_by_user(self, user_id) -> list[Order]:
+        try:
+            if not self.dao.user_by_id(user_id):
+                raise ExistenceError("User does not exist.")
+            return self.dao.recent_orders_by_user(user_id)
+        except ExistenceError as e:
+            print(e)
+    
+    def get_recent_orders(self) -> list[Order]:
+        return self.dao.recent_orders()
+        
+    """GAMES"""
     def get_all_games(self):
         return self.dao.all_games()
     
@@ -115,66 +177,8 @@ class Service():
         
     def get_games_ordered_by_date(self):
         return self.dao.games_ordered_by_date()
-        
-    def purchase_wallet_funds(self, user:User, amount):
-        """Purchases wallet funds for a given user."""
-        try:
-            amount = Decimal(amount)
-            if amount <= Decimal(0.00):
-                raise ValueError
-            else:
-                if self.dao.insert_order(user.user_id, dt.datetime.now(), amount):
-                    new_amount = user.wallet + amount
-                    return self.update_wallet_funds(user, new_amount)
-        except (ValueError, InvalidOperation) as e:
-            print("Please enter a positive monetary value.")
     
-    def update_wallet_funds(self, user:User, amount:Decimal):
-        """Update a user's wallet funds."""
-        if amount >= Decimal(0.00):
-            if self.dao.update_user_wallet(user.user_id, amount):
-                user.wallet = amount
-                return True
-        else:
-            print("Cannot have negative wallet funds.")
-            return False
-        
-    def get_recent_orders_by_user(self, user_id) -> list[Order]:
-        try:
-            if not self.dao.user_by_id(user_id):
-                raise ExistenceError("User does not exist.")
-            return self.dao.recent_orders_by_user(user_id)
-        except ExistenceError as e:
-            print(e)
-    
-    def get_recent_orders(self) -> list[Order]:
-        return self.dao.recent_orders()
-    
-    def get_all_users(self) -> list[User]:
-        return self.dao.all_users()
-    
-    def change_username(self, current_username, new_username):
-        try:
-            if not new_username:
-                raise ValueError("Username must not be empty.")
-            elif not self.dao.user_by_username(current_username):
-                raise ExistenceError("User does not exist.")
-            else:
-                return self.dao.update_username(current_username, new_username)
-        except (ValueError, ExistenceError) as e:
-            print(e)
-            return False
-        
-    def remove_user(self, user_id):
-        try:
-            if not self.dao.user_by_id(user_id):
-                raise ExistenceError("User does not exist.")
-            else:
-                return self.dao.delete_user(user_id)
-        except ExistenceError as e:
-            print(e)
-            return False
-    
+    """HELPER"""
     # TODO: Move years_since_date to more appropriate, reusable location.
     def years_since_date(date:str):
         """Returns the number of years since the given date."""
