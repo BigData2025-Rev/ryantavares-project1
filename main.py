@@ -328,62 +328,41 @@ def admin_view_orders():
         end = end + 5 if end + 5 <= len(recent_orders) else len(recent_orders)
     
 def admin_add_game():
-    name = ""
+    name, rating, description, developer, publisher = "","","","",""
     price = 0.00
-    rating = ""
-    description = ""
-    developer = ""
-    publisher = ""
-    genres = []
-    categories = []
+    genres, categories = [],[]
 
-    option = input("\nEnter title\n"
-                "[C]ancel\n" +
-                ">> ")
+    option = input("\nEnter title\n" + "[C]ancel\n" + ">> ")
     if option.upper() == 'C': return
     else: name = option
     
-    option = input("\nEnter price\n"
-                "[C]ancel\n" +
-                ">> ")
+    option = input("\nEnter price\n" + "[C]ancel\n" + ">> ")
     if option.upper() == 'C': return
     elif option.replace('.','',1).isnumeric(): 
         price = f"{float(option):.2f}"
         print(price)
 
-    option = input("\nEnter maturity rating\n"
-                "[C]ancel\n" +
-                ">> ")
+    option = input("\nEnter maturity rating\n" + "[C]ancel\n" + ">> ")
     if option.upper() == 'C': return
     elif option.lower() in ['e', 'e10', 't', 'm', 'ao', 'rp']: rating = option.lower()
 
-    option = input("\nEnter description\n"
-                "[C]ancel\n" +
-                ">> ")
+    option = input("\nEnter description\n" + "[C]ancel\n" + ">> ")
     if option.upper() == 'C': return
     else: description = option
 
-    option = input("\nEnter developer\n"
-                "[C]ancel\n" +
-                ">> ")
+    option = input("\nEnter developer\n" "[C]ancel\n" + ">> ")
     if option.upper() == 'C': return
     else: developer = option
 
-    option = input("\nEnter publisher\n"
-                "[C]ancel\n" +
-                ">> ")
+    option = input("\nEnter publisher\n" + "[C]ancel\n" + ">> ")
     if option.upper() == 'C': return
     else: publisher = option    
 
-    option = input("\nEnter genres \t [genre1, genre2, ...]\n"
-                "[C]ancel\n" +
-                ">> ")
+    option = input("\nEnter genres \t [genre1, genre2, ...]\n" + "[C]ancel\n" + ">> ")
     if option.upper() == 'C': return
     else: genres = option.split(', ')
 
-    option = input("\nEnter categories \t [category1, category2, ...]\n"
-                "[C]ancel\n" +
-                ">> ")
+    option = input("\nEnter categories \t [category1, category2, ...]\n" + "[C]ancel\n" + ">> ")
     if option.upper() == 'C': return
     else: categories = option.split(', ')
         
@@ -392,6 +371,8 @@ def admin_add_game():
                 release_date=dt.date.today(), metacritic=0, genres=genres, categories=categories)
     if service.add_game_to_store(game):
         print(f"\nAdded game: {game.name}")
+    else:
+        print("Failed to add game.")
 
 
 if __name__ == "__main__":
