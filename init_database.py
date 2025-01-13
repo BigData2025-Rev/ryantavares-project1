@@ -1,6 +1,5 @@
 """This module is meant to initialize the MySQL database with some baked-in game data.
-Useful if you need to initialize the database for the first time, or if you need to reset the database to its initial state.
-Should only be run as __name__ == '__main__' in either case.
+Useful for initializing the database for the first time, or for resetting the database to its initial state.
 """
 
 import mysql.connector
@@ -16,15 +15,17 @@ logging.basicConfig(filename="logs/db_init.log",
 logger = logging.getLogger(__name__)
 
 def main():
-    init_database()
+    init_database(abort_if_exists=False)
 
-def init_database():
-    """Initializes/Resets database with baked in game data."""
+def init_database(abort_if_exists=True):
+    """Initializes/Resets database with baked in game data.
+    Set abort_if_exists to True stop the database from being reset if it already exists.
+    """
     # Connect to the MySQL database.
     try:
-        cnx = mysql.connector.connect(user=config.user, password=config.password,
-                                    host=config.host,
-                                    database='p1')
+        cnx = mysql.connector.connect(user=config.user, 
+                                    password=config.password,
+                                    host=config.host)
 
         logger.info("Connected to MySQL database")
     except mysql.connector.Error as e:
@@ -36,7 +37,14 @@ def init_database():
 
     cursor = cnx.cursor()
 
+    if abort_if_exists:
+        cursor.execute("SHOW DATABASES LIKE 'p1';")
+        if cursor.fetchall():
+            return
+
     # Initialize database.
+    cursor.execute("CREATE DATABASE IF NOT EXISTS p1;")
+    cursor.execute("USE p1;")
     drop_tables(cursor)
     create_tables(cursor)
     insert_data(cursor)
@@ -83,10 +91,10 @@ def create_tables(cursor):
         """
         CREATE TABLE Orders(
             order_id INT AUTO_INCREMENT PRIMARY KEY,
-            user_fk INT NOT NULL,
+            user_fk INT,
             order_date DATETIME NOT NULL,
             total_cost DECIMAL(7,2),
-            FOREIGN KEY (user_fk) REFERENCES Users(user_id) ON DELETE CASCADE
+            FOREIGN KEY (user_fk) REFERENCES Users(user_id) ON DELETE SET NULL
         );
         """
         )

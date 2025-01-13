@@ -1,6 +1,6 @@
 """The main entry point for the CLI store application."""
 
-from decimal import Decimal
+from init_database import init_database
 from exceptions import (InvalidInputError, InvalidCredentialsError)
 from entities import (User, Game)
 from service import Service
@@ -16,6 +16,8 @@ def main():
                     format='%(asctime)s :: %(levelname)s :: %(message)s')
     global logger
     logger = logging.getLogger(__name__)
+
+    init_database(abort_if_exists=True)
     
     intro = "Welcome to The Game Store"
     while True:

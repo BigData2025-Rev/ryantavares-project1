@@ -95,7 +95,7 @@ class User():
         self.cart = Cart()
 
     def show_wallet(self):
-        print("${wallet:.2f}\tIn your wallet".format(wallet=self.wallet))
+        print("${wallet:.2f}\tin your wallet".format(wallet=self.wallet))
 
     def will_purchase(self):
         while True:

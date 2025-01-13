@@ -52,15 +52,7 @@ class Service():
         return self.dao.all_games()
     
     def get_game_by_id(self, game_id):
-        # try:
-            #game = self.dao.game_by_id(game_id)
         return self.dao.game_by_id(game_id)
-        #     if game:
-        #         return game
-        #     else:
-        #         raise ValueError("Game with that id does not exist")
-        # except ValueError as e:
-        #     print(e)
 
     def get_games_in_user_inventory(self, user:User) -> list[Game]:
         """Gets games that a user has purchased."""
