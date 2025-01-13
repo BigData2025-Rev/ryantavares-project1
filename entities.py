@@ -106,6 +106,7 @@ class User():
                                 "Remove game from cart  ->  [remove (Game ID)]\n"
                                 "[B]ack\n"
                                 ">> ").upper()
+                print()
                 option_parts = option.split(' ')
                 if option == 'M':
                     return True

@@ -82,27 +82,14 @@ class Service():
             print(e)
             return False
         
-    def purchase_wallet_funds(self, user:User, amount):
-        """Purchases wallet funds for a given user."""
+    def add_game_to_store(self, game:Game):
         try:
-            amount = Decimal(amount)
-            if amount <= Decimal(0.00):
-                raise ValueError
+            if self.get_game_by_id(game.game_id):
+                raise ExistenceError("That game already exists.")
             else:
-                if self.dao.insert_order(user.user_id, dt.datetime.now(), amount):
-                    new_amount = user.wallet + amount
-                    return self.update_wallet_funds(user, new_amount)
-        except (ValueError, InvalidOperation) as e:
-            print("Please enter a positive monetary value.")
-    
-    def update_wallet_funds(self, user:User, amount:Decimal):
-        """Update a user's wallet funds."""
-        if amount >= Decimal(0.00):
-            if self.dao.update_user_wallet(user.user_id, amount):
-                user.wallet = amount
-                return True
-        else:
-            print("Cannot have negative wallet funds.")
+                return self.dao.insert_game(game)
+        except ExistenceError as e:
+            print(e)
             return False
     
     def add_games_to_user(self, user:User, games:list[Game]):
@@ -126,7 +113,33 @@ class Service():
         else:
             return False
         
-    def recent_orders_by_user(self, user_id) -> list[Order]:
+    def get_games_ordered_by_date(self):
+        return self.dao.games_ordered_by_date()
+        
+    def purchase_wallet_funds(self, user:User, amount):
+        """Purchases wallet funds for a given user."""
+        try:
+            amount = Decimal(amount)
+            if amount <= Decimal(0.00):
+                raise ValueError
+            else:
+                if self.dao.insert_order(user.user_id, dt.datetime.now(), amount):
+                    new_amount = user.wallet + amount
+                    return self.update_wallet_funds(user, new_amount)
+        except (ValueError, InvalidOperation) as e:
+            print("Please enter a positive monetary value.")
+    
+    def update_wallet_funds(self, user:User, amount:Decimal):
+        """Update a user's wallet funds."""
+        if amount >= Decimal(0.00):
+            if self.dao.update_user_wallet(user.user_id, amount):
+                user.wallet = amount
+                return True
+        else:
+            print("Cannot have negative wallet funds.")
+            return False
+        
+    def get_recent_orders_by_user(self, user_id) -> list[Order]:
         try:
             if not self.dao.user_by_id(user_id):
                 raise ExistenceError("User does not exist.")
@@ -161,20 +174,6 @@ class Service():
         except ExistenceError as e:
             print(e)
             return False
-        
-    def add_game_to_store(self, game:Game):
-        try:
-            if self.get_game_by_id(game.game_id):
-                raise ExistenceError("That game already exists.")
-            else:
-                return self.dao.insert_game(game)
-        except ExistenceError as e:
-            print(e)
-            return False
-        
-    def get_games_ordered_by_date(self):
-        return self.dao.games_ordered_by_date()
-
     
     # TODO: Move years_since_date to more appropriate, reusable location.
     def years_since_date(date:str):

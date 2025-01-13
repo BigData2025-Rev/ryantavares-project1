@@ -99,12 +99,12 @@ def user_mode(user:User):
                 del user
                 break
             else:
-                raise InvalidInputError(['b', 'g', 'i', 'o', 'w', 'l'])
+                raise InvalidInputError(['b', 'i', 'o', 'w', 'l'])
         except InvalidInputError as e:
             print(e)
 
 def user_order_history(user_id):
-    recent_orders = service.recent_orders_by_user(user_id)
+    recent_orders = service.get_recent_orders_by_user(user_id)
     if not recent_orders: 
         recent_orders = []
 
@@ -131,7 +131,8 @@ def user_order_history(user_id):
 def view_user_inventory(user:User):
     while True:
         try:
-            print(f"\n{user.username}'s Inventory".center(30, '='))
+            print()
+            print(f"{user.username}'s Inventory".center(30, '='))
             print("gID\t" + "Qty\t" + "Title")
             games = service.get_games_in_user_inventory(user)
             unique_games = sorted(set(games), key=lambda game: game.game_id)
@@ -180,7 +181,8 @@ def browse_store(user:User):
             option = input("\nSearch Filter\n"
                         "Get [A]ll games\n"
                         "Games by Release [D]ate\n"
-                        "[B]ack").upper()
+                        "[B]ack\n"
+                        ">> ").upper()
             if option == 'A':
                 games = service.get_all_games()
                 break
