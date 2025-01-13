@@ -181,6 +181,7 @@ def browse_store(user:User):
             option = input("\nSearch Filter\n"
                         "Get [A]ll games\n"
                         "Games by Release [D]ate\n"
+                        "Games by [M]etacritic score\n"
                         "[B]ack\n"
                         ">> ").upper()
             if option == 'A':
@@ -189,10 +190,13 @@ def browse_store(user:User):
             elif option == 'D':
                 games = service.get_games_ordered_by_date()
                 break
+            elif option == 'M':
+                games = service.get_games_ordered_by_metacritic()
+                break
             elif option == 'B':
                 return
             else:
-                raise InvalidInputError(['a', 'd', 'b'])
+                raise InvalidInputError(['a', 'd', 'm', 'b'])
         except InvalidInputError as e:
             print(e)
 

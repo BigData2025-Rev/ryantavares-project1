@@ -178,6 +178,9 @@ class Service():
     def get_games_ordered_by_date(self):
         return self.dao.games_ordered_by_date()
     
+    def get_games_ordered_by_metacritic(self):
+        return self.dao.games_ordered_by_metacritic()
+    
     """HELPER"""
     # TODO: Move years_since_date to more appropriate, reusable location.
     def years_since_date(date:str):

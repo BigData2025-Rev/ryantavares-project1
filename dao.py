@@ -394,3 +394,19 @@ class Dao():
                     return [Game(**game) for game in games]
                 except mysql.connector.Error as e:
                     logger.error("Query to select games ordered by release date failed :: %s", (e.msg))
+
+    def games_ordered_by_metacritic(self):
+        if self.cnx and self.cnx.is_connected():
+            with self.cnx.cursor(dictionary=True) as cursor:
+                try:
+                    cursor.execute("SELECT * FROM Games WHERE metacritic IS NOT null ORDER BY metacritic DESC, game_id DESC;")
+                    games = cursor.fetchall()
+                    genres = self.all_game_genres()
+                    categories = self.all_game_categories()
+                    for game in games:
+                        game['genres'] = [genre['genre'] for genre in genres if genre['game_id'] == game['game_id']]
+                        game['categories'] = [category['category'] for category in categories if category['game_id'] == game['game_id']]
+
+                    return [Game(**game) for game in games]
+                except mysql.connector.Error as e:
+                    logger.error("Query to select games ordered by Metacritic failed :: %s", (e.msg))
