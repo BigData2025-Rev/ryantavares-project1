@@ -51,7 +51,11 @@ class Dao():
             with self.cnx.cursor(dictionary=True) as cursor:
                 try:
                     cursor.execute("SELECT user_id, username, date_of_birth, wallet FROM Users WHERE username=%s", [username])
-                    return User(**cursor.fetchone())
+                    result = cursor.fetchone()
+                    if result:
+                        return User(**result)
+                    else:
+                        return None
                 except mysql.connector.Error as e:
                     logger.error("Query to select user by username [%s] failed :: %s", username, e.msg)
     
@@ -98,8 +102,8 @@ class Dao():
                 try:
                     cursor.execute("SELECT * FROM Games;")
                     games = cursor.fetchall()
-                    genres = self.game_genres()
-                    categories = self.game_categories()
+                    genres = self.all_game_genres()
+                    categories = self.all_game_categories()
                     for game in games:
                         game['genres'] = [genre['genre'] for genre in genres if genre['game_id'] == game['game_id']]
                         game['categories'] = [category['category'] for category in categories if category['game_id'] == game['game_id']]
@@ -351,8 +355,8 @@ class Dao():
                 try:
                     cursor.execute("SELECT * FROM Games ORDER BY release_date DESC, game_id DESC;")
                     games = cursor.fetchall()
-                    genres = self.game_genres()
-                    categories = self.game_categories()
+                    genres = self.all_game_genres()
+                    categories = self.all_game_categories()
                     for game in games:
                         game['genres'] = [genre['genre'] for genre in genres if genre['game_id'] == game['game_id']]
                         game['categories'] = [category['category'] for category in categories if category['game_id'] == game['game_id']]
@@ -361,7 +365,7 @@ class Dao():
                 except mysql.connector.Error as e:
                     logger.error("Query to select games ordered by release date failed :: %s", (e.msg))
 
-    def game_genres(self):
+    def all_game_genres(self):
         if self.cnx and self.cnx.is_connected():
             with self.cnx.cursor(dictionary=True) as cursor:
                 try:
@@ -375,7 +379,7 @@ class Dao():
                 except mysql.connector.Error as e:
                     logger.error("Query to select game genres failed :: %s", (e.msg))
 
-    def game_categories(self):
+    def all_game_categories(self):
         if self.cnx and self.cnx.is_connected():
             with self.cnx.cursor(dictionary=True) as cursor:
                 try:
