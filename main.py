@@ -4,6 +4,7 @@ from decimal import Decimal
 from exceptions import (InvalidInputError, InvalidCredentialsError)
 from entities import (User, Game)
 from service import Service
+import datetime as dt
 import logging
 
 logger: logging.Logger
@@ -243,41 +244,23 @@ def admin_mode():
             print("\nWelcome, admin.")
 
             option = input("\nWhat would you like to do?\n" +
-                        "[V]iew data\n" +
-                        "Make changes to [G]ames\n" +
-                        "Make changes to [U]sers\n" +
+                        "View [U]sers\n" +
+                        "View [O]rders\n" +
+                        "Add [G]ame to store inventory\n" +
                         "[L]og out\n" +
                         ">> ").upper()
-            if option == 'V':
-                admin_view_data()
-            elif option == 'G':
-                print("Add, update, or delete games in store")
-            elif option == 'U':
-                print("Update or delete users")
-            elif option == 'L':
-                logger.info("Admin logged out")
-                break
-            else:
-                raise InvalidInputError(valid_keys=['v', 'g', 'u', 'l'])
-        except InvalidInputError as e:
-            print(e)
-
-def admin_view_data():
-    while True:
-        try:
-            option = input("\nWhat would you like to do?\n" +
-                    "View [U]sers\n"
-                    "View [O]rders\n"
-                    "[B]ack\n" +
-                    ">> ").upper()
             if option == 'U':
                 admin_view_users()
             elif option == 'O':
                 admin_view_orders()
-            elif option == 'B':
+            elif option == 'G':
+                admin_add_game()
+            elif option == 'L':
+                print("Logging out...")
+                logger.info("Admin logged out")
                 break
             else:
-                raise InvalidInputError(['u', 'o', 'b'])
+                raise InvalidInputError(valid_keys=['u', 'o', 'g', 'l'])
         except InvalidInputError as e:
             print(e)
 
@@ -344,6 +327,71 @@ def admin_view_orders():
         start = end
         end = end + 5 if end + 5 <= len(recent_orders) else len(recent_orders)
     
+def admin_add_game():
+    name = ""
+    price = 0.00
+    rating = ""
+    description = ""
+    developer = ""
+    publisher = ""
+    genres = []
+    categories = []
+
+    option = input("\nEnter title\n"
+                "[C]ancel\n" +
+                ">> ")
+    if option.upper() == 'C': return
+    else: name = option
+    
+    option = input("\nEnter price\n"
+                "[C]ancel\n" +
+                ">> ")
+    if option.upper() == 'C': return
+    elif option.replace('.','',1).isnumeric(): 
+        price = f"{float(option):.2f}"
+        print(price)
+
+    option = input("\nEnter maturity rating\n"
+                "[C]ancel\n" +
+                ">> ")
+    if option.upper() == 'C': return
+    elif option.lower() in ['e', 'e10', 't', 'm', 'ao', 'rp']: rating = option.lower()
+
+    option = input("\nEnter description\n"
+                "[C]ancel\n" +
+                ">> ")
+    if option.upper() == 'C': return
+    else: description = option
+
+    option = input("\nEnter developer\n"
+                "[C]ancel\n" +
+                ">> ")
+    if option.upper() == 'C': return
+    else: developer = option
+
+    option = input("\nEnter publisher\n"
+                "[C]ancel\n" +
+                ">> ")
+    if option.upper() == 'C': return
+    else: publisher = option    
+
+    option = input("\nEnter genres \t [genre1, genre2, ...]\n"
+                "[C]ancel\n" +
+                ">> ")
+    if option.upper() == 'C': return
+    else: genres = option.split(', ')
+
+    option = input("\nEnter categories \t [category1, category2, ...]\n"
+                "[C]ancel\n" +
+                ">> ")
+    if option.upper() == 'C': return
+    else: categories = option.split(', ')
+        
+    game = Game(game_id=0, name=name, price=price, rating=rating, description=description,
+                developer=developer, publisher=publisher, recommendations=0,
+                release_date=dt.date.today(), metacritic=0, genres=genres, categories=categories)
+    if service.add_game_to_store(game):
+        print(f"\nAdded game: {game.name}")
 
 
 if __name__ == "__main__":

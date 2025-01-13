@@ -129,9 +129,12 @@ class Dao():
                 try:
                     cursor.execute("SELECT * FROM Games WHERE game_id=%s;", [game_id])
                     game = cursor.fetchone()
-                    game['genres'] = [genre[0] for genre in self.game_genres(game['game_id'])]
-                    game['categories'] = [category[0] for category in self.game_categories(game['game_id'])]
-                    return Game(**game)
+                    if game:
+                        game['genres'] = [genre[0] for genre in self.game_genres(game['game_id'])]
+                        game['categories'] = [category[0] for category in self.game_categories(game['game_id'])]
+                        return Game(**game)
+                    else:
+                        return None
                 except mysql.connector.Error as e:
                     logger.error("Query to select game by game_id [%s] failed :: %s", game_id, e.msg)
 
@@ -322,3 +325,37 @@ class Dao():
                     return [Order(**order) for order in orders]
                 except mysql.connector.Error as e:
                     logger.error("Query to select all recent orders failed :: %s", e.msg)
+
+    def insert_game(self, game:Game):
+        if self.cnx and self.cnx.is_connected():
+            with self.cnx.cursor() as cursor:
+                try:
+                    insert_query = "INSERT INTO Games (name, price, rating, description, developer, publisher, release_date) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+                    cursor.execute(insert_query, (game.name, game.price, game.rating, game.description, game.developer, game.publisher, game.release_date))
+                    new_game_id = cursor._last_insert_id
+
+                    cursor.execute("SELECT LOWER(genre) FROM Genres;")
+                    existing_genres = [genre[0].lower() for genre in cursor.fetchall()]
+                    add_genres = [genre for genre in game.genres if genre.lower() not in existing_genres]
+
+                    cursor.execute("SELECT LOWER(category) FROM Categories;")
+                    existing_categories = [category[0].lower() for category in cursor.fetchall()]
+                    add_categories = [category for category in game.categories if category.lower() not in existing_categories]
+
+                    for genre in add_genres:
+                        cursor.execute("INSERT INTO Genres (genre) VALUES (%s);", (genre,))
+
+                    for category in add_categories:
+                        cursor.execute("INSERT INTO Categories (category) VALUES (%s);", (category,))
+
+                    for genre in game.genres:
+                        cursor.execute("INSERT INTO Game_Genre (game_fk, genre) VALUES (%s, %s);", (new_game_id, genre,))
+                    for category in game.categories:
+                        cursor.execute("INSERT INTO Game_Category (game_fk, category) VALUES (%s, %s);", (new_game_id, category,))
+
+                    self.cnx.commit()
+                    logger.info("Inserted game [%s] into db", game.name)
+                    return True
+                except mysql.connector.Error as e:
+                    logger.error("Failed to insert game [%s] :: %s", game.name, e.msg)
+        return False

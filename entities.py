@@ -4,7 +4,7 @@ from decimal import Decimal
 from exceptions import (InvalidInputError)
 
 class Game():
-    def __init__(self, game_id, name, price, rating, description, developer, publisher, recommendations, release_date, metacritic, discount_percent, genres=[], categories=[]):
+    def __init__(self, game_id, name, price, rating, description, developer, publisher, recommendations, release_date, metacritic=None, discount_percent=0.00, genres=[], categories=[]):
         self.game_id = game_id
         self.name = name
         self.price = Decimal(price)

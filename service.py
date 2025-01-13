@@ -52,14 +52,15 @@ class Service():
         return self.dao.all_games()
     
     def get_game_by_id(self, game_id):
-        try:
-            game = self.dao.game_by_id(game_id)
-            if game:
-                return game
-            else:
-                raise ValueError("Game with that id does not exist")
-        except ValueError as e:
-            print(e)
+        # try:
+            #game = self.dao.game_by_id(game_id)
+        return self.dao.game_by_id(game_id)
+        #     if game:
+        #         return game
+        #     else:
+        #         raise ValueError("Game with that id does not exist")
+        # except ValueError as e:
+        #     print(e)
 
     def get_games_in_user_inventory(self, user:User) -> list[Game]:
         """Gets games that a user has purchased."""
@@ -168,7 +169,16 @@ class Service():
         except ExistenceError as e:
             print(e)
             return False
-
+        
+    def add_game_to_store(self, game:Game):
+        try:
+            if self.get_game_by_id(game.game_id):
+                raise ExistenceError("That game already exists.")
+            else:
+                return self.dao.insert_game(game)
+        except ExistenceError as e:
+            print(e)
+            return False
     
     # TODO: Move years_since_date to more appropriate, reusable location.
     def years_since_date(date:str):
