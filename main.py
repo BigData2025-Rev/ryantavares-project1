@@ -174,7 +174,24 @@ def manage_wallet(user:User):
 def browse_store(user:User):
     """Browse and select available games in the store."""
     # TODO: Add options to sort results
-    games = service.get_all_games()
+    while True:
+        try:
+            option = input("\nSearch Filter\n"
+                        "Get [A]ll games\n"
+                        "Games by Release [D]ate\n"
+                        "[B]ack").upper()
+            if option == 'A':
+                games = service.get_all_games()
+                break
+            elif option == 'D':
+                games = service.get_games_ordered_by_date()
+                break
+            elif option == 'B':
+                return
+            else:
+                raise InvalidInputError(['a', 'd', 'b'])
+        except InvalidInputError as e:
+            print(e)
 
     # View 5 games at a time.
     start = 0

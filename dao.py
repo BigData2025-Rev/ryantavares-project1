@@ -98,23 +98,8 @@ class Dao():
                 try:
                     cursor.execute("SELECT * FROM Games;")
                     games = cursor.fetchall()
-
-                    cursor.execute(
-                        """
-                        SELECT gam.game_id, gen.genre
-                        FROM Games gam INNER JOIN Game_Genre gen ON gam.game_id = gen.game_fk;
-                        """
-                    )
-                    genres = cursor.fetchall()
-
-                    cursor.execute(
-                        """
-                        SELECT gam.game_id, cat.category
-                        FROM Games gam INNER JOIN Game_Category cat ON gam.game_id = cat.game_fk;
-                        """
-                    )
-                    categories = cursor.fetchall()
-
+                    genres = self.game_genres()
+                    categories = self.game_categories()
                     for game in games:
                         game['genres'] = [genre['genre'] for genre in genres if genre['game_id'] == game['game_id']]
                         game['categories'] = [category['category'] for category in categories if category['game_id'] == game['game_id']]
@@ -359,3 +344,47 @@ class Dao():
                 except mysql.connector.Error as e:
                     logger.error("Failed to insert game [%s] :: %s", game.name, e.msg)
         return False
+    
+    def games_ordered_by_date(self):
+        if self.cnx and self.cnx.is_connected():
+            with self.cnx.cursor(dictionary=True) as cursor:
+                try:
+                    cursor.execute("SELECT * FROM Games ORDER BY release_date DESC, game_id DESC;")
+                    games = cursor.fetchall()
+                    genres = self.game_genres()
+                    categories = self.game_categories()
+                    for game in games:
+                        game['genres'] = [genre['genre'] for genre in genres if genre['game_id'] == game['game_id']]
+                        game['categories'] = [category['category'] for category in categories if category['game_id'] == game['game_id']]
+
+                    return [Game(**game) for game in games]
+                except mysql.connector.Error as e:
+                    logger.error("Query to select games ordered by release date failed :: %s", (e.msg))
+
+    def game_genres(self):
+        if self.cnx and self.cnx.is_connected():
+            with self.cnx.cursor(dictionary=True) as cursor:
+                try:
+                    cursor.execute(
+                        """
+                        SELECT gam.game_id, gen.genre
+                        FROM Games gam INNER JOIN Game_Genre gen ON gam.game_id = gen.game_fk;
+                        """
+                    )
+                    return cursor.fetchall()
+                except mysql.connector.Error as e:
+                    logger.error("Query to select game genres failed :: %s", (e.msg))
+
+    def game_categories(self):
+        if self.cnx and self.cnx.is_connected():
+            with self.cnx.cursor(dictionary=True) as cursor:
+                try:
+                    cursor.execute(
+                        """
+                        SELECT gam.game_id, cat.category
+                        FROM Games gam INNER JOIN Game_Category cat ON gam.game_id = cat.game_fk;
+                        """
+                    )
+                    return cursor.fetchall()
+                except mysql.connector.Error as e:
+                    logger.error("Query to select game categories failed :: %s", (e.msg))

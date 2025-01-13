@@ -179,6 +179,10 @@ class Service():
         except ExistenceError as e:
             print(e)
             return False
+        
+    def get_games_ordered_by_date(self):
+        return self.dao.games_ordered_by_date()
+
     
     # TODO: Move years_since_date to more appropriate, reusable location.
     def years_since_date(date:str):
