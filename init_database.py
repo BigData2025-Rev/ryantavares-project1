@@ -9,10 +9,9 @@ import datetime as dt
 import json
 import logging
 
-logging.basicConfig(filename="logs/db_init.log",
-                level=logging.INFO,
-                format='%(asctime)s :: %(levelname)s :: %(message)s')
-logger = logging.getLogger(__name__)
+logger = None
+if __name__ != "__main__":
+    logger = logging.getLogger(__name__)
 
 def main():
     init_database(abort_if_exists=False)
@@ -41,6 +40,8 @@ def init_database(abort_if_exists=True):
         cursor.execute("SHOW DATABASES LIKE 'p1';")
         if cursor.fetchall():
             return
+    
+    logger.warning("Resetting database")
 
     # Initialize database.
     cursor.execute("CREATE DATABASE IF NOT EXISTS p1;")
@@ -259,4 +260,8 @@ def insert_data(cursor):
     
 
 if __name__ == "__main__":
+    logging.basicConfig(filename="logs/p1.log",
+                level=logging.INFO,
+                format='%(asctime)s :: %(levelname)s :: %(message)s')
+    logger = logging.getLogger(__name__)
     main()
