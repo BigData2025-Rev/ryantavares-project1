@@ -97,7 +97,16 @@ def create_tables(cursor):
             FOREIGN KEY (user_fk) REFERENCES Users(user_id) ON DELETE SET NULL
         );
         """
-        )
+    )
+    
+    cursor.execute(
+    """
+    CREATE TABLE Ratings(
+        rating CHAR(3) PRIMARY KEY,
+        required_age INT NOT NULL
+    );
+    """
+    )
 
     cursor.execute(
         """
@@ -105,17 +114,18 @@ def create_tables(cursor):
             game_id INT AUTO_INCREMENT PRIMARY KEY,
             name VARCHAR(256) NOT NULL,
             price DECIMAL(6,2) NOT NULL,
-            rating CHAR(3) NOT NULL DEFAULT 'rp',
+            rating CHAR(3) DEFAULT 'rp',
             description VARCHAR(512) NOT NULL,
             developer VARCHAR(100) NOT NULL,
             publisher VARCHAR(100) NOT NULL,
             recommendations INT DEFAULT 0,
             release_date DATE NOT NULL,
             metacritic INT DEFAULT NULL,
-            discount_percent DECIMAL(5,2) DEFAULT 0.00
+            discount_percent DECIMAL(5,2) DEFAULT 0.00,
+            FOREIGN KEY (rating) REFERENCES Ratings(rating) ON DELETE SET NULL
         );
         """
-        )
+    )
     
     cursor.execute(
         """
@@ -123,21 +133,12 @@ def create_tables(cursor):
             genre VARCHAR(50) PRIMARY KEY
         );
         """
-        )
+    )
     
     cursor.execute(
         """
         CREATE TABLE Categories(
             category VARCHAR(50) PRIMARY KEY
-        );
-        """
-    )
-
-    cursor.execute(
-        """
-        CREATE TABLE Ratings(
-            rating CHAR(3) PRIMARY KEY,
-            required_age INT NOT NULL
         );
         """
     )

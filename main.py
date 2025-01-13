@@ -175,7 +175,6 @@ def manage_wallet(user:User):
 
 def browse_store(user:User):
     """Browse and select available games in the store."""
-    # TODO: Add options to sort results
     while True:
         try:
             option = input("\nSearch Filter\n"
